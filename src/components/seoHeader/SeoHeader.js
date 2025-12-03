@@ -22,7 +22,7 @@ function SeoHeader() {
 
   let mail = socialMediaLinks
     .find((media) => media.link.startsWith("mailto"))
-    .link.substring("mailto:".length);
+    ?.link.substring("mailto:".length) || "";
   let job = experience.sections
     ?.find((section) => section.work)
     ?.experiences?.at(0);
