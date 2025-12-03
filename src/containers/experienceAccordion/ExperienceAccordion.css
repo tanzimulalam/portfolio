@@ -1,0 +1,31 @@
+.experience-accord {
+  margin: 50px;
+}
+
+.accord-panel {
+  font-family: "Google Sans Regular";
+}
+
+.work-section {
+  position: relative;
+}
+
+.work-section::before {
+  content: "⭐";
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .experience-accord {
+    margin: 20px;
+  }
+
+  .work-section::before {
+    display: none;
+  }
+}
