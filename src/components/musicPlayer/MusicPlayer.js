@@ -4,11 +4,24 @@ import "./MusicPlayer.css";
 export default function MusicPlayer(props) {
   const theme = props.theme;
   const [isPlaying, setIsPlaying] = useState(false);
+  const [musicPath, setMusicPath] = useState('/music/Russ.mp3');
   const audioRef = useRef(null);
 
-  // Path to the MP3 file - place it in public/music/ folder
-  // Using process.env.PUBLIC_URL to handle GitHub Pages subdirectory
-  const musicPath = `${process.env.PUBLIC_URL || ""}/music/Russ.mp3`;
+  // Set the correct music path based on the deployment environment
+  useEffect(() => {
+    // Use PUBLIC_URL if available (set during build)
+    if (process.env.PUBLIC_URL) {
+      setMusicPath(`${process.env.PUBLIC_URL}/music/Russ.mp3`);
+    } else if (typeof window !== 'undefined') {
+      // Runtime detection for GitHub Pages subdirectory
+      const pathParts = window.location.pathname.split('/').filter(p => p);
+      if (pathParts.length > 0 && pathParts[0] === 'portfolio') {
+        setMusicPath('/portfolio/music/Russ.mp3');
+      } else {
+        setMusicPath('/music/Russ.mp3');
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const audio = audioRef.current;
