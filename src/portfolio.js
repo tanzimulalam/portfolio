@@ -731,14 +731,14 @@ const achievements = {
       title: "Guinness World Records",
       achievements: [
         {
-          title: "Crop Field Mosaic of Bangabandhu",
+          title: "Worlds Largest Crop Field Mosaic Art",
           organization: "National Implementation Committee of Bangabandhu 100",
           organization_url: "",
           logo_path: "guinness_logo.png",
           duration: "",
           location: "Bangladesh",
           description:
-            "This project is known as 'Shosshochitre Bangabandhu' where I worked in the youth and volunteer sub-committee under National Implementation Committee of Bangabandhu 100. Designed official medals, awards, brooches, certificates, Prime Minister's medal, and other commemorative items. (https://www.youtube.com/watch?v=5tfVJcIbj5c) - Overview | (tinyurl.com/SB-TANZIMUL) – Records | Other notable designs can be found at: https://tinyurl.com/other-designs-tanzimul",
+            "Worked on the Youth & Voluntary Sub-Committee with National AgriCare. The picture covers 119,430.273 m² (1,285,536.75 ft²).",
           color: "#F57C00",
         },
       ],
