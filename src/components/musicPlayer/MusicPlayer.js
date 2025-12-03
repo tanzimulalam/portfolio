@@ -12,14 +12,9 @@ export default function MusicPlayer(props) {
     // Use PUBLIC_URL if available (set during build)
     if (process.env.PUBLIC_URL) {
       setMusicPath(`${process.env.PUBLIC_URL}/music/shunno.mp3`);
-    } else if (typeof window !== 'undefined') {
-      // Runtime detection for GitHub Pages subdirectory
-      const pathParts = window.location.pathname.split('/').filter(p => p);
-      if (pathParts.length > 0 && pathParts[0] === 'portfolio') {
-        setMusicPath('/portfolio/music/shunno.mp3');
-      } else {
-        setMusicPath('/music/shunno.mp3');
-      }
+    } else {
+      // For custom domain, use root path
+      setMusicPath('/music/shunno.mp3');
     }
   }, []);
 

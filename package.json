@@ -2,7 +2,7 @@
   "private": true,
   "name": "masterPortfolio",
   "version": "0.1.0",
-  "homepage": "/portfolio",
+  "homepage": ".",
   "scripts": {
     "build": "react-scripts build",
     "predeploy": "npm run build",
