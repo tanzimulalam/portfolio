@@ -206,7 +206,7 @@ class Experience extends Component {
                       }}
                     >
                       {isWorkSection && (
-                        <span className="section-icon">⭐</span>
+                        <span className="section-icon" role="img" aria-label="star icon">⭐</span>
                       )}
                       {section["title"]}
                     </h2>

@@ -6,8 +6,6 @@ import { getImageSrc } from "../../utils/imageLoader";
 class AchievementCard extends Component {
   render() {
     const achievement = this.props.achievement;
-    const index = this.props.index;
-    const totalCards = this.props.totalCards;
     const theme = this.props.theme;
     return (
       <div className="achievement-list-item">

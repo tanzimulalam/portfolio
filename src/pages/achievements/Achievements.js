@@ -66,7 +66,7 @@ class Achievements extends Component {
                       }}
                     >
                       {isGuinnessSection && (
-                        <span className="section-icon">🏆</span>
+                        <span className="section-icon" role="img" aria-label="trophy icon">🏆</span>
                       )}
                       {section["title"]}
                     </h2>

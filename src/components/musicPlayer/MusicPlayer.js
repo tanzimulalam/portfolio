@@ -4,7 +4,6 @@ import "./MusicPlayer.css";
 export default function MusicPlayer(props) {
   const theme = props.theme;
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
   const audioRef = useRef(null);
 
   // Path to the MP3 file - place it in public/music/ folder
@@ -20,7 +19,6 @@ export default function MusicPlayer(props) {
         try {
           await audio.play();
           setIsPlaying(true);
-          setHasInteracted(true);
         } catch (error) {
           // Auto-play was prevented - user will need to click the button
           setIsPlaying(false);
@@ -49,7 +47,6 @@ export default function MusicPlayer(props) {
         playPromise
           .then(() => {
             setIsPlaying(true);
-            setHasInteracted(true);
           })
           .catch((error) => {
             console.error("Error playing audio:", error);
