@@ -59,12 +59,69 @@ const socialMediaLinks = [
 const skills = {
   data: [
     {
+      title: "Cybersecurity & Security Tools",
+      fileName: "CloudInfraImg",
+      skills: [
+        "⚡ Proactively investigated and conducted vulnerability assessments, executed security tests, and analyzed systems to detect threats using Splunk, Microsoft Defender, Cisco Anti-Malware Protection, Umbrella, and PhishER",
+        "⚡ Experienced in Security Operations Center (SOC) analysis, threat detection, incident response, and security monitoring",
+        "⚡ Developed synthetic cyber threat intelligence (CTI) software with STIX 2.1-compliant knowledge graphs for threat analysis",
+        "⚡ Researched and enhanced Mobile Driver's License (mDL) architecture focusing on security, privacy, and cryptographic protocols",
+        "⚡ Applied Cryptography expertise in course development and security architecture design",
+      ],
+      softwareSkills: [
+        {
+          skillName: "Splunk",
+          fontAwesomeClassname: "simple-icons:splunk",
+          style: {
+            color: "#000000",
+          },
+        },
+        {
+          skillName: "Cisco",
+          fontAwesomeClassname: "simple-icons:cisco",
+          style: {
+            color: "#1BA0D7",
+          },
+        },
+        {
+          skillName: "Microsoft Defender",
+          fontAwesomeClassname: "simple-icons:microsoft",
+          style: {
+            color: "#0078D4",
+          },
+        },
+        {
+          skillName: "STIX",
+          fontAwesomeClassname: "simple-icons:stix",
+          style: {
+            backgroundColor: "transparent",
+            color: "#FF6B35",
+          },
+        },
+        {
+          skillName: "Docker",
+          fontAwesomeClassname: "simple-icons:docker",
+          style: {
+            color: "#1488C6",
+          },
+        },
+        {
+          skillName: "Cryptography",
+          fontAwesomeClassname: "fa-shield-alt",
+          style: {
+            backgroundColor: "transparent",
+            color: "#FFD700",
+          },
+        },
+      ],
+    },
+    {
       title: "Data Science & Machine Learning",
       fileName: "DataScienceImg",
       skills: [
-        "⚡ Developing machine learning models using TensorFlow, PyTorch, and Scikit-learn for various applications",
+        "⚡ Developed machine learning models using TensorFlow, PyTorch, and Scikit-learn for various applications",
         "⚡ Experience with GANs, GNN, GCN for synthetic data generation and knowledge graph analysis",
-        "⚡ Building data pipelines and performing advanced analytics using Pandas, NumPy, and LangChain",
+        "⚡ Built data pipelines and performed advanced analytics using Pandas, NumPy, and LangChain",
       ],
       softwareSkills: [
         {
@@ -186,45 +243,6 @@ const skills = {
           style: {
             backgroundColor: "transparent",
             color: "#181717",
-          },
-        },
-      ],
-    },
-    {
-      title: "Cybersecurity & Security Tools",
-      fileName: "CloudInfraImg",
-      skills: [
-        "⚡ Proactively investigating and conducting vulnerability assessments using advanced security tools",
-        "⚡ Analyzing systems to detect irregularities and potential threats in Security Operations Center (SOC)",
-        "⚡ Experience with threat detection, incident response, and security monitoring platforms",
-      ],
-      softwareSkills: [
-        {
-          skillName: "Splunk",
-          fontAwesomeClassname: "simple-icons:splunk",
-          style: {
-            color: "#000000",
-          },
-        },
-        {
-          skillName: "Cisco",
-          fontAwesomeClassname: "simple-icons:cisco",
-          style: {
-            color: "#1BA0D7",
-          },
-        },
-        {
-          skillName: "Microsoft Defender",
-          fontAwesomeClassname: "simple-icons:microsoft",
-          style: {
-            color: "#0078D4",
-          },
-        },
-        {
-          skillName: "Docker",
-          fontAwesomeClassname: "simple-icons:docker",
-          style: {
-            color: "#1488C6",
           },
         },
       ],
@@ -412,7 +430,7 @@ const experience = {
             "UNCP Division of Information Technology, Network & Security Department",
           company_url: "https://www.uncp.edu/",
           logo_path: "uncp_logo.png",
-          duration: "Jan 2021 - Sep 2022",
+          duration: "Jan 2024 – Sep 2025",
           location: "Pembroke, NC",
           description:
             "Proactively investigated and conducted vulnerability assessments, executed security tests, and analyzed systems to detect irregularities that may indicate potential threats using security tools like Splunk, Microsoft Defender, Cisco Anti-Malware Protection, Umbrella, and PhishER.",
@@ -423,10 +441,10 @@ const experience = {
           company: "UNCP Department of Mathematics & Computer Science",
           company_url: "https://www.uncp.edu/",
           logo_path: "uncp_logo.png",
-          duration: "Aug 2021 - May 2022",
+          duration: "Aug 2024 – May 2025",
           location: "Pembroke, NC",
           description:
-            "Assisted in Applied Cryptography course through syllabus development, assignment design, and student support. Created and distributed marketing emails for the department to share cybersecurity resources, news, and opportunities. Kept the department's website updated to ensure information is current and relevant for students and visitors.",
+            "Assisted in Applied Cryptography course through syllabus development, assignment design, and student support. Created and distributed marketing emails for the department to share cybersecurity resources, news, and opportunities. This initiative encouraged involvement in cybersecurity activities, promoted events, and fostered a collaborative environment. Kept the department's website updated to ensure that information was current and relevant for students and visitors.",
           color: "#003366",
         },
         {
@@ -434,10 +452,10 @@ const experience = {
           company: "UNCP Department of Geology",
           company_url: "https://www.uncp.edu/",
           logo_path: "uncp_logo.png",
-          duration: "May 2021 - May 2022",
+          duration: "May 2024 – May 2025",
           location: "Pembroke, NC",
           description:
-            "Built Python pipelines processing 340k+ PFAS well-water records; cut manual cleaning time by 54% via automated validation & Haversine matching. Applied Principal Component Analysis (PCA) with Scikit-learn for dimensionality reduction, identifying key data insights and trends. Engineered robust data integration pipelines with Python, merging datasets and ensuring data consistency and integrity through validation techniques.",
+            "Built Python pipelines processing 100k+ PFAS well-water records; cut manual cleaning time by 60% via automated validation & Haversine matching. Applied Principal Component Analysis (PCA) with Scikit-learn for dimensionality reduction, identifying key data insights and trends. Engineered robust data integration pipelines with Python, merging datasets and ensuring data consistency and integrity through validation techniques.",
           color: "#003366",
         },
         {
@@ -445,10 +463,10 @@ const experience = {
           company: "UNCP Cyber Defense Education Center",
           company_url: "https://www.uncp.edu/",
           logo_path: "uncp_logo.png",
-          duration: "Jan 2021 - May 2022",
+          duration: "Jan 2024 – May 2025",
           location: "Pembroke, NC",
           description:
-            "Researched and enhanced Mobile Driver's License (mDL) architecture, focusing on security, privacy, interoperability, and user experience. Analyzed 340+ studies on digital identity, cryptographic protocols, and mobile security to identify research gaps and propose innovations. Investigated scalable, secure mDL architectures, including blockchain, biometric authentication, and various communication protocols (NFC, Bluetooth, QR codes).",
+            "Researched and enhanced Mobile Driver's License (mDL) architecture, focusing on security, privacy, interoperability, and user experience. Analyzed 100+ studies on digital identity, cryptographic protocols, and mobile security to identify research gaps and propose innovations. Investigated scalable, secure mDL architectures, including blockchain, biometric authentication, and various communication protocols (NFC, Bluetooth, QR codes).",
           color: "#003366",
         },
         {
@@ -456,10 +474,10 @@ const experience = {
           company: "UNCP Housing & Residence Life",
           company_url: "https://www.uncp.edu/",
           logo_path: "uncp_logo.png",
-          duration: "Jan 2021 - April 2022",
+          duration: "Jan 2024 – April 2025",
           location: "Pembroke, NC",
           description:
-            "Managed field & administrative responsibilities and ensured a harmonious living environment of 67 residents.",
+            "Managed field & administrative responsibilities and ensured a harmonious living environment of 577 residents.",
           color: "#003366",
         },
       ],
@@ -470,13 +488,13 @@ const experience = {
         {
           title: "Research and ML Intern",
           company:
-            "Laboratory for Analytic Sciences (LAS), National Security Agency",
+            "Laboratory for Analytic Sciences and National Security Agency",
           company_url: "https://www.nsa.gov/",
           logo_path: "las_logo.png",
-          duration: "Dec 2020 - Aug 2021",
+          duration: "Dec 2023 – Aug 2024",
           location: "Raleigh, NC",
           description:
-            "Led a team of 6 in developing a large-scale synthetic cyber threat intelligence (CTI) software, generating a knowledge graph with 340,000+ nodes. Developed a Django-based web application for user-defined attack scenario and entity selection. Engineered Generative Adversarial Networks (GANs) using PyTorch for synthetic data generation. Integrated LangChain & GPT-4 to auto-generate STIX 2.1 objects with 90% validity; presented results at LAS Research Symposium.",
+            "Led a team of 5 in developing a large-scale synthetic cyber threat intelligence (CTI) software, generating a knowledge graph with 100,000+ nodes. Developed a Django-based web application for user-defined attack scenario and entity selection. Engineered Generative Adversarial Networks (GANs) using PyTorch for synthetic data generation. Integrated LangChain & GPT-4 to auto-generate STIX 2.1 objects with 90% validity; presented results at LAS Research Symposium.",
           color: "#003366",
         },
         {
@@ -484,10 +502,10 @@ const experience = {
           company: "Laboratory for Space Systems Engineering & Technology",
           company_url: "",
           logo_path: "bracu_logo.png",
-          duration: "Feb 2018 - Jul 2019",
+          duration: "Feb 2021 – Jul 2022",
           location: "Dhaka, Bangladesh",
           description:
-            "Served as a Team Lead of Operations for BRACU Dichari project, overseeing project operations and leading the team to the European Robotics League 2019 final round as the first Asian Team winning Perseverance Award in Aero-Klub Poznan, Poland. Contributed to the Mechanical Team for the BRACU Mongol Tori 5.4 project, supporting the design and physical implementation of the rover body through 3D modeling in SolidWorks. Participated in the International Rover Challenge 2019 and University Rover Challenge 2019 securing 3rd position, with the team advancing as a finalist in the University Rover Challenge 2019.",
+            "Served as a Team Lead of Operations for BRACU Dichari project, overseeing project operations and leading the team to the European Robotics League 2022 final round as the first Asian Team winning Perseverance Award in Aero-Klub Poznan, Poland. Contributed to the Mechanical Team for the BRACU Mongol Tori 6.0 project, supporting the design and physical implementation of the rover body through 3D modeling in SolidWorks. Participated in the International Rover Challenge 2021 and University Rover Challenge 2021 securing 3rd position, with the team advancing as a finalist in the University Rover Challenge 2022.",
           color: "#0066CC",
         },
       ],

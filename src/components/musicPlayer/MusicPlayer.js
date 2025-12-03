@@ -11,14 +11,14 @@ export default function MusicPlayer(props) {
   useEffect(() => {
     // Use PUBLIC_URL if available (set during build)
     if (process.env.PUBLIC_URL) {
-      setMusicPath(`${process.env.PUBLIC_URL}/music/Russ.mp3`);
+      setMusicPath(`${process.env.PUBLIC_URL}/music/shunno.mp3`);
     } else if (typeof window !== 'undefined') {
       // Runtime detection for GitHub Pages subdirectory
       const pathParts = window.location.pathname.split('/').filter(p => p);
       if (pathParts.length > 0 && pathParts[0] === 'portfolio') {
-        setMusicPath('/portfolio/music/Russ.mp3');
+        setMusicPath('/portfolio/music/shunno.mp3');
       } else {
-        setMusicPath('/music/Russ.mp3');
+        setMusicPath('/music/shunno.mp3');
       }
     }
   }, []);
@@ -27,32 +27,58 @@ export default function MusicPlayer(props) {
     const audio = audioRef.current;
 
     // Try to auto-play when component mounts
-    // Note: Most browsers block auto-play, so this may not work until user interacts
     if (audio) {
       // Handle audio loading errors
-      audio.addEventListener('error', (e) => {
+      const handleError = (e) => {
         console.error('Audio loading error:', e);
         console.error('Audio source:', audio.src);
-      });
+      };
+      audio.addEventListener('error', handleError);
+
+      // Set volume to a reasonable level (0.5 = 50%)
+      audio.volume = 0.5;
+
+      let hasAttemptedPlay = false;
 
       const attemptAutoPlay = async () => {
+        if (hasAttemptedPlay) return;
+        hasAttemptedPlay = true;
+
         try {
+          // Try to play immediately
           await audio.play();
           setIsPlaying(true);
         } catch (error) {
-          // Auto-play was prevented - user will need to click the button
-          setIsPlaying(false);
+          // If autoplay is blocked, try again after a short delay
+          // Some browsers allow autoplay after a brief interaction
+          setTimeout(async () => {
+            try {
+              await audio.play();
+              setIsPlaying(true);
+            } catch (err) {
+              // Auto-play was prevented - user will need to click the button
+              setIsPlaying(false);
+            }
+          }, 1000);
         }
       };
 
-      // Small delay to ensure audio is loaded
+      // Wait for audio to be ready, then attempt to play
+      const handleCanPlay = () => {
+        attemptAutoPlay();
+      };
+
+      audio.addEventListener('canplay', handleCanPlay);
+      
+      // Also try after a short delay as fallback
       const timer = setTimeout(() => {
         attemptAutoPlay();
       }, 500);
 
       return () => {
         clearTimeout(timer);
-        audio.removeEventListener('error', () => {});
+        audio.removeEventListener('canplay', handleCanPlay);
+        audio.removeEventListener('error', handleError);
       };
     }
   }, []);
