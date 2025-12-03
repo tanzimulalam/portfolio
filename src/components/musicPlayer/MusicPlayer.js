@@ -7,7 +7,8 @@ export default function MusicPlayer(props) {
   const audioRef = useRef(null);
 
   // Path to the MP3 file - place it in public/music/ folder
-  const musicPath = "/music/Russ.mp3";
+  // Using process.env.PUBLIC_URL to handle GitHub Pages subdirectory
+  const musicPath = `${process.env.PUBLIC_URL || ""}/music/Russ.mp3`;
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -15,6 +16,12 @@ export default function MusicPlayer(props) {
     // Try to auto-play when component mounts
     // Note: Most browsers block auto-play, so this may not work until user interacts
     if (audio) {
+      // Handle audio loading errors
+      audio.addEventListener('error', (e) => {
+        console.error('Audio loading error:', e);
+        console.error('Audio source:', audio.src);
+      });
+
       const attemptAutoPlay = async () => {
         try {
           await audio.play();
@@ -30,7 +37,10 @@ export default function MusicPlayer(props) {
         attemptAutoPlay();
       }, 500);
 
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(timer);
+        audio.removeEventListener('error', () => {});
+      };
     }
   }, []);
 
