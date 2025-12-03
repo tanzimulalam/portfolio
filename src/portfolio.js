@@ -43,16 +43,10 @@ const socialMediaLinks = [
     backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
   },
   {
-    name: "Gmail",
-    link: "mailto:fahim8040@gmail.com",
-    fontAwesomeIcon: "fa-google", // Reference https://fontawesome.com/icons/google?style=brands
-    backgroundColor: "#D14836", // Reference https://simpleicons.org/?q=gmail
-  },
-  {
-    name: "Website",
-    link: "https://www.tanzimulalam.com",
-    fontAwesomeIcon: "fa-globe", // Reference https://fontawesome.com/icons/globe?style=solid
-    backgroundColor: "#4285F4", // Reference https://simpleicons.org/?q=website
+    name: "Devpost",
+    link: "https://devpost.com/fahim5898",
+    fontAwesomeIcon: "fa-code", // Reference https://fontawesome.com/icons/code?style=solid
+    backgroundColor: "#003E52", // Devpost brand color
   },
 ];
 
@@ -429,7 +423,7 @@ const experience = {
           company:
             "UNCP Division of Information Technology, Network & Security Department",
           company_url: "https://www.uncp.edu/",
-          logo_path: "uncp_logo.png",
+          logo_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg/1200px-University_of_North_Carolina_at_Pembroke_seal.svg.png",
           duration: "Jan 2024 – Sep 2025",
           location: "Pembroke, NC",
           description:
@@ -440,7 +434,7 @@ const experience = {
           title: "Teaching Assistant (TA) & Web Information Coordinator (WIC)",
           company: "UNCP Department of Mathematics & Computer Science",
           company_url: "https://www.uncp.edu/",
-          logo_path: "uncp_logo.png",
+          logo_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg/1200px-University_of_North_Carolina_at_Pembroke_seal.svg.png",
           duration: "Aug 2024 – May 2025",
           location: "Pembroke, NC",
           description:
@@ -451,7 +445,7 @@ const experience = {
           title: "Data Science Research Assistant",
           company: "UNCP Department of Geology",
           company_url: "https://www.uncp.edu/",
-          logo_path: "uncp_logo.png",
+          logo_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg/1200px-University_of_North_Carolina_at_Pembroke_seal.svg.png",
           duration: "May 2024 – May 2025",
           location: "Pembroke, NC",
           description:
@@ -462,7 +456,7 @@ const experience = {
           title: "Research Assistant",
           company: "UNCP Cyber Defense Education Center",
           company_url: "https://www.uncp.edu/",
-          logo_path: "uncp_logo.png",
+          logo_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg/1200px-University_of_North_Carolina_at_Pembroke_seal.svg.png",
           duration: "Jan 2024 – May 2025",
           location: "Pembroke, NC",
           description:
@@ -473,7 +467,7 @@ const experience = {
           title: "Resident Assistant",
           company: "UNCP Housing & Residence Life",
           company_url: "https://www.uncp.edu/",
-          logo_path: "uncp_logo.png",
+          logo_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg/1200px-University_of_North_Carolina_at_Pembroke_seal.svg.png",
           duration: "Jan 2024 – April 2025",
           location: "Pembroke, NC",
           description:
@@ -490,7 +484,7 @@ const experience = {
           company:
             "Laboratory for Analytic Sciences and National Security Agency",
           company_url: "https://www.nsa.gov/",
-          logo_path: "las_logo.png",
+          logo_path: "https://ncsu-las.org/wp-content/uploads/2022/08/LAS_logo_fullcolor-e1660057075455.png",
           duration: "Dec 2023 – Aug 2024",
           location: "Raleigh, NC",
           description:
@@ -498,10 +492,10 @@ const experience = {
           color: "#003366",
         },
         {
-          title: "Research Assistant",
+          title: "Research Intern",
           company: "Laboratory for Space Systems Engineering & Technology",
           company_url: "",
-          logo_path: "bracu_logo.png",
+          logo_path: "icons/lasset.png",
           duration: "Feb 2021 – Jul 2022",
           location: "Dhaka, Bangladesh",
           description:
@@ -517,7 +511,7 @@ const experience = {
           title: "Vice President, Artificial Intelligence @ UNCP Club",
           company: "UNCP",
           company_url: "https://www.uncp.edu/",
-          logo_path: "uncp_logo.png",
+          logo_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg/1200px-University_of_North_Carolina_at_Pembroke_seal.svg.png",
           duration: "Aug 2022 - Dec 2022",
           location: "Pembroke, NC",
           description:
@@ -528,7 +522,7 @@ const experience = {
           title: "Organizer, HackUNCP Hackathon",
           company: "UNCP",
           company_url: "https://www.uncp.edu/",
-          logo_path: "uncp_logo.png",
+          logo_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg/1200px-University_of_North_Carolina_at_Pembroke_seal.svg.png",
           duration: "Aug 2021 - Dec 2022",
           location: "Pembroke, NC",
           description:
@@ -539,7 +533,7 @@ const experience = {
           title: "Committee Chairman, Cyber Defense Club",
           company: "UNCP",
           company_url: "https://www.uncp.edu/",
-          logo_path: "uncp_logo.png",
+          logo_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg/1200px-University_of_North_Carolina_at_Pembroke_seal.svg.png",
           duration: "Aug 2021 - Aug 2022",
           location: "Pembroke, NC",
           description:
@@ -551,7 +545,7 @@ const experience = {
             "Head of Electoral Commission, Student Government Association 77th Election",
           company: "UNCP",
           company_url: "https://www.uncp.edu/",
-          logo_path: "uncp_logo.png",
+          logo_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg/1200px-University_of_North_Carolina_at_Pembroke_seal.svg.png",
           duration: "Jan 2021 - April 2022",
           location: "Pembroke, NC",
           description:
@@ -563,7 +557,7 @@ const experience = {
             "Industry Relations Officer, Artificial Intelligence @ UNCP Club",
           company: "UNCP",
           company_url: "https://www.uncp.edu/",
-          logo_path: "uncp_logo.png",
+          logo_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg/1200px-University_of_North_Carolina_at_Pembroke_seal.svg.png",
           duration: "Jan 2021 - Aug 2021",
           location: "Pembroke, NC",
           description:

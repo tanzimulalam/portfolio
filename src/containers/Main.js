@@ -4,7 +4,6 @@ import Home from "../pages/home/HomeComponent";
 import Splash from "../pages/splash/Splash";
 import Experience from "../pages/experience/Experience";
 import Achievements from "../pages/achievements/Achievements";
-import Contact from "../pages/contact/ContactComponent";
 import Projects from "../pages/projects/Projects";
 import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
@@ -41,10 +40,6 @@ export default class Main extends Component {
             render={(props) => (
               <Achievements {...props} theme={this.props.theme} />
             )}
-          />
-          <Route
-            path="/contact"
-            render={(props) => <Contact {...props} theme={this.props.theme} />}
           />
 
           {settings.isSplash && (
