@@ -595,7 +595,7 @@ const publications = {
     {
       id: "betterats",
       name: "betterATS",
-      createdAt: "2024-01-01T00:00:00Z",
+      createdAt: "2026-01-01T00:00:00Z",
       description:
         "AI-native ATS that uses contextual AI to rank candidates by true fit and potential, not keywords. Hire smarter with betterATS. Team: Najmul Hasan, Tanzimul Alam Fahim, Ubayeid Bin Habib, Mohammad Kawsar",
       url: "https://devpost.com/software/better-ats",
@@ -603,7 +603,7 @@ const publications = {
     {
       id: "synthetica",
       name: "Synthetica!",
-      createdAt: "2023-08-01T00:00:00Z",
+      createdAt: "2024-08-01T00:00:00Z",
       description:
         "Synthetic Cyber Knowledge Graph Generator for Analysts & Cyber Security Professionals! Platform to generate synthetic STIX 2.1-compliant cyber knowledge graphs for CTI analysis. Team: Tanzimul Alam Fahim, Harry Lamichhane, AndrewCart5, C Rajwardhan Shinde. Tools: STIX 2.1, Django, Angular, three.js, GPT-4o, LangChain",
       url: "https://devpost.com/software/synthetica",

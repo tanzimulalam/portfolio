@@ -68,7 +68,7 @@ export default function Projects(props) {
   const timeline = [
     {
       title: "SAKURA — Knowledge Graph Generation & Analysis",
-      period: "Aug 2023 – Present",
+      period: "Aug 2023 – 2026",
       bullets: [
         "Generated synthetic STIX 2.1-compliant CTI knowledge graphs for analysts.",
         "Used LangChain + GPT-4o Turbo to create realistic threat relationships.",
@@ -77,7 +77,7 @@ export default function Projects(props) {
     },
     {
       title: "Link Prediction in Knowledge Graphs (KG)",
-      period: "Sep 2023 – Present",
+      period: "Sep 2023 – 2026",
       bullets: [
         "Evaluating link prediction models on the SAKURA dataset.",
         "Benchmarking accuracy and computational efficiency across approaches.",
