@@ -585,12 +585,20 @@ const publicationsHeader = {
 const publications = {
   data: [
     {
+      id: "skelevision",
+      name: "SkeleVision",
+      createdAt: "2026-02-22T00:00:00Z",
+      description:
+        "Turn your body into a live, interactive anatomy classroom. An AI-powered anatomy learning app that overlays a real-time skeleton on the user using webcam + pose detection, with contextual explanations.",
+      url: "https://devpost.com/software/skelevision",
+    },
+    {
       id: "betterats",
       name: "betterATS",
       createdAt: "2024-01-01T00:00:00Z",
       description:
         "AI-native ATS that uses contextual AI to rank candidates by true fit and potential, not keywords. Hire smarter with betterATS. Team: Najmul Hasan, Tanzimul Alam Fahim, Ubayeid Bin Habib, Mohammad Kawsar",
-      url: "https://devpost.com/software/betterats",
+      url: "https://devpost.com/software/better-ats",
     },
     {
       id: "synthetica",
