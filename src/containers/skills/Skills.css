@@ -1,8 +1,7 @@
 .skills-header-div {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 12px;
-  padding: 0 16px;
+  margin: 0 0 12px;
+  padding: 0 5%;
 }
 
 .skills-header {
@@ -16,8 +15,7 @@
   display: flex;
   overflow: hidden;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 28px;
+  margin: 0 5% 28px;
   padding: 20px 18px;
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.96);
