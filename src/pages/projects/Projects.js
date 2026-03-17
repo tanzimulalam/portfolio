@@ -8,12 +8,6 @@ import "./Projects.css";
 
 const DEVPOST_PROFILE_URL = "https://devpost.com/fahim5898";
 
-function formatMonthYear(dateStr) {
-  const d = new Date(dateStr);
-  if (Number.isNaN(d.getTime())) return "";
-  return d.toLocaleString(undefined, { month: "short", year: "numeric" });
-}
-
 function DevpostCard({ project }) {
   return (
     <a
@@ -26,7 +20,7 @@ function DevpostCard({ project }) {
         <div className="projects-devpost-meta">
           <div className="projects-devpost-pill">Devpost</div>
           <div className="projects-devpost-date">
-            {formatMonthYear(project.createdAt)}
+            {new Date(project.createdAt).getFullYear()}
           </div>
         </div>
         <div className="projects-devpost-title">{project.name}</div>
@@ -64,6 +58,15 @@ export default function Projects(props) {
   const devpostFeatured = publications.data.filter((p) =>
     (p.url || "").includes("devpost.com/software/")
   );
+
+  const bravesRide = {
+    id: "bravesride",
+    name: "BravesRide",
+    createdAt: "2025-01-01T00:00:00Z",
+    description:
+      "Student‑centric ride‑sharing PWA for the UNCP community. BravesRide matches BraveMail‑verified student drivers with riders to close the transportation gap around Pembroke with secure, campus‑only mobility.",
+    url: "https://www.youtube.com/watch?v=2c-1qmQqZgY",
+  };
 
   const timeline = [
     {
@@ -209,6 +212,7 @@ export default function Projects(props) {
               {devpostFeatured.map((p) => (
                 <DevpostCard key={p.id} project={p} />
               ))}
+              <DevpostCard project={bravesRide} key={bravesRide.id} />
             </div>
           </section>
         </Fade>
