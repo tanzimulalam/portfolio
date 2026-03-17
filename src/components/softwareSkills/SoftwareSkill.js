@@ -35,14 +35,25 @@ class SoftwareSkill extends React.Component {
                         data-inline="false"
                       ></span>
                     )}
-                    {!logo.fontAwesomeClassname && logo.imageSrc && (
+                    {!logo.fontAwesomeClassname && logo.imageUrl && (
                       <img
                         className="skill-image"
                         style={logo.style}
-                        src={`${process.env.PUBLIC_URL}/skills/${logo.imageSrc}`}
+                        src={logo.imageUrl}
                         alt={logo.skillName}
+                        loading="lazy"
                       />
                     )}
+                    {!logo.fontAwesomeClassname &&
+                      !logo.imageUrl &&
+                      logo.imageSrc && (
+                        <img
+                          className="skill-image"
+                          style={logo.style}
+                          src={`${process.env.PUBLIC_URL}/skills/${logo.imageSrc}`}
+                          alt={logo.skillName}
+                        />
+                      )}
                   </li>
                 </OverlayTrigger>
               );

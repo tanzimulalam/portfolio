@@ -87,7 +87,9 @@ const skills = {
         },
         {
           skillName: "STIX",
-          fontAwesomeClassname: "simple-icons:stix",
+          fontAwesomeClassname: "",
+          imageUrl:
+            "https://www.oasis-open.org/wp-content/uploads/2020/11/sTIX.png",
           style: {
             backgroundColor: "transparent",
             color: "#FF6B35",
@@ -186,7 +188,7 @@ const skills = {
         },
         {
           skillName: "Java",
-          fontAwesomeClassname: "simple-icons:java",
+          fontAwesomeClassname: "logos:java",
           style: {
             backgroundColor: "transparent",
             color: "#ED8B00",
