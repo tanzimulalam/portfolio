@@ -77,10 +77,28 @@ export default function Greeting(props) {
                 {greeting.subTitle}
               </p>
               <SocialMedia theme={theme} />
-              {/* <div className="button-greeting-div">
-              <Button text="Contact me" href="#contact" />
-              <Button text="See my resume" newTab={true} href={greeting.resumeLink} />
-            </div> */}
+              {/* Primary hero actions */}
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <div className="button-greeting-div">
+                <a
+                  className="main-button"
+                  href="/contact-me"
+                  style={{ textDecoration: "none" }}
+                >
+                  Contact Me
+                </a>
+                {greeting.resumeLink && (
+                  <a
+                    className="ghost-main-button"
+                    href={greeting.resumeLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    View Resume
+                  </a>
+                )}
+              </div>
             </div>
           </div>
           <div className="greeting-image-div">

@@ -24,6 +24,29 @@
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
   background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
+.ghost-main-button {
+  background: transparent;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  color: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  width: max-content;
+  padding: 11px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Google Sans Regular";
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ghost-main-button:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
 .project-button {
   display: flex;
   justify-content: center;
