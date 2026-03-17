@@ -6,9 +6,7 @@
 
 .contactme-body {
   flex: 1;
-  display: flex;
-  align-items: stretch;
-  justify-content: flex-start;
+  display: block;
   padding: 4rem 5% 3rem;
 }
 
@@ -50,15 +48,18 @@
 
 .contactme-title {
   font-size: clamp(2.4rem, 3vw, 2.9rem);
-  font-weight: 800;
+  font-family: "Agustina Regular";
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
 .contactme-handle {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   opacity: 0.9;
-  margin-top: 0.25rem;
+  margin-top: 0.65rem;
 }
 
 .contactme-subtitle {
