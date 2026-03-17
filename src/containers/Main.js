@@ -5,6 +5,7 @@ import Splash from "../pages/splash/Splash";
 import Experience from "../pages/experience/Experience";
 import Achievements from "../pages/achievements/Achievements";
 import Projects from "../pages/projects/Projects";
+import ContactMe from "../pages/contactMe/ContactMe";
 import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
 
@@ -52,6 +53,12 @@ export default class Main extends Component {
           <Route
             path="/projects"
             render={(props) => <Projects {...props} theme={this.props.theme} />}
+          />
+          <Route
+            path="/contact-me"
+            render={(props) => (
+              <ContactMe {...props} theme={this.props.theme} />
+            )}
           />
           <Route
             path="*"

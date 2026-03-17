@@ -25,7 +25,7 @@ const greeting = {
   subTitle:
     "Cybersecurity professional and researcher specializing in security operations, threat intelligence, machine learning, and data science. Passionate about developing innovative solutions for cybersecurity challenges.",
   resumeLink: "",
-  portfolio_repository: "https://github.com/tanzimulalam/masterPortfolio",
+  portfolio_repository: "https://github.com/tanzimulalam/portfolio",
   githubProfile: "https://github.com/tanzimulalam",
 };
 
@@ -321,7 +321,7 @@ const competitiveSites = {
       style: {
         color: "#5B4638",
       },
-      profileLink: "https://www.codechef.com/users/ashutosh_1919",
+      profileLink: "",
     },
     {
       siteName: "Codeforces",
@@ -337,7 +337,7 @@ const competitiveSites = {
       style: {
         color: "#323754",
       },
-      profileLink: "https://www.hackerearth.com/@ashutosh391",
+      profileLink: "",
     },
     {
       siteName: "Kaggle",
@@ -623,7 +623,7 @@ const publications = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "animated_ashutosh.png",
+    profile_image_path: "animated_profile.png",
     description:
       "I am available for opportunities in cybersecurity, machine learning, and data science. Feel free to reach out via email or LinkedIn. I typically respond within 24 hours. I can help with cybersecurity analysis, threat intelligence, ML/AI projects, and research collaborations.",
   },
