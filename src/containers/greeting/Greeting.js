@@ -92,7 +92,7 @@ export default function Greeting(props) {
                     className="ghost-main-button"
                     href={greeting.resumeLink}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     style={{ textDecoration: "none" }}
                   >
                     View Resume
