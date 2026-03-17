@@ -5,7 +5,7 @@ import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
 import FeelingProud from "./FeelingProud";
 import HeroScene from "../../components/heroScene/HeroScene";
-import anime from "animejs";
+import { animate, createTimeline, stagger } from "animejs";
 
 export default function Greeting(props) {
   const theme = props.theme;
@@ -13,17 +13,15 @@ export default function Greeting(props) {
   React.useEffect(() => {
     // Anime.js hero intro (lightweight, runs once)
     const t = setTimeout(() => {
-      anime
-        .timeline({ easing: "easeOutExpo" })
-        .add({
-          targets: ".greeting-text",
-          translateY: [18, 0],
-          opacity: [0, 1],
-          duration: 700,
-        })
+      const tl = createTimeline({ defaults: { easing: "easeOutExpo" } });
+      tl.add(".greeting-text", {
+        translateY: [18, 0],
+        opacity: [0, 1],
+        duration: 700,
+      })
         .add(
+          ".greeting-nickname",
           {
-            targets: ".greeting-nickname",
             translateY: [12, 0],
             opacity: [0, 1],
             duration: 550,
@@ -31,24 +29,22 @@ export default function Greeting(props) {
           "-=420"
         )
         .add(
+          ".greeting-text-p",
           {
-            targets: ".greeting-text-p",
             translateY: [10, 0],
             opacity: [0, 1],
             duration: 550,
           },
           "-=420"
-        )
-        .add(
-          {
-            targets: ".social-media-div a",
-            translateY: [8, 0],
-            opacity: [0, 1],
-            delay: anime.stagger(70),
-            duration: 450,
-          },
-          "-=380"
         );
+
+      animate(".social-media-div a", {
+        translateY: [8, 0],
+        opacity: [0, 1],
+        delay: stagger(70),
+        duration: 450,
+        easing: "easeOutExpo",
+      });
     }, 60);
 
     return () => clearTimeout(t);
