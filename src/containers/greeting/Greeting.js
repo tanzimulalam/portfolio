@@ -6,6 +6,7 @@ import { Fade } from "react-reveal";
 import FeelingProud from "./FeelingProud";
 import HeroScene from "../../components/heroScene/HeroScene";
 import { animate, createTimeline, stagger } from "animejs";
+import { Link } from "react-router-dom";
 
 export default function Greeting(props) {
   const theme = props.theme;
@@ -78,15 +79,14 @@ export default function Greeting(props) {
               </p>
               <SocialMedia theme={theme} />
               {/* Primary hero actions */}
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <div className="button-greeting-div">
-                <a
+                <Link
                   className="main-button"
-                  href="/contact-me"
+                  to="/contact-me"
                   style={{ textDecoration: "none" }}
                 >
                   Contact Me
-                </a>
+                </Link>
                 {greeting.resumeLink && (
                   <a
                     className="ghost-main-button"

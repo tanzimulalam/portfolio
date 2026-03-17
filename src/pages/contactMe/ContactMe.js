@@ -7,6 +7,7 @@ import "./ContactMe.css";
 
 function ContactMe(props) {
   const { theme } = props;
+  const avatar = require("../../assets/images/animated_profile.png");
 
   const handleEmailClick = () => {
     window.location.href = "mailto:fahim.communicate@gmail.com";
@@ -41,32 +42,57 @@ function ContactMe(props) {
                 just to say hi.
               </p>
 
-              <button
-                className="contactme-email-button"
-                onClick={handleEmailClick}
-              >
-                <span>Send an email</span>
-              </button>
+              <div className="contactme-actions">
+                <button
+                  className="contactme-email-button"
+                  onClick={handleEmailClick}
+                >
+                  <span>Send an email</span>
+                </button>
+                <p
+                  className="contactme-email-hint"
+                  style={{ color: theme.secondaryText }}
+                >
+                  fahim.communicate@gmail.com
+                </p>
+              </div>
             </div>
 
             <div className="contactme-hero-right">
-              <div className="contactme-orbit">
-                <div className="contactme-orbit-ring contactme-orbit-ring-1" />
-                <div className="contactme-orbit-ring contactme-orbit-ring-2" />
-                <div className="contactme-orbit-ring contactme-orbit-ring-3" />
-                <div className="contactme-orbit-core">
-                  <img
-                    src="/icons/desc.png"
-                    alt="Tanzimul Alam Fahim illustration"
-                    className="contactme-avatar"
-                  />
+              <div className="contactme-card">
+                <div className="contactme-card-top">
+                  <div className="contactme-avatar-wrap" aria-hidden="true">
+                    <img
+                      src={avatar}
+                      alt="Tanzimul Alam Fahim"
+                      className="contactme-avatar"
+                    />
+                  </div>
+                  <div className="contactme-card-glow" aria-hidden="true" />
                 </div>
-              </div>
-              <div className="contactme-mail-float">
-                <img
-                  src={require("../../assets/images/contactMail.png")}
-                  alt="Contact mail"
-                />
+                <div className="contactme-card-bottom">
+                  <div className="contactme-mail-row">
+                    <img
+                      src={require("../../assets/images/contactMail.png")}
+                      alt=""
+                      className="contactme-mail-icon"
+                    />
+                    <div className="contactme-mail-text">
+                      <div
+                        className="contactme-mail-title"
+                        style={{ color: theme.text }}
+                      >
+                        Email
+                      </div>
+                      <div
+                        className="contactme-mail-value"
+                        style={{ color: theme.secondaryText }}
+                      >
+                        fahim.communicate@gmail.com
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>

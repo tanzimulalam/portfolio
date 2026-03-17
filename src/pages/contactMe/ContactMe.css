@@ -22,16 +22,17 @@
   gap: 3rem;
   background: radial-gradient(
       circle at 0% 0%,
-      rgba(92, 225, 230, 0.16),
-      transparent 52%
+      rgba(92, 225, 230, 0.18),
+      transparent 55%
     ),
     radial-gradient(
       circle at 100% 100%,
       rgba(179, 127, 235, 0.18),
-      transparent 55%
+      transparent 60%
     ),
-    linear-gradient(135deg, #050816, #080f21);
-  box-shadow: 0 32px 80px rgba(5, 8, 22, 0.6);
+    linear-gradient(180deg, #ffffff, #f7f9ff);
+  border: 1px solid rgba(16, 24, 40, 0.08);
+  box-shadow: 0 24px 60px rgba(16, 24, 40, 0.12);
 }
 
 .contactme-hero-left {
@@ -67,8 +68,21 @@
   max-width: 32rem;
 }
 
-.contactme-email-button {
+.contactme-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   margin-top: 2.2rem;
+  flex-wrap: wrap;
+}
+
+.contactme-email-hint {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.contactme-email-button {
   padding: 0.9rem 1.9rem;
   border-radius: 999px;
   border: none;
@@ -79,7 +93,7 @@
   font-size: 0.88rem;
   color: #050816;
   background: linear-gradient(135deg, #5ce1e6, #b37feb);
-  box-shadow: 0 14px 30px rgba(92, 225, 230, 0.35);
+  box-shadow: 0 14px 30px rgba(92, 225, 230, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
@@ -101,72 +115,104 @@
   justify-content: center;
 }
 
-.contactme-orbit {
+.contactme-card {
   position: relative;
-  width: 260px;
-  height: 260px;
-}
-
-.contactme-orbit-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  animation: contactme-orbit-pulse 8s ease-in-out infinite;
-}
-
-.contactme-orbit-ring-2 {
-  inset: 16px;
-  animation-delay: 0.4s;
-}
-
-.contactme-orbit-ring-3 {
-  inset: 30px;
-  animation-delay: 0.8s;
-}
-
-.contactme-orbit-core {
-  position: absolute;
-  inset: 42px;
-  border-radius: 999px;
+  width: min(360px, 100%);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(16, 24, 40, 0.08);
+  box-shadow: 0 22px 50px rgba(16, 24, 40, 0.14);
   overflow: hidden;
-  background: radial-gradient(circle at 30% 20%, #ffffff, #ceeaff);
-  box-shadow: 0 24px 52px rgba(5, 8, 22, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+.contactme-card-top {
+  position: relative;
+  padding: 26px 26px 18px;
+}
+
+.contactme-card-glow {
+  position: absolute;
+  inset: -60px;
+  background: radial-gradient(
+      circle at 30% 20%,
+      rgba(92, 225, 230, 0.35),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(179, 127, 235, 0.35),
+      transparent 50%
+    );
+  filter: blur(20px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.contactme-avatar-wrap {
+  width: 176px;
+  height: 176px;
+  border-radius: 999px;
+  margin: 0 auto;
+  padding: 8px;
+  background: linear-gradient(
+    135deg,
+    rgba(92, 225, 230, 0.55),
+    rgba(179, 127, 235, 0.55)
+  );
+  box-shadow: 0 18px 40px rgba(16, 24, 40, 0.18);
+  position: relative;
+  z-index: 1;
 }
 
 .contactme-avatar {
   width: 100%;
   height: 100%;
+  border-radius: 999px;
+  overflow: hidden;
   object-fit: cover;
   transform-origin: center center;
   animation: contactme-avatar-float 7s ease-in-out infinite;
 }
 
-.contactme-mail-float {
-  position: absolute;
-  right: -22px;
-  bottom: 18px;
-  width: 120px;
-  filter: drop-shadow(0 18px 40px rgba(5, 8, 22, 0.85));
-  animation: contactme-mail-bob 6s ease-in-out infinite;
+.contactme-card-bottom {
+  padding: 0 26px 26px;
 }
 
-.contactme-mail-float img {
-  width: 100%;
-  height: auto;
+.contactme-mail-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(16, 24, 40, 0.06);
 }
 
-@keyframes contactme-orbit-pulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.04);
-    opacity: 1;
-  }
+.contactme-mail-icon {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(92, 225, 230, 0.22),
+    rgba(179, 127, 235, 0.18)
+  );
+  border: 1px solid rgba(16, 24, 40, 0.06);
+  box-sizing: border-box;
+}
+
+.contactme-mail-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.1;
+}
+
+.contactme-mail-value {
+  margin-top: 4px;
+  font-size: 0.92rem;
+  word-break: break-word;
 }
 
 @keyframes contactme-avatar-float {
@@ -176,16 +222,6 @@
   }
   50% {
     transform: translateY(-10px);
-  }
-}
-
-@keyframes contactme-mail-bob {
-  0%,
-  100% {
-    transform: translateY(0px) translateX(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-12px) translateX(-6px) rotate(-2deg);
   }
 }
 
@@ -218,8 +254,7 @@
     font-size: 0.95rem;
   }
 
-  .contactme-orbit {
-    width: 220px;
-    height: 220px;
+  .contactme-card {
+    width: min(420px, 100%);
   }
 }
