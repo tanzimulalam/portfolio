@@ -11,6 +11,11 @@ export default function Greeting(props) {
     <Fade bottom duration={2000} distance="40px">
       <div className="greet-main" id="greeting">
         <div className="greeting-main">
+          <div className="hero-blobs" aria-hidden="true">
+            <span className="hero-blob hero-blob-1" />
+            <span className="hero-blob hero-blob-2" />
+            <span className="hero-blob hero-blob-3" />
+          </div>
           <div className="greeting-text-div">
             <div>
               <h1 className="greeting-text" style={{ color: theme.text }}>

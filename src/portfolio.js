@@ -698,7 +698,8 @@ const achievements = {
           title: "Global Affairs Deputy Head",
           organization: "English Olympiad Global",
           organization_url: "",
-          logo_path: "english_olympiad_logo.png",
+          logo_path:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgYcwEzBvZvnq6MWU2LaWIGKgKu9mWadE5bw&s",
           duration: "",
           location: "Global",
           description:
@@ -709,7 +710,8 @@ const achievements = {
           title: "National Event Coordinator",
           organization: "Coding Olympiad Global",
           organization_url: "",
-          logo_path: "coding_olympiad_logo.png",
+          logo_path:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmZESpQwieBzQkhPq_I2JHIiss1clbEpL8QQ&s",
           duration: "2021",
           location: "Bangladesh",
           description:
@@ -720,7 +722,8 @@ const achievements = {
           title: "Convenor & Country Ambassador (BANGLADESH)",
           organization: "Worldwide Organization for Charity (WOC)",
           organization_url: "",
-          logo_path: "woc_logo.png",
+          logo_path:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLD_3SLpXK_gDGCic6orAQmZRJkYq6I6ISBg&s",
           duration: "",
           location: "Bangladesh",
           description:
@@ -732,7 +735,8 @@ const achievements = {
           organization:
             "Workplace Skill Development Academy New Zealand (WSDA NZ)",
           organization_url: "",
-          logo_path: "wsda_logo.png",
+          logo_path:
+            "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/163239651_381325526494841_4179118879986352282_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=bllAcrjcMKQQ7kNvwEpBR9v&_nc_oc=Adkt1skpIzqJekAuwFB7-JStCA_L9PCC8jDn0fMfkkj-y4SJc76MlV9a12oRMsHMnNXmJXe97AOuOHpx8OijmmBa&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=AbLh-LQOEjToSxWCZFd3EQ&_nc_ss=8&oh=00_AfyK3m76TNU_NcfJQvwg7iJ2H0dR290GYAzPaBUBIXrQ2w&oe=69E05FDD",
           duration: "2020",
           location: "Bangladesh",
           description:
@@ -743,7 +747,8 @@ const achievements = {
           title: "Delegate of Japan",
           organization: "HIS Model United Nations 2019",
           organization_url: "",
-          logo_path: "mun_logo.png",
+          logo_path:
+            "https://i2.wp.com/oehowl.org/wp-content/uploads/2021/02/Model-UN-Logo.jpg?fit=698%2C600&ssl=1",
           duration: "2019",
           location: "Bangladesh",
           description:
@@ -759,7 +764,8 @@ const achievements = {
           title: "Worlds Largest Crop Field Mosaic Art",
           organization: "National Implementation Committee of Bangabandhu 100",
           organization_url: "",
-          logo_path: "guinness_logo.png",
+          logo_path:
+            "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Guinness_World_Records_logo.svg/1280px-Guinness_World_Records_logo.svg.png",
           duration: "",
           location: "Bangladesh",
           description:

@@ -22,6 +22,7 @@
 }
 
 .greeting-main {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,6 +32,63 @@
   padding: 40px 40px 32px;
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.15);
   backdrop-filter: blur(24px);
+  overflow: hidden;
+}
+
+.hero-blobs {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-blob {
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  border-radius: 999px;
+  filter: blur(36px);
+  opacity: 0.55;
+  animation: blobFloat 10s ease-in-out infinite;
+  mix-blend-mode: multiply;
+}
+
+.hero-blob-1 {
+  left: 0%;
+  top: 0%;
+  background: radial-gradient(circle at 30% 30%, #a6e1fa, transparent 60%);
+}
+
+.hero-blob-2 {
+  right: 5%;
+  top: 10%;
+  background: radial-gradient(circle at 30% 30%, #be95c4, transparent 60%);
+  animation-delay: -3s;
+}
+
+.hero-blob-3 {
+  left: 15%;
+  bottom: -5%;
+  background: radial-gradient(circle at 30% 30%, #ffba08, transparent 60%);
+  animation-delay: -6s;
+}
+
+.greeting-text-div,
+.greeting-image-div {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes blobFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(28px, -24px, 0) scale(1.06);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 
 .greeting-main > * {
