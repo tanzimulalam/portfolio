@@ -104,7 +104,8 @@ const skills = {
         },
         {
           skillName: "Cryptography",
-          fontAwesomeClassname: "fa-shield-alt",
+          fontAwesomeClassname: "",
+          imageUrl: "https://cdn-icons-png.flaticon.com/512/8948/8948693.png",
           style: {
             backgroundColor: "transparent",
             color: "#FFD700",
@@ -276,7 +277,9 @@ const skills = {
         },
         {
           skillName: "MATLAB",
-          fontAwesomeClassname: "simple-icons:matlab",
+          fontAwesomeClassname: "",
+          imageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/330px-Matlab_Logo.png",
           style: {
             color: "#0076A8",
           },
