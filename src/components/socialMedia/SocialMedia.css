@@ -27,6 +27,18 @@
   margin-bottom: 10px;
 }
 
+.social-icon-img {
+  border-radius: 2.6rem;
+  cursor: pointer;
+  display: inline-block;
+  height: 2.6rem;
+  width: 2.6rem;
+  padding: 0.55rem;
+  margin: 0 5px 10px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
 /* .facebook i {
   background-color: #3b5998;
 }
