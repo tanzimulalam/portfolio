@@ -9,6 +9,9 @@ import "./Projects.css";
 const DEVPOST_PROFILE_URL = "https://devpost.com/fahim5898";
 
 function DevpostCard({ project }) {
+  const year = new Date(project.createdAt).getFullYear();
+  const sourceLabel = project.source || "Devpost";
+
   return (
     <a
       className="projects-devpost-card"
@@ -18,10 +21,8 @@ function DevpostCard({ project }) {
     >
       <div className="projects-devpost-card-top">
         <div className="projects-devpost-meta">
-          <div className="projects-devpost-pill">Devpost</div>
-          <div className="projects-devpost-date">
-            {new Date(project.createdAt).getFullYear()}
-          </div>
+          <div className="projects-devpost-pill">{sourceLabel}</div>
+          <div className="projects-devpost-date">{year}</div>
         </div>
         <div className="projects-devpost-title">{project.name}</div>
         <div className="projects-devpost-desc">{project.description}</div>
@@ -66,6 +67,7 @@ export default function Projects(props) {
     description:
       "Student‑centric ride‑sharing PWA for the UNCP community. BravesRide matches BraveMail‑verified student drivers with riders to close the transportation gap around Pembroke with secure, campus‑only mobility.",
     url: "https://www.youtube.com/watch?v=2c-1qmQqZgY",
+    source: "Watch Demo",
   };
 
   const timeline = [
