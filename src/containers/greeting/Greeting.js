@@ -4,13 +4,61 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
 import FeelingProud from "./FeelingProud";
+import HeroScene from "../../components/heroScene/HeroScene";
+import anime from "animejs/lib/anime.es.js";
 
 export default function Greeting(props) {
   const theme = props.theme;
+
+  React.useEffect(() => {
+    // Anime.js hero intro (lightweight, runs once)
+    const t = setTimeout(() => {
+      anime
+        .timeline({ easing: "easeOutExpo" })
+        .add({
+          targets: ".greeting-text",
+          translateY: [18, 0],
+          opacity: [0, 1],
+          duration: 700,
+        })
+        .add(
+          {
+            targets: ".greeting-nickname",
+            translateY: [12, 0],
+            opacity: [0, 1],
+            duration: 550,
+          },
+          "-=420"
+        )
+        .add(
+          {
+            targets: ".greeting-text-p",
+            translateY: [10, 0],
+            opacity: [0, 1],
+            duration: 550,
+          },
+          "-=420"
+        )
+        .add(
+          {
+            targets: ".social-media-div a",
+            translateY: [8, 0],
+            opacity: [0, 1],
+            delay: anime.stagger(70),
+            duration: 450,
+          },
+          "-=380"
+        );
+    }, 60);
+
+    return () => clearTimeout(t);
+  }, []);
+
   return (
     <Fade bottom duration={2000} distance="40px">
       <div className="greet-main" id="greeting">
         <div className="greeting-main">
+          <HeroScene />
           <div className="hero-blobs" aria-hidden="true">
             <span className="hero-blob hero-blob-1" />
             <span className="hero-blob hero-blob-2" />
