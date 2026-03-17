@@ -5,7 +5,7 @@ import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
 import FeelingProud from "./FeelingProud";
 import HeroScene from "../../components/heroScene/HeroScene";
-import anime from "animejs/lib/anime.es.js";
+import anime from "animejs";
 
 export default function Greeting(props) {
   const theme = props.theme;
