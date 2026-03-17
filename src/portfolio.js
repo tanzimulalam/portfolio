@@ -42,13 +42,6 @@ const socialMediaLinks = [
     fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
     backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
   },
-  {
-    name: "Devpost",
-    link: "https://devpost.com/fahim5898",
-    iconUrl: "https://www.svgrepo.com/show/330293/devpost.svg",
-    fontAwesomeIcon: "fa-code", // fallback if iconUrl fails
-    backgroundColor: "#003E52", // Devpost brand color
-  },
 ];
 
 const skills = {
