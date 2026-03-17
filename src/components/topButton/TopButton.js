@@ -7,20 +7,24 @@ export default function TopButton({ theme }) {
     document.documentElement.scrollTop = 0;
   }
 
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 30 ||
-      document.documentElement.scrollTop > 30
-    ) {
-      document.getElementById("topButton").style.visibility = "visible";
-    } else {
-      document.getElementById("topButton").style.visibility = "hidden";
-    }
-  }
+  React.useEffect(() => {
+    const scrollFunction = () => {
+      const el = document.getElementById("topButton");
+      if (!el) return;
+      if (
+        document.body.scrollTop > 30 ||
+        document.documentElement.scrollTop > 30
+      ) {
+        el.style.visibility = "visible";
+      } else {
+        el.style.visibility = "hidden";
+      }
+    };
 
-  window.onscroll = function () {
+    window.addEventListener("scroll", scrollFunction, { passive: true });
     scrollFunction();
-  };
+    return () => window.removeEventListener("scroll", scrollFunction);
+  }, []);
 
   const onMouseEnter = (color, bgColor) => {
     /* For the button */

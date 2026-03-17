@@ -71,26 +71,17 @@ function ContactMe(props) {
                   <div className="contactme-card-glow" aria-hidden="true" />
                 </div>
                 <div className="contactme-card-bottom">
-                  <div className="contactme-mail-row">
-                    <img
-                      src={require("../../assets/images/contactMail.png")}
-                      alt=""
-                      className="contactme-mail-icon"
-                    />
-                    <div className="contactme-mail-text">
-                      <div
-                        className="contactme-mail-title"
-                        style={{ color: theme.text }}
-                      >
-                        Email
-                      </div>
-                      <div
-                        className="contactme-mail-value"
-                        style={{ color: theme.secondaryText }}
-                      >
-                        fahim.communicate@gmail.com
-                      </div>
-                    </div>
+                  <div
+                    className="contactme-tagline"
+                    style={{ color: theme.text }}
+                  >
+                    Cybersecurity Researcher
+                  </div>
+                  <div
+                    className="contactme-tagline-sub"
+                    style={{ color: theme.secondaryText }}
+                  >
+                    Cyber Threat Intelligence
                   </div>
                 </div>
               </div>
