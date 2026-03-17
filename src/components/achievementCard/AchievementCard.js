@@ -120,6 +120,37 @@ class AchievementCard extends Component {
                 <div className="repo-description" />
                 {achievement["description"]}
               </div>
+              {Array.isArray(achievement.links) &&
+                achievement.links.length > 0 && (
+                  <div
+                    style={{
+                      marginTop: 16,
+                      display: "flex",
+                      gap: 10,
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    {achievement.links.map((l, idx) => (
+                      <a
+                        key={`${l.url}-${idx}`}
+                        href={l.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          padding: "8px 12px",
+                          borderRadius: 999,
+                          textDecoration: "none",
+                          fontSize: 13,
+                          fontFamily: "Google Sans Medium",
+                          background: theme.highlight,
+                          color: theme.text,
+                        }}
+                      >
+                        {l.label || "Link"}
+                      </a>
+                    ))}
+                  </div>
+                )}
             </div>
           </Fade>
         </div>

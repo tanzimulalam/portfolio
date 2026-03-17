@@ -359,11 +359,11 @@ const degrees = {
       subtitle: "Bachelor of Science: Cybersecurity",
       logo_path: "uncp_logo.png",
       alt_name: "UNCP",
-      duration: "2019 - 2024",
+      duration: "2025",
       descriptions: [
-        "⚡ Dean's List recipient with Honors Scholar Fellowship, Chancellor's Honor List, National Honors Society, and Pembroke Scholar recognition",
-        "⚡ Focused on cybersecurity fundamentals, network security, threat detection, and incident response",
-        "⚡ Active in research and leadership roles, contributing to multiple research projects and student organizations",
+        "⚡ Cum Laude — Honors Scholar Fellowship, Chancellor's Honor List, National Honors Society",
+        "⚡ Pembroke Scholar (2023, 2024, 2025)",
+        "⚡ Focused on cybersecurity, application security, incident response, and secure identity research",
       ],
       website_link: "https://www.uncp.edu/",
     },
@@ -429,7 +429,7 @@ const experience = {
           duration: "Jan 2024 – Sep 2025",
           location: "Pembroke, NC",
           description:
-            "Proactively investigated and conducted vulnerability assessments, executed security tests, and analyzed systems to detect irregularities that may indicate potential threats using security tools like Splunk, Microsoft Defender, Cisco Anti-Malware Protection, Umbrella, and PhishER.",
+            "Proactively conducted vulnerability analysis and security operations in Splunk, Microsoft Defender, Cisco AMP, Umbrella, and PhishER, triaging alerts and performing incident response workflows to detect and mitigate threats.",
           color: "#003366",
         },
         {
@@ -441,7 +441,7 @@ const experience = {
           duration: "Aug 2024 – May 2025",
           location: "Pembroke, NC",
           description:
-            "Assisted in Applied Cryptography course through syllabus development, assignment design, and student support. Created and distributed marketing emails for the department to share cybersecurity resources, news, and opportunities. This initiative encouraged involvement in cybersecurity activities, promoted events, and fostered a collaborative environment. Kept the department's website updated to ensure that information was current and relevant for students and visitors.",
+            "Assisted in Applied Cryptography and application security courses through syllabus development, assignment design, and student support. Created and distributed departmental marketing emails showcasing cybersecurity resources and events, improving engagement in security workshops and initiatives. Kept the department website updated so information stayed current for students and visitors.",
           color: "#003366",
         },
         {
@@ -465,7 +465,7 @@ const experience = {
           duration: "Jan 2024 – May 2025",
           location: "Pembroke, NC",
           description:
-            "Researched and enhanced Mobile Driver's License (mDL) architecture, focusing on security, privacy, interoperability, and user experience. Analyzed 100+ studies on digital identity, cryptographic protocols, and mobile security to identify research gaps and propose innovations. Investigated scalable, secure mDL architectures, including blockchain, biometric authentication, and various communication protocols (NFC, Bluetooth, QR codes).",
+            "Researched and enhanced Mobile Driver's License (mDL) architecture focused on secure identity management, privacy, and interoperability. Analyzed 100+ studies on digital identity, cryptographic protocols, and mobile security to identify research gaps and propose innovations. Investigated scalable, secure mDL architectures including blockchain, biometric authentication, and communication protocols (NFC, Bluetooth, QR codes).",
           color: "#003366",
         },
         {
@@ -474,7 +474,7 @@ const experience = {
           company_url: "https://www.uncp.edu/",
           logo_path:
             "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
-          duration: "Jan 2024 – April 2025",
+          duration: "Jan 2024 – Apr 2025",
           location: "Pembroke, NC",
           description:
             "Managed field & administrative responsibilities and ensured a harmonious living environment of 577 residents.",
@@ -521,7 +521,7 @@ const experience = {
           company_url: "https://www.uncp.edu/",
           logo_path:
             "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
-          duration: "Aug 2022 - Dec 2022",
+          duration: "",
           location: "Pembroke, NC",
           description:
             "Attended NC-PaCE Symposium, gaining insights into cybersecurity trends and initiatives in NC. Organized monthly programming competitions in collaboration with ACM Chapter at UNCP.",
@@ -533,7 +533,7 @@ const experience = {
           company_url: "https://www.uncp.edu/",
           logo_path:
             "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
-          duration: "Aug 2021 - Dec 2022",
+          duration: "Aug 2024 – Dec 2025",
           location: "Pembroke, NC",
           description:
             "Coordinated logistics, sponsorships management, industry engagement, and participant engagement for the hackathon.",
@@ -545,7 +545,7 @@ const experience = {
           company_url: "https://www.uncp.edu/",
           logo_path:
             "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
-          duration: "Aug 2021 - Aug 2022",
+          duration: "Aug 2024 – Aug 2025",
           location: "Pembroke, NC",
           description:
             "Organized and led committee initiatives, fostering collaboration among members and leadership to strengthen the organization.",
@@ -558,23 +558,10 @@ const experience = {
           company_url: "https://www.uncp.edu/",
           logo_path:
             "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
-          duration: "Jan 2021 - April 2022",
+          duration: "Jan 2024 – Apr 2025",
           location: "Pembroke, NC",
           description:
             "Oversaw the election process, ensuring transparency, fairness, and increased student involvement.",
-          color: "#003366",
-        },
-        {
-          title:
-            "Industry Relations Officer, Artificial Intelligence @ UNCP Club",
-          company: "UNCP",
-          company_url: "https://www.uncp.edu/",
-          logo_path:
-            "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
-          duration: "Jan 2021 - Aug 2021",
-          location: "Pembroke, NC",
-          description:
-            "Built partnerships with industry leaders to support AI learning opportunities, workshops, and career pathways for students.",
           color: "#003366",
         },
       ],
@@ -676,6 +663,37 @@ const achievements = {
     {
       title: "National & International Events",
       achievements: [
+        {
+          title:
+            "Team Lead of Operations — BRACU Dichari (European Robotics League 2022)",
+          organization: "BRACU Dichari Robotics Team",
+          organization_url:
+            "https://www.tbsnews.net/features/pursuit/bracu-dichari-bangladeshi-robotics-team-world-stage-479498",
+          logo_path:
+            "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/277748940_124007493541864_7622640440864708500_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=nbTvOVGH-LsQ7kNvwFnS5Rh&_nc_oc=Adk0HV_xVIGhx1QoA6otgQ3zkUnl4rX3uIDG8SMoSOaapNzaWzJVODnDnbNOc4pE_570EsHXi3rk7M7qeOY1aY-n&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=YqhE0n7yunpueFtWzmMC6A&_nc_ss=8&oh=00_Afy3M1BUo1-dDe219fHCz3MaI7TgBbRqjXLWBCK7SOh2Vg&oe=69BEB71B",
+          duration: "2022",
+          location: "Aero Klub Poznań, Poland",
+          description:
+            "Led operations for the BRACU Dichari robotics team at European Robotics League (ERL) 2022 — first Asian team to reach the final round; won the Perseverance Award and placed Top 5.",
+          color: "#1E88E5",
+          links: [
+            {
+              label: "News (TBS)",
+              url:
+                "https://www.tbsnews.net/features/pursuit/bracu-dichari-bangladeshi-robotics-team-world-stage-479498",
+            },
+            {
+              label: "News (The Daily Star)",
+              url:
+                "https://online.thedailystar.net/tech-startup/news/team-brac-university-makes-it-the-top-5-the-european-robotics-league-3019991",
+            },
+            {
+              label: "Team photo",
+              url:
+                "https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2022/08/18/img-20220705-wa0006.jpg",
+            },
+          ],
+        },
         {
           title: "Global Affairs Deputy Head",
           organization: "English Olympiad Global",
