@@ -1,53 +1,85 @@
 .main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 32px 16px;
+  margin: 0 auto;
   margin-top: 4rem;
 }
+
 .greet-main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 32px 16px;
+  margin: 0 auto;
   margin-top: 2rem;
 }
 
 .gretting-main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 32px 16px;
+  margin: 0 auto;
 }
 
 .greeting-main {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 32px;
+  padding: 40px 40px 32px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.15);
+  backdrop-filter: blur(24px);
 }
 
 .greeting-main > * {
   flex: 1;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
+
+.greeting-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .button-greeting-div {
   display: flex;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
 }
 
 .greeting-text {
-  margin-top: 80px;
-  font-size: 70px;
-  line-height: 1.1;
+  margin-top: 0;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   font-family: "Google Sans Bold";
 }
 
 .greeting-nickname {
-  font-size: 30px;
-  line-height: 0px;
+  margin-top: 8px;
+  font-size: 24px;
+  line-height: 1.2;
   font-family: "Google Sans Bold Italic";
+  opacity: 0.9;
 }
 
 .greeting-text-p {
-  font-size: 40px;
-  line-height: 40px;
-  margin-right: 40px;
+  margin-top: 18px;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-right: 0;
   font-family: "Google Sans Medium";
+  opacity: 0.9;
+}
+
+.greeting-image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .greeting-image-div > * {
@@ -58,29 +90,40 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 42px;
   }
   .greeting-text-p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
+
+@media (max-width: 900px) {
+  .greeting-main {
+    flex-direction: column-reverse;
+    padding: 28px 20px 24px;
+    gap: 24px;
+  }
+}
+
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
   }
   .greeting-text {
-    font-size: 30px;
-    margin-top: 0px;
+    font-size: 32px;
     text-align: center;
   }
   .greeting-nickname {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
   }
   .greeting-text-p {
     font-size: 16px;
-    margin-right: 0px;
-    line-height: normal;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .greeting-text-div {
+    align-items: center;
     text-align: center;
   }
   .greeting-main {
