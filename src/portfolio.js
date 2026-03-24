@@ -329,7 +329,7 @@ const competitiveSites = {
       style: {
         color: "#1F8ACB",
       },
-      profileLink: "http://codeforces.com/profile/layman_brother",
+      profileLink: "",
     },
     {
       siteName: "Hackerearth",
