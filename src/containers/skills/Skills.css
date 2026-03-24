@@ -21,6 +21,9 @@
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 20px 52px rgba(15, 23, 42, 0.14);
   backdrop-filter: blur(18px);
+  align-items: center;
+  gap: 28px;
+  flex-direction: row-reverse; /* image on right, text on left like first card */
 }
 
 .skills-main-div > * {
@@ -40,7 +43,7 @@
 }
 
 .skills-text-div {
-  margin-left: 40px;
+  margin-left: 0;
   font-family: "Google Sans Regular";
 }
 
@@ -68,7 +71,7 @@
 
 @media (max-width: 768px) {
   .skills-main-div {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 18px 16px;
   }
 
@@ -97,6 +100,6 @@
   }
 
   .skills-image-div {
-    order: 2;
+    order: 2; /* show image after text on mobile */
   }
 }
