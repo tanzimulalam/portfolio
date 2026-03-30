@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Highlights.css";
 import { Fade } from "react-reveal";
 
 export default function Highlights(props) {
   const { theme } = props;
+  const [isFeedExpanded, setIsFeedExpanded] = useState(false);
 
   const cards = [
     {
@@ -20,20 +21,20 @@ export default function Highlights(props) {
       accent: "#00A896",
       updates: [
         {
-          date: "Mar 30, 2026",
+          date: "Mar 2026",
           text:
             "Became Technical Review Committee (TRC) at the 2026 IEEE 18th International Conference on Computational Intelligence and Communication Networks (CICN).",
         },
         {
-          date: "Feb 21, 2026",
+          date: "Feb 2026",
           text: "Participated in HackUNCP 2026.",
         },
         {
-          date: "Feb 11, 2026",
+          date: "Feb 2026",
           text: "Started working for Vanguard as a Cybersecurity Analyst.",
         },
         {
-          date: "Dec 15, 2025",
+          date: "Dec 2025",
           text: "Graduated from UNC Pembroke with a BS in Cybersecurity.",
         },
         {
@@ -63,6 +64,12 @@ export default function Highlights(props) {
   ];
   const liveFeedCard = cards.find((card) => card.label === "Latest Updates");
   const regularCards = cards.filter((card) => card.label !== "Latest Updates");
+  const updatesToShow =
+    liveFeedCard && liveFeedCard.updates
+      ? isFeedExpanded
+        ? liveFeedCard.updates
+        : liveFeedCard.updates.slice(0, 3)
+      : [];
 
   return (
     <section className="highlights-section" id="highlights">
@@ -82,14 +89,23 @@ export default function Highlights(props) {
             <h3 className="highlight-heading" style={{ color: theme.text }}>
               {liveFeedCard.title}
             </h3>
+            <p className="highlight-feed-subtitle">
+              Fresh milestones, roles, and events
+            </p>
             <p
               className="highlight-body"
               style={{ color: theme.secondaryText }}
             >
               {liveFeedCard.body}
             </p>
-            <ul className="highlight-feed">
-              {liveFeedCard.updates.map((update, updateIndex) => (
+            <ul
+              className={`highlight-feed ${
+                isFeedExpanded
+                  ? "highlight-feed-expanded"
+                  : "highlight-feed-collapsed"
+              }`}
+            >
+              {updatesToShow.map((update, updateIndex) => (
                 <li
                   className="highlight-feed-item"
                   key={`${update.date}-${updateIndex}`}
@@ -104,6 +120,15 @@ export default function Highlights(props) {
                 </li>
               ))}
             </ul>
+            {liveFeedCard.updates.length > 3 ? (
+              <button
+                type="button"
+                className="highlight-feed-toggle"
+                onClick={() => setIsFeedExpanded((prev) => !prev)}
+              >
+                {isFeedExpanded ? "Show less" : "Expand updates"}
+              </button>
+            ) : null}
           </article>
         </Fade>
       ) : null}
