@@ -14,6 +14,39 @@ export default function Highlights(props) {
       accent: "#0E6BA8",
     },
     {
+      label: "Latest Updates",
+      title: "Live Feed",
+      body: "Recent milestones and activities from my cybersecurity journey.",
+      accent: "#00A896",
+      updates: [
+        {
+          date: "Mar 30, 2026",
+          text:
+            "Became Technical Review Committee (TRC) at the 2026 IEEE 18th International Conference on Computational Intelligence and Communication Networks (CICN).",
+        },
+        {
+          date: "Feb 21, 2026",
+          text: "Participated in HackUNCP 2026.",
+        },
+        {
+          date: "Feb 11, 2026",
+          text: "Started working for Vanguard as a Cybersecurity Analyst.",
+        },
+        {
+          date: "Dec 15, 2025",
+          text: "Graduated from UNC Pembroke with a BS in Cybersecurity.",
+        },
+        {
+          date: "Nov 2025",
+          text: "Participated in HackPrinceton 2025.",
+        },
+        {
+          date: "Sep 2025",
+          text: "Elected Vice President of Artificial Intelligence @ UNCP.",
+        },
+      ],
+    },
+    {
       label: "AI & Data Science",
       title: "ML, Knowledge Graphs & Synthetic CTI",
       body:
@@ -53,7 +86,11 @@ export default function Highlights(props) {
             delay={index * 120}
             key={card.label}
           >
-            <article className="highlight-card">
+            <article
+              className={`highlight-card ${
+                card.updates ? "highlight-card-live" : ""
+              }`}
+            >
               <div
                 className="highlight-pill"
                 style={{
@@ -62,6 +99,7 @@ export default function Highlights(props) {
                 }}
               >
                 {card.label}
+                {card.updates ? <span className="highlight-live-dot" /> : null}
               </div>
               <h3 className="highlight-heading" style={{ color: theme.text }}>
                 {card.title}
@@ -74,6 +112,24 @@ export default function Highlights(props) {
               >
                 {card.body}
               </p>
+              {card.updates ? (
+                <ul className="highlight-feed">
+                  {card.updates.map((update, updateIndex) => (
+                    <li
+                      className="highlight-feed-item"
+                      key={`${update.date}-${updateIndex}`}
+                    >
+                      <span className="highlight-feed-date">{update.date}</span>
+                      <p
+                        className="highlight-feed-text"
+                        style={{ color: theme.secondaryText }}
+                      >
+                        {update.text}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </article>
           </Fade>
         ))}
