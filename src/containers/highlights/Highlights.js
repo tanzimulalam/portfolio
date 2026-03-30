@@ -61,9 +61,53 @@ export default function Highlights(props) {
       accent: "#FB8C00",
     },
   ];
+  const liveFeedCard = cards.find((card) => card.label === "Latest Updates");
+  const regularCards = cards.filter((card) => card.label !== "Latest Updates");
 
   return (
     <section className="highlights-section" id="highlights">
+      {liveFeedCard ? (
+        <Fade bottom duration={1600} distance="20px">
+          <article className="highlight-card highlight-card-live highlight-feed-featured">
+            <div
+              className="highlight-pill"
+              style={{
+                background: `${liveFeedCard.accent}15`,
+                color: liveFeedCard.accent,
+              }}
+            >
+              {liveFeedCard.label}
+              <span className="highlight-live-dot" />
+            </div>
+            <h3 className="highlight-heading" style={{ color: theme.text }}>
+              {liveFeedCard.title}
+            </h3>
+            <p
+              className="highlight-body"
+              style={{ color: theme.secondaryText }}
+            >
+              {liveFeedCard.body}
+            </p>
+            <ul className="highlight-feed">
+              {liveFeedCard.updates.map((update, updateIndex) => (
+                <li
+                  className="highlight-feed-item"
+                  key={`${update.date}-${updateIndex}`}
+                >
+                  <span className="highlight-feed-date">{update.date}</span>
+                  <p
+                    className="highlight-feed-text"
+                    style={{ color: theme.secondaryText }}
+                  >
+                    {update.text}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </article>
+        </Fade>
+      ) : null}
+
       <Fade bottom duration={1800} distance="24px">
         <div className="highlights-header">
           <p
@@ -78,7 +122,7 @@ export default function Highlights(props) {
         </div>
       </Fade>
       <div className="highlights-grid">
-        {cards.map((card, index) => (
+        {regularCards.map((card, index) => (
           <Fade
             bottom
             duration={1400}

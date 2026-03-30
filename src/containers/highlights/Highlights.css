@@ -139,6 +139,10 @@
   );
 }
 
+.highlight-feed-featured {
+  margin-bottom: 22px;
+}
+
 .highlight-card-live::after {
   content: "";
   position: absolute;
