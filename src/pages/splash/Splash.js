@@ -2,17 +2,30 @@ import React, { Component } from "react";
 import "./Splash.css";
 import { Redirect } from "react-router-dom";
 import { greeting } from "../../portfolio";
+import CyberIntroScene from "./CyberIntroScene";
+import profileImage from "../../assets/images/animated_profile.png";
 
 function AnimatedSplash(props) {
   return (
     <div className="intro-wrapper">
       <div className="intro-screen" style={{ backgroundColor: "#030303" }}>
+        <CyberIntroScene />
         <div className="intro-content">
+          <div className="intro-avatar-wrap">
+            <img
+              className="intro-avatar"
+              src={profileImage}
+              alt={greeting.title}
+            />
+          </div>
           <div className="intro-lock" aria-hidden="true">
             <span className="intro-lock-shackle" />
             <span className="intro-lock-body" />
           </div>
           <h1 className="intro-name">{greeting.title}</h1>
+          <p className="intro-tagline">
+            Cybersecurity | Threat Intelligence | AI
+          </p>
         </div>
       </div>
     </div>
@@ -28,7 +41,7 @@ class Splash extends Component {
   }
 
   componentDidMount() {
-    this.id = setTimeout(() => this.setState({ redirect: true }), 4200);
+    this.id = setTimeout(() => this.setState({ redirect: true }), 5200);
   }
 
   componentWillUnmount() {
