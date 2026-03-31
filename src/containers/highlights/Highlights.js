@@ -23,6 +23,11 @@ export default function Highlights(props) {
         {
           date: "Mar 2026",
           text:
+            "Reported a Joomla Core security issue that was publicly disclosed and fixed as CVE-2026-21631 (XSS vector in com_associations comparison view).",
+        },
+        {
+          date: "Mar 2026",
+          text:
             "Became Technical Review Committee (TRC) at the 2026 IEEE 18th International Conference on Computational Intelligence and Communication Networks (CICN).",
         },
         {
