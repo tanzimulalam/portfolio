@@ -1,184 +1,91 @@
-.intro-wrapper {
-  height: 100vh;
-  width: 100vw;
-}
-
-.intro-screen {
+.splash-root {
   position: fixed;
   inset: 0;
   z-index: 9999;
+  background: #000000;
   overflow: hidden;
-  display: block;
-  background: radial-gradient(
-      circle at 16% 20%,
-      rgba(0, 183, 255, 0.12),
-      transparent 42%
-    ),
-    radial-gradient(circle at 84% 24%, rgba(255, 0, 111, 0.08), transparent 48%),
-    #030303;
 }
 
-.intro-screen-exit {
-  animation: intro-slide-up 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
-}
-
-.intro-grid {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  align-items: center;
-  gap: 24px;
-  padding: clamp(28px, 4vw, 48px);
-}
-
-.intro-terminal {
-  position: relative;
-  max-width: 920px;
-  background: rgba(6, 14, 22, 0.78);
-  border: 1px solid rgba(66, 173, 255, 0.32);
-  box-shadow: 0 0 40px rgba(0, 106, 255, 0.14),
-    inset 0 0 22px rgba(53, 181, 255, 0.08);
-  border-radius: 16px;
-  padding: clamp(18px, 2vw, 28px);
-  backdrop-filter: blur(3px);
-}
-
-.intro-terminal-line {
-  margin: 0 0 12px;
-  color: #93dfff;
-  font-family: "Consolas", "Courier New", monospace;
-  font-size: clamp(13px, 1.6vw, 18px);
-  text-shadow: 0 0 12px rgba(111, 225, 255, 0.22);
-}
-
-.intro-terminal-line-main {
-  color: #e9f6ff;
-  margin: 6px 0 14px;
-  line-height: 1.12;
-  font-size: clamp(26px, 5vw, 68px);
-  letter-spacing: 0.06em;
-  font-weight: 700;
-}
-
-.intro-terminal-meta {
-  margin-top: 12px;
-  margin-bottom: 0;
-  color: rgba(161, 220, 255, 0.78);
-  font-size: clamp(12px, 1.2vw, 14px);
-}
-
-.intro-caret {
-  display: inline-block;
-  width: 10px;
-  height: 1em;
-  margin-left: 8px;
-  vertical-align: text-bottom;
-  background: #76d9ff;
-  box-shadow: 0 0 10px rgba(118, 217, 255, 0.7);
-  animation: caret-blink 1s steps(1) infinite;
-}
-
-.intro-progress {
-  height: 8px;
-  width: min(96%, 620px);
-  border-radius: 999px;
-  background: rgba(118, 217, 255, 0.15);
-  overflow: hidden;
-  box-shadow: inset 0 0 0 1px rgba(118, 217, 255, 0.2);
-}
-
-.intro-progress-fill {
-  height: 100%;
-  width: 0;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #38bdf8, #22d3ee, #8b5cf6);
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.5);
-  transition: width 180ms linear;
-}
-
-.intro-cyber-scene {
+.splash-binary-canvas {
   position: absolute;
   inset: 0;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 800ms ease;
-}
-
-.intro-cyber-scene canvas {
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
   display: block;
 }
 
-.intro-visual {
-  text-align: center;
-  opacity: 0;
-  transform: translateY(12px) scale(0.98);
-  transition: opacity 700ms ease, transform 700ms ease;
-}
-
-.intro-visual-on {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.intro-screen-globe .intro-cyber-scene {
-  opacity: 0.92;
-}
-
-.intro-avatar-wrap {
-  width: 108px;
-  height: 108px;
-  margin: 0 auto 14px;
-  border-radius: 50%;
-  padding: 3px;
-  background: linear-gradient(135deg, #7dd3fc, #38bdf8 45%, #22d3ee);
-  box-shadow: 0 0 38px rgba(56, 189, 248, 0.36);
-}
-
-.intro-avatar {
+.splash-terminal-wrap {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-  border: 2px solid rgba(7, 14, 26, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(24px, 5vw, 48px);
+  background: #000000;
+  transition: opacity 0.85s ease, transform 0.85s ease;
 }
 
-.intro-name {
-  margin: 0;
-  color: #f7fbff;
+.splash-terminal-fade {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.98);
+}
+
+.splash-terminal {
+  max-width: min(920px, 100%);
+  text-align: left;
+  font-family: "Consolas", "Courier New", "Lucida Console", monospace;
+  font-size: clamp(15px, 2.2vw, 22px);
+  line-height: 1.55;
+  color: #00ff41;
+  text-shadow: 0 0 12px rgba(0, 255, 65, 0.45), 0 0 28px rgba(0, 255, 80, 0.15);
   letter-spacing: 0.02em;
-  font-size: clamp(26px, 2.4vw, 38px);
-  font-weight: 300;
-  font-family: "Segoe UI Light", "Segoe UI", Arial, sans-serif;
-  text-shadow: 0 0 22px rgba(96, 190, 255, 0.22);
 }
 
-.intro-tagline {
-  margin: 8px 0 0;
-  font-family: "Google Sans Medium", "Segoe UI", Arial, sans-serif;
-  font-size: clamp(11px, 1.6vw, 14px);
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: rgba(173, 219, 255, 0.9);
+.splash-line {
+  margin: 0 0 0.35em;
+  min-height: 1.4em;
 }
 
-@keyframes intro-slide-up {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100%);
-  }
+.splash-prompt {
+  color: #00cc33;
+  opacity: 0.92;
+  font-size: 0.92em;
 }
 
-@keyframes caret-blink {
+.splash-main {
+  font-size: 1.08em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.splash-second {
+  color: #39ff14;
+  margin-top: 0.75em;
+}
+
+.splash-caret {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.1em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: #00ff41;
+  box-shadow: 0 0 8px #00ff41;
+  animation: splash-caret-blink 0.85s steps(1) infinite;
+}
+
+.splash-enter-effect {
+  color: #7fff7f;
+  animation: splash-enter-pulse 0.42s ease-out;
+}
+
+@keyframes splash-caret-blink {
   0%,
-  49% {
+  45% {
     opacity: 1;
   }
   50%,
@@ -187,31 +94,32 @@
   }
 }
 
-@media (max-width: 768px) {
-  .intro-grid {
-    grid-template-columns: 1fr;
-    align-content: center;
-    gap: 16px;
-    padding: 22px;
+@keyframes splash-enter-pulse {
+  0% {
+    opacity: 0;
+    transform: translateX(-4px);
   }
-
-  .intro-terminal-line-main {
-    font-size: clamp(22px, 8vw, 36px);
+  40% {
+    opacity: 1;
   }
-
-  .intro-avatar-wrap {
-    width: 84px;
-    height: 84px;
-    margin-bottom: 10px;
-  }
-
-  .intro-tagline {
-    letter-spacing: 0.12em;
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .intro-cyber-scene {
+  .splash-binary-canvas {
     display: none;
+  }
+
+  .splash-caret {
+    animation: none;
+    opacity: 1;
+  }
+
+  .splash-terminal-fade {
+    opacity: 0;
+    transition-duration: 0.2s;
   }
 }
