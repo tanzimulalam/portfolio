@@ -24,19 +24,25 @@ export default function Footer() {
           <h3 className="site-footer-heading">Quick links</h3>
           <ul className="site-footer-links">
             <li>
-              <Link to="/home">Home</Link>
+              <Link to={{ pathname: "/home", hash: "#top" }}>Home</Link>
             </li>
             <li>
-              <Link to="/experience">Experience</Link>
+              <Link to={{ pathname: "/home", hash: "#experience" }}>
+                Experience
+              </Link>
             </li>
             <li>
-              <Link to="/projects">Projects</Link>
+              <Link to={{ pathname: "/home", hash: "#projects" }}>
+                Projects
+              </Link>
             </li>
             <li>
-              <Link to="/achievements">Achievements</Link>
+              <Link to={{ pathname: "/home", hash: "#achievements" }}>
+                Achievements
+              </Link>
             </li>
             <li>
-              <Link to="/contact-me">Contact</Link>
+              <Link to={{ pathname: "/home", hash: "#contact" }}>Contact</Link>
             </li>
           </ul>
         </div>

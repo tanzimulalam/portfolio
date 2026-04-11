@@ -1,11 +1,7 @@
 import React, { Component } from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
 import Home from "../pages/home/HomeComponent";
 import Splash from "../pages/splash/Splash";
-import Experience from "../pages/experience/Experience";
-import Achievements from "../pages/achievements/Achievements";
-import Projects from "../pages/projects/Projects";
-import ContactMe from "../pages/contactMe/ContactMe";
 import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
 
@@ -32,14 +28,29 @@ export default class Main extends Component {
           <Route
             path="/experience"
             exact
-            render={(props) => (
-              <Experience {...props} theme={this.props.theme} />
+            render={() => (
+              <Redirect to={{ pathname: "/home", hash: "#experience" }} />
             )}
           />
           <Route
             path="/achievements"
-            render={(props) => (
-              <Achievements {...props} theme={this.props.theme} />
+            exact
+            render={() => (
+              <Redirect to={{ pathname: "/home", hash: "#achievements" }} />
+            )}
+          />
+          <Route
+            path="/projects"
+            exact
+            render={() => (
+              <Redirect to={{ pathname: "/home", hash: "#projects" }} />
+            )}
+          />
+          <Route
+            path="/contact-me"
+            exact
+            render={() => (
+              <Redirect to={{ pathname: "/home", hash: "#contact" }} />
             )}
           />
 
@@ -50,16 +61,6 @@ export default class Main extends Component {
             />
           )}
 
-          <Route
-            path="/projects"
-            render={(props) => <Projects {...props} theme={this.props.theme} />}
-          />
-          <Route
-            path="/contact-me"
-            render={(props) => (
-              <ContactMe {...props} theme={this.props.theme} />
-            )}
-          />
           <Route
             path="*"
             render={(props) => <Error404 {...props} theme={this.props.theme} />}

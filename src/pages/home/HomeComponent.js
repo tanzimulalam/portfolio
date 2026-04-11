@@ -1,22 +1,35 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../../components/header/Header";
-import AcademicHome from "./AcademicHome";
+import OnePager from "./OnePager";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 
-class Home extends Component {
-  render() {
-    return (
-      <div className="home-academic-shell academic-site-main">
-        <Header theme={this.props.theme} />
-        <main className="home-academic-main">
-          <AcademicHome />
-        </main>
-        <Footer theme={this.props.theme} />
-        <TopButton theme={this.props.theme} />
-      </div>
-    );
-  }
-}
+export default function Home({ theme }) {
+  const location = useLocation();
 
-export default Home;
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.replace(/^#/, "");
+    const run = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+    requestAnimationFrame(run);
+    const t = window.setTimeout(run, 100);
+    return () => window.clearTimeout(t);
+  }, [location.pathname, location.hash]);
+
+  return (
+    <div className="home-academic-shell academic-site-main">
+      <Header theme={theme} />
+      <main className="home-academic-main">
+        <OnePager theme={theme} />
+      </main>
+      <Footer theme={theme} />
+      <TopButton theme={theme} />
+    </div>
+  );
+}
