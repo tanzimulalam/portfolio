@@ -1,106 +1,108 @@
 import React, { Component } from "react";
 import "./Header.css";
-import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
 import { greeting, settings } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
 
-const onMouseEnter = (event, color) => {
-  const el = event.target;
-  el.style.backgroundColor = color;
-};
-
-const onMouseOut = (event) => {
-  const el = event.target;
-  el.style.backgroundColor = "transparent";
-};
-
 class Header extends Component {
   render() {
-    const theme = this.props.theme;
-    const link = settings.isSplash ? "/splash" : "/home";
+    const resumeHref = `${process.env.PUBLIC_URL || ""}/Resume.pdf`;
+
     return (
-      <Fade top duration={1000} distance="20px">
+      <div className="header-outer">
         <SeoHeader />
-        <div>
-          <header className="header">
-            <NavLink to={link} tag={Link} className="logo">
-              <span style={{ color: theme.text }}> &lt;</span>
-              <span className="logo-name" style={{ color: theme.text }}>
-                {greeting.logo_name}
-              </span>
-              <span style={{ color: theme.text }}>/&gt;</span>
-            </NavLink>
-            <input className="menu-btn" type="checkbox" id="menu-btn" />
-            <label className="menu-icon" htmlFor="menu-btn">
-              <span className="navicon"></span>
-            </label>
-            <ul className="menu" style={{ backgroundColor: theme.body }}>
+        <header className="header header-academic">
+          <NavLink to="/home" tag={Link} className="header-logo">
+            {greeting.title}
+          </NavLink>
+          <input className="menu-btn" type="checkbox" id="menu-btn" />
+          <label
+            className="menu-icon"
+            htmlFor="menu-btn"
+            aria-label="Open menu"
+          >
+            <span className="navicon" />
+          </label>
+          <ul className="menu">
+            <li>
+              <NavLink
+                to="/home"
+                tag={Link}
+                className="header-link"
+                activeClassName="header-link-active"
+                exact
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/experience"
+                tag={Link}
+                className="header-link"
+                activeClassName="header-link-active"
+              >
+                Experience
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/projects"
+                tag={Link}
+                className="header-link"
+                activeClassName="header-link-active"
+              >
+                Projects
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/achievements"
+                tag={Link}
+                className="header-link"
+                activeClassName="header-link-active"
+              >
+                Achievements
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact-me"
+                tag={Link}
+                className="header-link"
+                activeClassName="header-link-active"
+              >
+                Contact
+              </NavLink>
+            </li>
+            <li>
+              <a
+                className="header-link header-link-cv"
+                href={resumeHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CV
+              </a>
+            </li>
+            {settings.isSplash ? (
               <li>
                 <NavLink
-                  to="/home"
+                  to="/"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
+                  className="header-link header-link-quiet"
+                  activeClassName="header-link-active"
+                  exact
                 >
-                  Home
+                  Intro
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/experience"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Experience
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/projects"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Projects
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/achievements"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Achievements
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/contact-me"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Contact Me
-                </NavLink>
-              </li>
-            </ul>
-          </header>
-        </div>
-      </Fade>
+            ) : null}
+          </ul>
+        </header>
+      </div>
     );
   }
 }
+
 export default Header;

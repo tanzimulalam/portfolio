@@ -1,10 +1,111 @@
-.footer-text {
-  text-align: center;
-  /* color: #868e96; */
-  font-weight: bold;
-  font-family: "Google Sans Regular";
+.site-footer {
+  margin-top: 3rem;
+  border-top: 1px solid #e5e5e5;
+  background: #fff;
+  padding: 2.5rem 1.25rem 1.25rem;
+  font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
 }
 
-.footer-div {
-  margin-top: 2rem;
+.site-footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.site-footer-heading {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: #111;
+}
+
+.site-footer-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #555;
+  max-width: 42ch;
+}
+
+.site-footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer-links li {
+  margin-bottom: 0.4rem;
+}
+
+.site-footer-links a {
+  color: #0e6ba8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.site-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.site-footer-social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer-social li {
+  margin-bottom: 0.5rem;
+}
+
+.site-footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-footer-social a:hover {
+  color: #0e6ba8;
+}
+
+.site-footer-social .fab {
+  font-size: 1.1rem;
+  width: 1.25rem;
+  text-align: center;
+}
+
+.site-footer-bottom {
+  max-width: 1120px;
+  margin: 2rem auto 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.site-footer-bottom p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #777;
+}
+
+@media (max-width: 900px) {
+  .site-footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer-col:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-footer-inner {
+    grid-template-columns: 1fr;
+  }
 }

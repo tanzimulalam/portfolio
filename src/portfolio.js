@@ -7,11 +7,11 @@ const settings = {
 
 //SEO Related settings
 const seo = {
-  title: "Tanzimul Alam Fahim's Portfolio",
+  title: "Tanzimul Alam Fahim — Portfolio",
   description:
-    "Cybersecurity professional and researcher specializing in security operations, threat intelligence, machine learning, and data science. Experienced in SOC analysis, vulnerability assessments, and developing innovative cybersecurity solutions.",
+    "Cybersecurity analyst and researcher. Interests: cyber threat intelligence, machine learning for security, robotics safety, and digital forensics.",
   og: {
-    title: "Tanzimul Alam Fahim Portfolio",
+    title: "Tanzimul Alam Fahim — Cybersecurity & Research",
     type: "website",
     url: "https://www.tanzimulalam.com/",
   },
@@ -20,14 +20,51 @@ const seo = {
 //Home Page
 const greeting = {
   title: "Tanzimul Alam Fahim",
-  logo_name: "TanzimulAlamFahim",
+  logo_name: "Tanzimul Alam Fahim",
   nickname: "tanzimulalam",
   subTitle:
-    "Cybersecurity professional and researcher specializing in security operations, threat intelligence, machine learning, and data science. Passionate about developing innovative solutions for cybersecurity challenges.",
+    "Cybersecurity analyst and researcher focused on threat intelligence, ML for security, and responsible technology.",
   resumeLink: "",
   portfolio_repository: "https://github.com/tanzimulalam/portfolio",
   githubProfile: "https://github.com/tanzimulalam",
 };
+
+// Academic-style home (hero, interests, CV). Headshot + bio for professional landing.
+const academicProfile = {
+  headshotUrl: "https://i.imgur.com/Mr40tL0.jpeg",
+  role: "Cybersecurity Analyst",
+  institution: "The Vanguard Group",
+  degreeLine: "B.S. Cybersecurity — University of North Carolina at Pembroke",
+  bio:
+    "Hi, I’m Tanzimul (Fahim). I work in cybersecurity with a strong interest in how intelligence, machine learning, and careful engineering make systems safer. I’ve contributed to open-source security (including coordinated disclosure in Joomla Core), built research-style tooling around synthetic CTI and knowledge graphs, and care about robotics safety and digital forensics as domains where assurance really matters. I enjoy shipping practical defenses, learning in public, and collaborating with teams that take both impact and ethics seriously.",
+  researchInterests: [
+    "Cyber Threat Intelligence",
+    "Machine Learning for Cybersecurity",
+    "Robotics Safety",
+    "Digital Forensics",
+  ],
+  resumePath: "/Resume.pdf",
+};
+
+const homeHighlights = [
+  {
+    date: "Mar 2026",
+    text:
+      "Reported a Joomla Core issue fixed as CVE-2026-21631 (XSS in com_associations).",
+  },
+  {
+    date: "Mar 2026",
+    text: "Technical Review Committee (TRC), IEEE CICN 2026.",
+  },
+  {
+    date: "Feb 2026",
+    text: "Cybersecurity Analyst at Vanguard; HackUNCP 2026 participant.",
+  },
+  {
+    date: "Dec 2025",
+    text: "Graduated UNCP — B.S. Cybersecurity.",
+  },
+];
 
 const socialMediaLinks = [
   {
@@ -418,6 +455,18 @@ const experience = {
       work: true,
       experiences: [
         {
+          title: "Cybersecurity Analyst",
+          company: "The Vanguard Group",
+          company_url: "https://investor.vanguard.com/",
+          logo_path:
+            "https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Vanguard_logo.svg/320px-Vanguard_logo.svg.png",
+          duration: "Feb 2026 – Present",
+          location: "United States",
+          description:
+            "Security operations and analysis within a large-scale enterprise environment, contributing to detection, response, and continuous improvement of defensive posture.",
+          color: "#96151d",
+        },
+        {
           title: "Security Operations Center (SOC) Analyst",
           company:
             "UNCP Division of Information Technology, Network & Security Department",
@@ -787,6 +836,8 @@ export {
   settings,
   seo,
   greeting,
+  academicProfile,
+  homeHighlights,
   socialMediaLinks,
   skills,
   competitiveSites,

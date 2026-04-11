@@ -195,4 +195,17 @@ export const materialTealTheme = {
   splashBg: "#05505E",
 };
 
-export const chosenTheme = blueTheme;
+// Clean academic / professional portfolio palette (inspired by minimal research sites)
+export const chosenTheme = {
+  body: "#fafafa",
+  text: "#1a1a1a",
+  expTxtColor: "#252525",
+  highlight: "#eaeaea",
+  dark: "#0d0d0d",
+  secondaryText: "#5c5c5c",
+  imageHighlight: "#0E6BA8",
+  compImgHighlight: "#e8e8e8",
+  jacketColor: "#0E6BA8",
+  headerColor: "#ffffff",
+  splashBg: "#030303",
+};
