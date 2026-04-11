@@ -1,0 +1,368 @@
+/* Unified academic layout across inner pages (matches home / jukomol-style polish). */
+
+.academic-site-main {
+  background: #fafafa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.academic-page-main {
+  flex: 1;
+  width: 100%;
+}
+
+/* ---------- Experience ---------- */
+.academic-site-main.experience-main .basic-experience {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1120px;
+  padding: 1.5rem 1.25rem 0;
+  width: 100%;
+}
+
+.academic-site-main .experience-heading-text {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.85rem, 4.5vw, 2.6rem);
+  margin-top: 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.academic-site-main .experience-heading-sub-text {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.academic-site-main .experience-header-detail-text {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.academic-site-main .experience-sections-container {
+  margin: 2.5rem auto 3rem;
+  max-width: 1120px;
+  padding: 0 1.25rem;
+  width: 100%;
+  gap: 2.5rem;
+}
+
+.academic-site-main .experience-section-title {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+  font-weight: 600;
+  background: #fff !important;
+  border: 1px solid #e5e5e5 !important;
+  border-left: 3px solid #0e6ba8 !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+  padding: 0.85rem 1rem !important;
+  border-radius: 10px;
+}
+
+.academic-site-main .work-section-highlight .experience-section-title {
+  background: #fff !important;
+  box-shadow: 0 2px 12px rgba(14, 107, 168, 0.08) !important;
+}
+
+.academic-site-main .experience-cards-container {
+  padding-left: 0;
+}
+
+.academic-site-main .experience-cards-container::before {
+  display: none;
+}
+
+.academic-site-main .experience-card {
+  background: #fff !important;
+  border: 1px solid #eaeaea !important;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06) !important;
+  backdrop-filter: none !important;
+  min-width: 0 !important;
+  width: 100%;
+  max-width: 100%;
+}
+
+.academic-site-main .experience-card:hover {
+  border-color: #d0d0d0 !important;
+}
+
+.academic-site-main .experience-card-title {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+.academic-site-main .experience-card-company > a:hover {
+  color: #0e6ba8;
+}
+
+.academic-site-main .experience-card-company > a:before {
+  background: #0e6ba8;
+}
+
+/* ---------- Projects ---------- */
+.academic-site-main.projects-page .projects-wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.academic-site-main .projects-hero {
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  background: #fff !important;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+}
+
+.academic-site-main .projects-hero-glow,
+.academic-site-main .projects-hero-glow-1,
+.academic-site-main .projects-hero-glow-2 {
+  display: none;
+}
+
+.academic-site-main .projects-title {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.academic-site-main .projects-kicker {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.academic-site-main .projects-subtitle {
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.65;
+}
+
+.academic-site-main .projects-hero-card {
+  background: #fafafa !important;
+  border: 1px solid #eaeaea;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.academic-site-main .projects-hero-card-title {
+  font-family: "Newsreader", Georgia, serif;
+}
+
+.academic-site-main .projects-section {
+  margin-top: 2.5rem;
+}
+
+.academic-site-main .projects-section-title {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+}
+
+.academic-site-main .projects-section-subtitle {
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+.academic-site-main .projects-devpost-card {
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.academic-site-main .projects-devpost-card:hover {
+  border-color: #ccc;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+
+.academic-site-main .projects-timeline-item {
+  border-color: #e5e5e5;
+}
+
+.academic-site-main .projects-timeline-content {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+}
+
+.academic-site-main .projects-timeline-title {
+  font-family: "Newsreader", Georgia, serif;
+}
+
+.academic-site-main .main-button {
+  border-radius: 8px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+}
+
+.academic-site-main .ghost-main-button {
+  border-radius: 8px;
+  border: 1px solid #ccc !important;
+  color: #111 !important;
+  background: #fff !important;
+}
+
+/* ---------- Achievements ---------- */
+.academic-site-main.achievements-main .basic-achievements {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1120px;
+  padding: 1.5rem 1.25rem 0;
+  width: 100%;
+}
+
+.academic-site-main .achievements-heading-text {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.85rem, 4.5vw, 2.6rem);
+  margin-top: 1rem;
+}
+
+.academic-site-main .achievements-heading-sub-text {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.academic-site-main .achievements-header-detail-text {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.academic-site-main .achievements-sections-container {
+  margin: 2.5rem auto 3rem;
+  max-width: 1120px;
+  padding: 0 1.25rem;
+  gap: 2.5rem;
+}
+
+.academic-site-main .achievement-section-title {
+  font-family: "Newsreader", Georgia, serif !important;
+  font-size: clamp(1.15rem, 2.4vw, 1.4rem) !important;
+  background: #fff !important;
+  border: 1px solid #e5e5e5 !important;
+  border-left-width: 3px !important;
+  border-radius: 10px;
+  padding: 0.85rem 1rem !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+.academic-site-main .achievement-card {
+  background: #fff !important;
+  border: 1px solid #eaeaea !important;
+  min-width: 0 !important;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.05) !important;
+}
+
+.academic-site-main .guinness-section-highlight .achievement-section-title {
+  border-left-color: #f57c00 !important;
+}
+
+/* ---------- Contact ---------- */
+.academic-site-main.contactme-main .contactme-body {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.academic-site-main .contactme-hero {
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  background: #fff !important;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+}
+
+.academic-site-main .contactme-title {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+}
+
+.academic-site-main .contactme-handle {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.academic-site-main .contactme-subtitle {
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.65;
+}
+
+.academic-site-main .contactme-email-button {
+  background: #111 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  border-radius: 8px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.academic-site-main .contactme-email-button:hover {
+  filter: brightness(1.08);
+}
+
+.academic-site-main .contactme-card {
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  box-shadow: none;
+}
+
+.academic-site-main .contactme-card-glow {
+  display: none;
+}
+
+/* ---------- 404 ---------- */
+.academic-site-main.error-main .error-class {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 4rem 1.25rem;
+  text-align: center;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.academic-site-main .error-class h1 {
+  font-family: "Newsreader", Georgia, serif;
+}
+
+.academic-site-main .error-404 {
+  font-size: clamp(3rem, 10vw, 5rem);
+  color: #0e6ba8;
+}
+
+/* ---------- Shared: heading hero rows ---------- */
+@media (max-width: 768px) {
+  .academic-site-main .experience-heading-div,
+  .academic-site-main .achievements-heading-div {
+    flex-direction: column;
+  }
+
+  .academic-site-main .experience-heading-text,
+  .academic-site-main .achievements-heading-text {
+    margin-top: 0.5rem;
+  }
+
+  .academic-site-main .projects-hero {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .academic-site-main .contactme-hero {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .academic-site-main .experience-sections-container,
+  .academic-site-main .achievements-sections-container,
+  .academic-site-main.projects-page .projects-wrap,
+  .academic-site-main.contactme-main .contactme-body {
+    max-width: 1180px;
+  }
+}

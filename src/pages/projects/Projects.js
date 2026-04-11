@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
@@ -116,140 +117,145 @@ export default function Projects(props) {
   ];
 
   return (
-    <div className="projects-page">
+    <div className="projects-page academic-site-main">
       <Header theme={theme} />
 
-      <div className="projects-wrap">
-        <Fade bottom duration={1200} distance="24px">
-          <section className="projects-hero">
-            <div className="projects-hero-left">
-              <div
-                className="projects-kicker"
-                style={{ color: theme.secondaryText }}
-              >
-                {projectsHeader.title}
-              </div>
-              <h1 className="projects-title" style={{ color: theme.text }}>
-                Build. Research. Ship.
-              </h1>
-              <p
-                className="projects-subtitle"
-                style={{ color: theme.secondaryText }}
-              >
-                {projectsHeader.description}
-              </p>
-
-              <div className="projects-hero-actions">
-                <a
-                  className="main-button"
-                  href={DEVPOST_PROFILE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: "none" }}
+      <main className="academic-page-main">
+        <div className="projects-wrap">
+          <Fade bottom duration={1200} distance="24px">
+            <section className="projects-hero">
+              <div className="projects-hero-left">
+                <div
+                  className="projects-kicker"
+                  style={{ color: theme.secondaryText }}
                 >
-                  View Devpost
-                </a>
-                <a
-                  className="ghost-main-button"
-                  href="/contact-me"
-                  style={{ textDecoration: "none" }}
+                  {projectsHeader.title}
+                </div>
+                <h1 className="projects-title" style={{ color: theme.text }}>
+                  Build. Research. Ship.
+                </h1>
+                <p
+                  className="projects-subtitle"
+                  style={{ color: theme.secondaryText }}
                 >
-                  Contact Me
-                </a>
-              </div>
-            </div>
+                  {projectsHeader.description}
+                </p>
 
-            <div className="projects-hero-right" aria-hidden="true">
-              <div className="projects-hero-glow projects-hero-glow-1" />
-              <div className="projects-hero-glow projects-hero-glow-2" />
-              <div className="projects-hero-card">
-                <div className="projects-hero-card-title">Highlights</div>
-                <div className="projects-hero-card-grid">
-                  <div className="projects-hero-stat">
-                    <div className="projects-hero-stat-num">AI</div>
-                    <div className="projects-hero-stat-label">
-                      Computer Vision
+                <div className="projects-hero-actions">
+                  <a
+                    className="main-button"
+                    href={DEVPOST_PROFILE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    View Devpost
+                  </a>
+                  <Link
+                    className="ghost-main-button"
+                    to="/contact-me"
+                    style={{ textDecoration: "none" }}
+                  >
+                    Contact Me
+                  </Link>
+                </div>
+              </div>
+
+              <div className="projects-hero-right" aria-hidden="true">
+                <div className="projects-hero-glow projects-hero-glow-1" />
+                <div className="projects-hero-glow projects-hero-glow-2" />
+                <div className="projects-hero-card">
+                  <div className="projects-hero-card-title">Highlights</div>
+                  <div className="projects-hero-card-grid">
+                    <div className="projects-hero-stat">
+                      <div className="projects-hero-stat-num">AI</div>
+                      <div className="projects-hero-stat-label">
+                        Computer Vision
+                      </div>
                     </div>
-                  </div>
-                  <div className="projects-hero-stat">
-                    <div className="projects-hero-stat-num">CTI</div>
-                    <div className="projects-hero-stat-label">
-                      STIX Knowledge Graphs
+                    <div className="projects-hero-stat">
+                      <div className="projects-hero-stat-num">CTI</div>
+                      <div className="projects-hero-stat-label">
+                        STIX Knowledge Graphs
+                      </div>
                     </div>
-                  </div>
-                  <div className="projects-hero-stat">
-                    <div className="projects-hero-stat-num">3D</div>
-                    <div className="projects-hero-stat-label">
-                      Three.js Visuals
+                    <div className="projects-hero-stat">
+                      <div className="projects-hero-stat-num">3D</div>
+                      <div className="projects-hero-stat-label">
+                        Three.js Visuals
+                      </div>
                     </div>
-                  </div>
-                  <div className="projects-hero-stat">
-                    <div className="projects-hero-stat-num">Full‑Stack</div>
-                    <div className="projects-hero-stat-label">Apps & Tools</div>
+                    <div className="projects-hero-stat">
+                      <div className="projects-hero-stat-num">Full‑Stack</div>
+                      <div className="projects-hero-stat-label">
+                        Apps & Tools
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </Fade>
+            </section>
+          </Fade>
 
-        <Fade bottom duration={1200} distance="24px">
-          <section className="projects-section">
-            <div className="projects-section-head">
-              <h2
-                className="projects-section-title"
-                style={{ color: theme.text }}
-              >
-                Featured Devpost Projects
-              </h2>
-              <p
-                className="projects-section-subtitle"
-                style={{ color: theme.secondaryText }}
-              >
-                Hackathon builds with polished writeups, screenshots, and story.
-              </p>
-            </div>
+          <Fade bottom duration={1200} distance="24px">
+            <section className="projects-section">
+              <div className="projects-section-head">
+                <h2
+                  className="projects-section-title"
+                  style={{ color: theme.text }}
+                >
+                  Featured Devpost Projects
+                </h2>
+                <p
+                  className="projects-section-subtitle"
+                  style={{ color: theme.secondaryText }}
+                >
+                  Hackathon builds with polished writeups, screenshots, and
+                  story.
+                </p>
+              </div>
 
-            <div className="projects-devpost-grid">
-              {devpostFeatured.map((p) => (
-                <DevpostCard key={p.id} project={p} />
-              ))}
-              <DevpostCard project={bravesRide} key={bravesRide.id} />
-            </div>
-          </section>
-        </Fade>
+              <div className="projects-devpost-grid">
+                {devpostFeatured.map((p) => (
+                  <DevpostCard key={p.id} project={p} />
+                ))}
+                <DevpostCard project={bravesRide} key={bravesRide.id} />
+              </div>
+            </section>
+          </Fade>
 
-        <Fade bottom duration={1200} distance="24px">
-          <section className="projects-section">
-            <div className="projects-section-head">
-              <h2
-                className="projects-section-title"
-                style={{ color: theme.text }}
-              >
-                Research & Engineering
-              </h2>
-              <p
-                className="projects-section-subtitle"
-                style={{ color: theme.secondaryText }}
-              >
-                Longer-term work across cybersecurity, ML/AI, robotics, and
-                systems.
-              </p>
-            </div>
+          <Fade bottom duration={1200} distance="24px">
+            <section className="projects-section">
+              <div className="projects-section-head">
+                <h2
+                  className="projects-section-title"
+                  style={{ color: theme.text }}
+                >
+                  Research & Engineering
+                </h2>
+                <p
+                  className="projects-section-subtitle"
+                  style={{ color: theme.secondaryText }}
+                >
+                  Longer-term work across cybersecurity, ML/AI, robotics, and
+                  systems.
+                </p>
+              </div>
 
-            <div className="projects-timeline">
-              {timeline.map((t) => (
-                <TimelineItem
-                  key={t.title}
-                  title={t.title}
-                  period={t.period}
-                  bullets={t.bullets}
-                />
-              ))}
-            </div>
-          </section>
-        </Fade>
-      </div>
+              <div className="projects-timeline">
+                {timeline.map((t) => (
+                  <TimelineItem
+                    key={t.title}
+                    title={t.title}
+                    period={t.period}
+                    bullets={t.bullets}
+                  />
+                ))}
+              </div>
+            </section>
+          </Fade>
+        </div>
+      </main>
 
       <Footer theme={props.theme} onToggle={props.onToggle} />
       <TopButton theme={props.theme} />

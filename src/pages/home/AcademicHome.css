@@ -234,37 +234,6 @@
   text-decoration: underline;
 }
 
-.academic-highlights {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.academic-highlight-row {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 1rem;
-  padding: 0.65rem 0;
-  border-bottom: 1px solid #eee;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.academic-highlight-row:last-child {
-  border-bottom: 0;
-}
-
-.academic-highlight-date {
-  font-weight: 600;
-  color: #666;
-  font-size: 0.85rem;
-  letter-spacing: 0.03em;
-}
-
-.academic-highlight-text {
-  color: #333;
-}
-
 @media (max-width: 900px) {
   .academic-hero-grid {
     grid-template-columns: 1fr;
@@ -274,12 +243,5 @@
 
   .academic-hero-copy {
     text-align: left;
-  }
-}
-
-@media (max-width: 600px) {
-  .academic-highlight-row {
-    grid-template-columns: 1fr;
-    gap: 0.25rem;
   }
 }

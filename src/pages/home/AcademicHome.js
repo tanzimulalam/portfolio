@@ -1,12 +1,8 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import "./AcademicHome.css";
-import {
-  academicProfile,
-  greeting,
-  homeHighlights,
-  publications,
-} from "../../portfolio.js";
+import LiveUpdatesFeed from "../../components/liveUpdates/LiveUpdatesFeed";
+import { academicProfile, greeting, publications } from "../../portfolio.js";
 
 function formatLongDate(iso) {
   try {
@@ -82,6 +78,10 @@ export default function AcademicHome() {
       </section>
 
       <section className="academic-section">
+        <LiveUpdatesFeed />
+      </section>
+
+      <section className="academic-section">
         <div className="academic-section-head">
           <h2 className="academic-section-title">Featured projects</h2>
           <Link className="academic-view-all" to="/projects">
@@ -110,20 +110,6 @@ export default function AcademicHome() {
               >
                 Read more →
               </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="academic-section academic-section-muted">
-        <div className="academic-section-head">
-          <h2 className="academic-section-title">Recent highlights</h2>
-        </div>
-        <ul className="academic-highlights">
-          {homeHighlights.map((item, idx) => (
-            <li key={`${item.date}-${idx}`} className="academic-highlight-row">
-              <span className="academic-highlight-date">{item.date}</span>
-              <span className="academic-highlight-text">{item.text}</span>
             </li>
           ))}
         </ul>

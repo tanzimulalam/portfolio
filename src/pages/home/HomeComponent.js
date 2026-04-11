@@ -7,7 +7,7 @@ import TopButton from "../../components/topButton/TopButton";
 class Home extends Component {
   render() {
     return (
-      <div className="home-academic-shell">
+      <div className="home-academic-shell academic-site-main">
         <Header theme={this.props.theme} />
         <main className="home-academic-main">
           <AcademicHome />

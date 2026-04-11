@@ -1,0 +1,121 @@
+.live-updates {
+  margin-bottom: 3rem;
+  padding: 1.5rem 1.35rem;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
+}
+
+.live-updates-head {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.35rem;
+}
+
+.live-updates-title {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111;
+}
+
+.live-updates-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(14, 107, 168, 0.1);
+  color: #0e6ba8;
+}
+
+.live-updates-lead {
+  margin: 0 0 1rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.live-updates-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.live-updates-list-collapsed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 32px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #fff);
+  pointer-events: none;
+}
+
+.live-updates-item {
+  padding: 0.65rem 0.75rem 0.65rem 0.9rem;
+  border-radius: 10px;
+  border-left: 2px solid rgba(14, 107, 168, 0.45);
+  background: linear-gradient(
+    125deg,
+    rgba(14, 107, 168, 0.06),
+    rgba(14, 107, 168, 0.02)
+  );
+}
+
+.live-updates-date {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0e6ba8;
+  margin-bottom: 0.25rem;
+}
+
+.live-updates-text {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.live-updates-toggle {
+  margin-top: 0.85rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(14, 107, 168, 0.28);
+  background: rgba(14, 107, 168, 0.08);
+  color: #08507f;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.live-updates-toggle:hover {
+  background: rgba(14, 107, 168, 0.14);
+  border-color: rgba(14, 107, 168, 0.45);
+}
+
+@media (max-width: 600px) {
+  .live-updates-toggle {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-updates-list-collapsed::after {
+    display: none;
+  }
+}

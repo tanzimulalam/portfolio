@@ -47,23 +47,37 @@ const academicProfile = {
     "https://drive.google.com/file/d/1yIu1uHcYQCdNFv5NA22ht2P00r4GVieX/view?usp=sharing",
 };
 
-const homeHighlights = [
+// Home “Latest updates” feed (month + year only); expandable on the landing page.
+const liveFeedUpdates = [
   {
     date: "Mar 2026",
     text:
-      "Reported a Joomla Core issue fixed as CVE-2026-21631 (XSS in com_associations).",
+      "Reported a Joomla Core security issue disclosed and fixed as CVE-2026-21631 (XSS vector in com_associations comparison view).",
   },
   {
     date: "Mar 2026",
-    text: "Technical Review Committee (TRC), IEEE CICN 2026.",
+    text:
+      "Became Technical Review Committee (TRC) at the 2026 IEEE 18th International Conference on Computational Intelligence and Communication Networks (CICN).",
   },
   {
     date: "Feb 2026",
-    text: "Cybersecurity Analyst at Vanguard; HackUNCP 2026 participant.",
+    text: "Participated in HackUNCP 2026.",
+  },
+  {
+    date: "Feb 2026",
+    text: "Started working for Vanguard as a Cybersecurity Analyst.",
   },
   {
     date: "Dec 2025",
-    text: "Graduated UNCP — B.S. Cybersecurity.",
+    text: "Graduated from UNC Pembroke with a B.S. in Cybersecurity.",
+  },
+  {
+    date: "Nov 2025",
+    text: "Participated in HackPrinceton 2025.",
+  },
+  {
+    date: "Sep 2025",
+    text: "Elected Vice President of Artificial Intelligence @ UNCP.",
   },
 ];
 
@@ -838,7 +852,7 @@ export {
   seo,
   greeting,
   academicProfile,
-  homeHighlights,
+  liveFeedUpdates,
   socialMediaLinks,
   skills,
   competitiveSites,

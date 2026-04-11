@@ -148,85 +148,93 @@ class Experience extends Component {
   render() {
     const theme = this.props.theme;
     return (
-      <div className="experience-main">
+      <div className="experience-main academic-site-main">
         <Header theme={theme} />
-        <div className="basic-experience">
-          <Fade bottom duration={2000} distance="40px">
-            <div className="experience-heading-div">
-              <div className="experience-heading-img-div">
-                {/* <img
+        <main className="academic-page-main">
+          <div className="basic-experience">
+            <Fade bottom duration={2000} distance="40px">
+              <div className="experience-heading-div">
+                <div className="experience-heading-img-div">
+                  {/* <img
 									src={require(`../../assets/images/${experience["header_image_path"]}`)}
 									alt=""
 								/> */}
-                <ExperienceImg theme={theme} />
-              </div>
-              <div className="experience-heading-text-div">
-                <h1
-                  className="experience-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {experience.title}
-                </h1>
-                <h3
-                  className="experience-heading-sub-text"
-                  style={{ color: theme.text }}
-                >
-                  {experience["subtitle"]}
-                </h3>
-                <p
-                  className="experience-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {experience["description"]}
-                </p>
-              </div>
-            </div>
-          </Fade>
-        </div>
-        <div className="experience-sections-container">
-          {experience["sections"].map((section, sectionIndex) => {
-            const isWorkSection =
-              section["title"] === "Work" || section["work"];
-            return (
-              <div
-                key={section["title"]}
-                className={`experience-section ${
-                  isWorkSection ? "work-section-highlight" : ""
-                }`}
-              >
-                <Fade bottom duration={1500} distance="30px">
-                  <div className="experience-section-header">
-                    <h2
-                      className="experience-section-title"
-                      style={{
-                        color: theme.text,
-                        borderLeft: isWorkSection
-                          ? `4px solid #667eea`
-                          : `4px solid ${theme.headerColor}`,
-                      }}
-                    >
-                      {isWorkSection && (
-                        <span className="section-icon" role="img" aria-label="star icon">⭐</span>
-                      )}
-                      {section["title"]}
-                    </h2>
-                  </div>
-                </Fade>
-                <div className="experience-cards-container">
-                  {section["experiences"].map((exp, index) => (
-                    <ExperienceCard
-                      key={index}
-                      index={index}
-                      totalCards={section["experiences"].length}
-                      experience={exp}
-                      theme={theme}
-                    />
-                  ))}
+                  <ExperienceImg theme={theme} />
+                </div>
+                <div className="experience-heading-text-div">
+                  <h1
+                    className="experience-heading-text"
+                    style={{ color: theme.text }}
+                  >
+                    {experience.title}
+                  </h1>
+                  <h3
+                    className="experience-heading-sub-text"
+                    style={{ color: theme.text }}
+                  >
+                    {experience["subtitle"]}
+                  </h3>
+                  <p
+                    className="experience-header-detail-text subTitle"
+                    style={{ color: theme.secondaryText }}
+                  >
+                    {experience["description"]}
+                  </p>
                 </div>
               </div>
-            );
-          })}
-        </div>
+            </Fade>
+          </div>
+          <div className="experience-sections-container">
+            {experience["sections"].map((section, sectionIndex) => {
+              const isWorkSection =
+                section["title"] === "Work" || section["work"];
+              return (
+                <div
+                  key={section["title"]}
+                  className={`experience-section ${
+                    isWorkSection ? "work-section-highlight" : ""
+                  }`}
+                >
+                  <Fade bottom duration={1500} distance="30px">
+                    <div className="experience-section-header">
+                      <h2
+                        className="experience-section-title"
+                        style={{
+                          color: theme.text,
+                          borderLeft: isWorkSection
+                            ? `4px solid #667eea`
+                            : `4px solid ${theme.headerColor}`,
+                        }}
+                      >
+                        {isWorkSection && (
+                          <span
+                            className="section-icon"
+                            role="img"
+                            aria-label="star icon"
+                          >
+                            ⭐
+                          </span>
+                        )}
+                        {section["title"]}
+                      </h2>
+                    </div>
+                  </Fade>
+                  <div className="experience-cards-container">
+                    {section["experiences"].map((exp, index) => (
+                      <ExperienceCard
+                        key={index}
+                        index={index}
+                        totalCards={section["experiences"].length}
+                        experience={exp}
+                        theme={theme}
+                      />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </main>
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
       </div>
