@@ -31,8 +31,6 @@ export default function AcademicHome() {
 
   const featured = sortedProjects.slice(0, 4);
 
-  const resumeHref = `${process.env.PUBLIC_URL || ""}/Resume.pdf`;
-
   return (
     <div className="academic-home">
       <section className="academic-hero">
@@ -61,7 +59,7 @@ export default function AcademicHome() {
               </Link>
               <a
                 className="academic-btn academic-btn-secondary"
-                href={resumeHref}
+                href={academicProfile.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >

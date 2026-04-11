@@ -43,7 +43,8 @@ const academicProfile = {
     "Robotics Safety",
     "Digital Forensics",
   ],
-  resumePath: "/Resume.pdf",
+  resumeUrl:
+    "https://drive.google.com/file/d/1yIu1uHcYQCdNFv5NA22ht2P00r4GVieX/view?usp=sharing",
 };
 
 const homeHighlights = [

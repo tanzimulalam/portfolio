@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import "./Header.css";
 import { NavLink, Link } from "react-router-dom";
-import { greeting, settings } from "../../portfolio.js";
+import { academicProfile, greeting, settings } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
 
 class Header extends Component {
   render() {
-    const resumeHref = `${process.env.PUBLIC_URL || ""}/Resume.pdf`;
-
     return (
       <div className="header-outer">
         <SeoHeader />
@@ -78,7 +76,7 @@ class Header extends Component {
             <li>
               <a
                 className="header-link header-link-cv"
-                href={resumeHref}
+                href={academicProfile.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
