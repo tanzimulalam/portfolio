@@ -195,17 +195,17 @@ export const materialTealTheme = {
   splashBg: "#05505E",
 };
 
-// Clean academic / professional portfolio palette (inspired by minimal research sites)
+// Warm, restrained personal brand (eye-soothing; accent used sparingly in UI)
 export const chosenTheme = {
-  body: "#fafafa",
-  text: "#1a1a1a",
-  expTxtColor: "#252525",
-  highlight: "#eaeaea",
-  dark: "#0d0d0d",
-  secondaryText: "#5c5c5c",
-  imageHighlight: "#0E6BA8",
-  compImgHighlight: "#e8e8e8",
-  jacketColor: "#0E6BA8",
-  headerColor: "#ffffff",
-  splashBg: "#030303",
+  body: "#FDF8F0",
+  text: "#1F1F1F",
+  expTxtColor: "#1F1F1F",
+  highlight: "#F2EFEA",
+  dark: "#1F1F1F",
+  secondaryText: "#5B5752",
+  imageHighlight: "#4F5B7A",
+  compImgHighlight: "#F2EFEA",
+  jacketColor: "#4F5B7A",
+  headerColor: "#FDF8F0",
+  splashBg: "#FDF8F0",
 };

@@ -2,7 +2,8 @@
 
 // Website related settings
 const settings = {
-  isSplash: true, // Change this to false if you don't want Splash screen.
+  // Calm landing loads the main site directly; set true only if using the minimal /splash page
+  isSplash: false,
 };
 
 //SEO Related settings
@@ -80,6 +81,142 @@ const liveFeedUpdates = [
     text: "Elected Vice President of Artificial Intelligence @ UNCP.",
   },
 ];
+
+// Calm homepage (value proposition + CTAs)
+const homepage = {
+  headline: "I help teams ship calm, defensible security work.",
+  subhead:
+    "Cybersecurity analyst and researcher—threat intelligence, SOC operations, and careful engineering: from STIX knowledge graphs to coordinated disclosure and open collaboration.",
+  primaryCta: { label: "View my work", to: "/work" },
+  secondaryCta: { label: "Get in touch", to: "/contact" },
+};
+
+const services = [
+  {
+    title: "Security operations & CTI",
+    description:
+      "Enterprise SOC workflows, triage, and structured threat data.",
+    to: "/work",
+  },
+  {
+    title: "Research-style engineering",
+    description: "Synthetic intel graphs, LLM pipelines, and evaluation rigor.",
+    to: "/work",
+  },
+  {
+    title: "Story & background",
+    description: "Education, leadership, and how I work with teams.",
+    to: "/about",
+  },
+];
+
+const testimonial = {
+  quote:
+    "Tanzimul brings disciplined security thinking and unusually clear technical communication—valuable on any research-heavy or incident-driven team.",
+  attribution:
+    "Collaborator, Laboratory for Analytic Sciences internship program",
+};
+
+const toolkitCategories = [
+  {
+    name: "Security & platforms",
+    items: [
+      "Splunk",
+      "Microsoft Defender",
+      "Cisco AMP / Umbrella",
+      "PhishER",
+      "STIX 2.1 / TAXII",
+    ],
+  },
+  {
+    name: "Engineering",
+    items: ["Python", "Django", "Angular", "LangChain", "Docker", "Git"],
+  },
+  {
+    name: "Workflow",
+    items: ["VS Code", "Markdown", "Wireshark (basics)", "Jupyter"],
+  },
+];
+
+/** In-depth case-style entries for the Work page. */
+const caseStudies = [
+  {
+    id: "sakura-cti",
+    title: "Synthetic CTI knowledge graphs (SAKURA / Synthetica)",
+    role: "Research engineer — NSA LAS internship",
+    problem:
+      "Analysts need realistic STIX 2.1 data without exposing sensitive production intel.",
+    approach:
+      "Designed generation pipelines with LangChain, GAN-style components where appropriate, and GPT-4o–assisted STIX objects; shipped a Django + Angular stack for scenario-driven graph creation.",
+    stack: ["Python", "Django", "Angular", "STIX 2.1", "LangChain", "PyTorch"],
+    result:
+      "Large-scale synthetic graphs and a repeatable workflow for CTI training and tooling validation.",
+    href: "https://devpost.com/software/synthetica",
+  },
+  {
+    id: "soc-uncp",
+    title: "SOC analysis & response (campus scale)",
+    role: "Security Operations Center Analyst — UNCP IT",
+    problem:
+      "High alert volume across email, endpoint, and network controls with limited analyst time.",
+    approach:
+      "Triaged and investigated in Splunk, Defender, Cisco AMP, Umbrella, and PhishER; standardized notes and escalation paths for recurring scenarios.",
+    stack: ["Splunk", "Microsoft Defender", "Cisco", "PhishER"],
+    result:
+      "Faster mean time to contain common phishing and endpoint cases; clearer handoffs for deeper incidents.",
+    href: null,
+  },
+  {
+    id: "mdl-identity",
+    title: "Mobile Driver’s License architecture research",
+    role: "Research Assistant — Cyber Defense Education Center",
+    problem:
+      "mDL systems must balance privacy, crypto agility, and real-world issuance constraints.",
+    approach:
+      "Surveyed 100+ sources on digital identity and protocols; evaluated architectures (NFC, Bluetooth, QR) against threat models relevant to adoption.",
+    stack: [
+      "Literature review",
+      "Threat modeling",
+      "Writing for technical audiences",
+    ],
+    result:
+      "Actionable synthesis for secure identity research direction and stakeholder communication.",
+    href: null,
+  },
+  {
+    id: "joomla-cve",
+    title: "Coordinated disclosure — Joomla Core (CVE-2026-21631)",
+    role: "Independent researcher",
+    problem:
+      "A stored XSS class of issue in a widely deployed CMS comparison view.",
+    approach:
+      "Responsible report with reproduction detail; worked through the vendor coordinated disclosure process.",
+    stack: ["Web app security", "XSS", "Coordinated disclosure"],
+    result:
+      "Issue fixed in core; users protected through an official security release.",
+    href: null,
+  },
+  {
+    id: "pfas-pipelines",
+    title: "Environmental data pipelines at scale",
+    role: "Data Science Research Assistant — UNCP Geology",
+    problem:
+      "Tens of thousands of PFAS well records required cleaning, deduplication, and geographic matching.",
+    approach:
+      "Python pipelines with automated validation and Haversine matching; PCA for exploratory insight.",
+    stack: ["Python", "Pandas", "Scikit-learn"],
+    result:
+      "Roughly 60% reduction in manual cleaning time; more reliable merged datasets for analysis.",
+    href: null,
+  },
+];
+
+const contactForm = {
+  /** Optional: set after creating a form at https://formspree.io */
+  formspreeAction: "",
+  bookChatMailto:
+    "mailto:fahim.communicate@gmail.com?subject=Book%20a%2020-minute%20chat",
+};
 
 const socialMediaLinks = [
   {
@@ -853,6 +990,12 @@ export {
   greeting,
   academicProfile,
   liveFeedUpdates,
+  homepage,
+  services,
+  testimonial,
+  toolkitCategories,
+  caseStudies,
+  contactForm,
   socialMediaLinks,
   skills,
   competitiveSites,

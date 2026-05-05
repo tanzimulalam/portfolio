@@ -1,0 +1,24 @@
+/* Shared top-of-page headers for Calm inner pages */
+.calm-page {
+  padding: clamp(1.5rem, 4vw, 2.5rem) var(--space-4) 4rem;
+}
+
+.calm-page-header {
+  margin-bottom: var(--space-8);
+}
+
+.calm-page-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 600;
+  margin: 0 0 var(--space-3);
+  color: var(--color-text);
+}
+
+.calm-page-lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 42rem;
+  margin: 0;
+}

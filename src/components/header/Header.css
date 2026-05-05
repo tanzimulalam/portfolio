@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #fafafa;
-  border-bottom: 1px solid #e8e8e8;
+  background: var(--color-bg-page);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .header.header-academic {
@@ -17,17 +17,17 @@
 }
 
 .header-logo {
-  font-family: "Newsreader", Georgia, serif;
+  font-family: var(--font-heading);
   font-weight: 600;
   font-size: 1.15rem;
-  color: #111;
+  color: var(--color-text);
   text-decoration: none;
   letter-spacing: -0.01em;
   white-space: nowrap;
 }
 
 .header-logo:hover {
-  color: #0e6ba8;
+  color: var(--color-accent);
 }
 
 .menu {
@@ -44,34 +44,35 @@
 .header-link {
   display: block;
   padding: 0.5rem 0.65rem;
-  font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 500;
-  color: #333;
+  color: var(--color-text-muted);
   text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.15s ease, color 0.15s ease;
+  border-radius: var(--radius-md);
+  transition: background var(--duration) var(--ease-out),
+    color var(--duration) var(--ease-out);
 }
 
 .header-link:hover {
-  background: #eaeaea;
-  color: #111;
+  background: var(--color-bg-muted);
+  color: var(--color-text);
 }
 
 .header-link-active {
-  color: #0e6ba8;
+  color: var(--color-accent);
   font-weight: 600;
 }
 
 .header-link-cv {
   font-weight: 600;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   margin-left: 0.25rem;
 }
 
 .header-link-cv:hover {
-  border-color: #111;
-  background: #fff;
+  border-color: var(--color-accent);
+  background: var(--color-bg-page);
 }
 
 .header-link-quiet {

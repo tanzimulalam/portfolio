@@ -1,0 +1,27 @@
+---
+description: CRA React stack, performance budget, structure
+alwaysApply: false
+globs: "**/*.{js,jsx,json}"
+---
+
+# Tech stack — portfolio
+
+## Stack
+
+- Create React App (`react-scripts` 3.x), React 16, React Router 5.
+- Deploy: GitHub Pages (`homepage: "."`, `gh-pages` branch).
+- Styled-components theme + shared CSS tokens (`src/styles/tokens.css`).
+
+## Performance budget (targets)
+
+- Prefer self-hosted fonts (`@fontsource`) over extra Google Fonts requests.
+- Remove unused CDN scripts from `public/index.html` (legacy anime/canvas/iconify).
+- Code-split secondary routes with `React.lazy` + `Suspense`.
+- Lazy-load images below the fold (`loading="lazy"`).
+- Avoid adding Three.js, heavy chart libs, or duplicate animation libraries unless strictly required.
+
+## Structure
+
+- Calm shell: `components/calmLayout/CalmLayout.js`.
+- Token-based styles: `tokens.css`, `calm-surface.css`, `calm-page.css`.
+- Content source of truth: `src/portfolio.js` (export data only; avoid hardcoding copy in components).

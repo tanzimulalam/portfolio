@@ -2,27 +2,37 @@ import React, { useMemo, useState } from "react";
 import "./LiveUpdatesFeed.css";
 import { liveFeedUpdates } from "../../portfolio.js";
 
-const INITIAL = 3;
+const DEFAULT_INITIAL = 3;
 
-export default function LiveUpdatesFeed() {
+export default function LiveUpdatesFeed({
+  initialCount = DEFAULT_INITIAL,
+  hideHeader = false,
+  hideLead = false,
+}) {
   const [expanded, setExpanded] = useState(false);
+  const cap = initialCount;
   const items = useMemo(
-    () => (expanded ? liveFeedUpdates : liveFeedUpdates.slice(0, INITIAL)),
-    [expanded]
+    () =>
+      expanded ? liveFeedUpdates : liveFeedUpdates.slice(0, Math.max(1, cap)),
+    [expanded, cap]
   );
-  const canExpand = liveFeedUpdates.length > INITIAL;
+  const canExpand = liveFeedUpdates.length > cap;
 
   return (
     <div className="live-updates">
-      <div className="live-updates-head">
-        <h2 className="live-updates-title">Latest updates</h2>
-        <span className="live-updates-badge" aria-hidden="true">
-          Live
-        </span>
-      </div>
-      <p className="live-updates-lead">
-        Recent milestones, roles, and security contributions.
-      </p>
+      {!hideHeader ? (
+        <div className="live-updates-head">
+          <h2 className="live-updates-title">Latest updates</h2>
+          <span className="live-updates-badge" aria-hidden="true">
+            Live
+          </span>
+        </div>
+      ) : null}
+      {!hideLead ? (
+        <p className="live-updates-lead">
+          Recent milestones, roles, and security contributions.
+        </p>
+      ) : null}
       <ul
         className={`live-updates-list ${
           expanded

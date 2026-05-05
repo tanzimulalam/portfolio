@@ -1,0 +1,13 @@
+---
+description: Global quality—accessibility, no glitter, consistent nav
+alwaysApply: true
+---
+
+# Global rules — portfolio
+
+- Ship accessible UI: semantic headings, visible focus for keyboard users, sufficient contrast with the warm palette.
+- No autoplay for media; no sound without explicit user action.
+- Prefer plain language; avoid sensational copy.
+- External links: `target="_blank"` with `rel="noopener noreferrer"`.
+- When adding animation, check `prefers-reduced-motion` and provide a non-animated equivalent.
+- Keep diffs focused; do not reintroduce removed “disco” patterns (particles, binary rain, music player, etc.) without an explicit product request.

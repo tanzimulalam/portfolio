@@ -4,6 +4,7 @@ import "./Footer.css";
 import {
   academicProfile,
   greeting,
+  settings,
   socialMediaLinks,
 } from "../../portfolio.js";
 
@@ -13,6 +14,8 @@ export default function Footer() {
       ? `${academicProfile.bio.slice(0, 197)}…`
       : academicProfile.bio;
 
+  const homeTo = settings.isSplash ? "/home" : "/";
+
   return (
     <footer className="site-footer">
       <div className="site-footer-inner">
@@ -21,28 +24,22 @@ export default function Footer() {
           <p className="site-footer-text">{aboutSnippet}</p>
         </div>
         <div className="site-footer-col">
-          <h3 className="site-footer-heading">Quick links</h3>
+          <h3 className="site-footer-heading">Explore</h3>
           <ul className="site-footer-links">
             <li>
-              <Link to={{ pathname: "/home", hash: "#top" }}>Home</Link>
+              <Link to={homeTo}>Home</Link>
             </li>
             <li>
-              <Link to={{ pathname: "/home", hash: "#experience" }}>
-                Experience
-              </Link>
+              <Link to="/work">Work</Link>
             </li>
             <li>
-              <Link to={{ pathname: "/home", hash: "#projects" }}>
-                Projects
-              </Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to={{ pathname: "/home", hash: "#achievements" }}>
-                Achievements
-              </Link>
+              <Link to="/uses">Uses</Link>
             </li>
             <li>
-              <Link to={{ pathname: "/home", hash: "#contact" }}>Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

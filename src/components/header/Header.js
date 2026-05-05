@@ -11,18 +11,20 @@ class Header extends Component {
   };
 
   render() {
-    const homeActive = (location) =>
-      location.pathname === "/home" &&
-      (!location.hash ||
-        location.hash === "" ||
-        location.hash === "#" ||
-        location.hash === "#top");
-
     return (
       <div className="header-outer">
         <SeoHeader />
-        <header className="header header-academic">
-          <NavLink to="/home" className="header-logo" onClick={this.closeMenu}>
+        <header className="header header-academic header-calm">
+          <NavLink
+            to={settings.isSplash ? "/home" : "/"}
+            className="header-logo"
+            isActive={(m, loc) =>
+              settings.isSplash
+                ? loc.pathname === "/home"
+                : loc.pathname === "/"
+            }
+            onClick={this.closeMenu}
+          >
             {greeting.title}
           </NavLink>
           <input className="menu-btn" type="checkbox" id="menu-btn" />
@@ -36,10 +38,14 @@ class Header extends Component {
           <ul className="menu">
             <li>
               <NavLink
-                to={{ pathname: "/home", hash: "#top" }}
+                to={settings.isSplash ? "/home" : "/"}
                 className="header-link"
                 activeClassName="header-link-active"
-                isActive={(_, loc) => homeActive(loc)}
+                isActive={(m, loc) =>
+                  settings.isSplash
+                    ? loc.pathname === "/home"
+                    : loc.pathname === "/"
+                }
                 onClick={this.closeMenu}
               >
                 Home
@@ -47,51 +53,39 @@ class Header extends Component {
             </li>
             <li>
               <NavLink
-                to={{ pathname: "/home", hash: "#experience" }}
+                to="/work"
                 className="header-link"
                 activeClassName="header-link-active"
-                isActive={(_, loc) =>
-                  loc.pathname === "/home" && loc.hash === "#experience"
-                }
                 onClick={this.closeMenu}
               >
-                Experience
+                Work
               </NavLink>
             </li>
             <li>
               <NavLink
-                to={{ pathname: "/home", hash: "#projects" }}
+                to="/about"
                 className="header-link"
                 activeClassName="header-link-active"
-                isActive={(_, loc) =>
-                  loc.pathname === "/home" && loc.hash === "#projects"
-                }
                 onClick={this.closeMenu}
               >
-                Projects
+                About
               </NavLink>
             </li>
             <li>
               <NavLink
-                to={{ pathname: "/home", hash: "#achievements" }}
+                to="/uses"
                 className="header-link"
                 activeClassName="header-link-active"
-                isActive={(_, loc) =>
-                  loc.pathname === "/home" && loc.hash === "#achievements"
-                }
                 onClick={this.closeMenu}
               >
-                Achievements
+                Uses
               </NavLink>
             </li>
             <li>
               <NavLink
-                to={{ pathname: "/home", hash: "#contact" }}
+                to="/contact"
                 className="header-link"
                 activeClassName="header-link-active"
-                isActive={(_, loc) =>
-                  loc.pathname === "/home" && loc.hash === "#contact"
-                }
                 onClick={this.closeMenu}
               >
                 Contact
@@ -105,7 +99,7 @@ class Header extends Component {
                 rel="noopener noreferrer"
                 onClick={this.closeMenu}
               >
-                CV
+                Résumé
               </a>
             </li>
             {settings.isSplash ? (

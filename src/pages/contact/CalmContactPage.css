@@ -1,0 +1,87 @@
+.calm-contact {
+  padding-bottom: 4rem;
+}
+
+.calm-contact-grid {
+  display: grid;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+@media (min-width: 800px) {
+  .calm-contact-grid {
+    grid-template-columns: 1fr 240px;
+  }
+}
+
+.calm-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.calm-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.calm-field-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.calm-field input,
+.calm-field textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-page);
+  color: var(--color-text);
+  transition: border-color var(--duration) var(--ease-out);
+}
+
+.calm-field input:focus,
+.calm-field textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.calm-form-status {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.calm-contact-aside {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.calm-contact-email {
+  margin: 0 0 var(--space-4);
+}
+
+.calm-contact-social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.calm-contact-social li {
+  margin-bottom: var(--space-2);
+}
+
+.calm-contact-social a {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration) var(--ease-out);
+}
+
+.calm-contact-social a:hover {
+  border-bottom-color: var(--color-accent);
+}

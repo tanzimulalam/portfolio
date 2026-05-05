@@ -1,0 +1,35 @@
+---
+description: Calm personal-site palette, type, spacing, motion (no disco)
+alwaysApply: false
+globs: "**/*.{css,js,jsx}"
+---
+
+# Design — personal site
+
+## Palette
+
+- Background: `#FDF8F0` (page), `#F2EFEA` (muted panels).
+- Text: `#1F1F1F` primary, `#5B5752` secondary.
+- Single accent: `#4F5B7A` (muted indigo)—CTAs, active nav, key links only.
+- No neon, no gradients-as-background, no glass blur stacks.
+
+## Typography
+
+- Headings: Cormorant Garamond (self-hosted).
+- Body: Inter (self-hosted).
+- Code/technical labels: `ui-monospace` stack; reserve a monospace webfont only when necessary.
+
+## Layout
+
+- Max width ~960px for prose; ~1200px for grids.
+- Section spacing ≥ 2rem; mobile-first from 375px.
+
+## Motion
+
+- Transitions ≤ 200ms; hover scale on cards ≤ 1.02.
+- One subtle fade-in on scroll is acceptable; no autoplay, particles, or cursor trails.
+- Always respect `prefers-reduced-motion`.
+
+## Forbidden (“disco list”)
+
+Parallax hero video, particle/WebGL backgrounds, rotating carousels, typewriter heroes, wavy cursors, emoji-as-icons, autoplay audio/video, heavy glow gradients.

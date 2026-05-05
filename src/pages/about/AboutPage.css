@@ -1,0 +1,114 @@
+.calm-page-about .calm-about-section {
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.calm-about-h2 {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-4);
+  color: var(--color-text);
+}
+
+.calm-about-h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: var(--space-5) 0 var(--space-3);
+  color: var(--color-text);
+}
+
+.calm-about-story-grid {
+  display: grid;
+  grid-template-columns: minmax(140px, 200px) 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .calm-about-story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calm-about-photo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  background: var(--color-bg-muted);
+}
+
+.calm-about-bio {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  font-size: 1.02rem;
+}
+
+.calm-about-pills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.calm-about-pills li {
+  font-size: 0.88rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-muted);
+  color: var(--color-text);
+}
+
+.calm-about-deck {
+  margin: 0 0 var(--space-6);
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 42rem;
+}
+
+.calm-exp-section {
+  margin-bottom: var(--space-8);
+}
+
+.calm-exp-heading {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin: 0 0 var(--space-4);
+  color: var(--color-text);
+}
+
+.calm-exp-heading--work {
+  color: var(--color-accent);
+}
+
+.calm-exp-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.calm-ach-section {
+  margin-bottom: var(--space-8);
+}
+
+.calm-ach-heading {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin: 0 0 var(--space-4);
+  color: var(--color-text);
+}
+
+.calm-ach-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.experience-section-wrap {
+  scroll-margin-top: 5rem;
+}

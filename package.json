@@ -12,6 +12,8 @@
     "test": "react-scripts test"
   },
   "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.2.8",
+    "@fontsource/inter": "^5.2.8",
     "animejs": "^4.3.6",
     "apollo-boost": "^0.4.4",
     "baseui": "^9.65.3",
