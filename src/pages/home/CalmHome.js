@@ -54,9 +54,7 @@ export default function CalmHome() {
             />
             <p className="calm-hero-meta-text">
               <span className="calm-hero-role">{academicProfile.role}</span>
-              <span className="calm-hero-inst">
-                {academicProfile.institution} · {academicProfile.degreeLine}
-              </span>
+              <span className="calm-hero-inst">{academicProfile.tagline}</span>
             </p>
           </div>
         </div>

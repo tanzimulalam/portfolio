@@ -34,8 +34,7 @@ const greeting = {
 const academicProfile = {
   headshotUrl: "https://i.imgur.com/Mr40tL0.jpeg",
   role: "Independent Cyber Threat Intelligence Researcher",
-  institution: "Independent",
-  degreeLine: "B.S. Cybersecurity — University of North Carolina at Pembroke",
+  tagline: "Researcher · Mentor · Cybersecurity Analyst",
   bio:
     "Hi, I’m Tanzimul (Fahim). I work in cybersecurity with a strong interest in how intelligence, machine learning, and careful engineering make systems safer. I’ve contributed to open-source security (including coordinated disclosure in Joomla Core), built research-style tooling around synthetic CTI and knowledge graphs, and care about robotics safety and digital forensics as domains where assurance really matters. I enjoy shipping practical defenses, learning in public, and collaborating with teams that take both impact and ethics seriously.",
   researchInterests: [
