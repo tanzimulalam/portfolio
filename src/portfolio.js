@@ -729,7 +729,7 @@ const experience = {
             "Laboratory for Analytic Sciences and National Security Agency",
           company_url: "https://www.nsa.gov/",
           logo_path:
-            "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/269265388_437140104692210_184097023900869449_n.png?_nc_cat=110&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=ThVrCTIgt4sQ7kNvwHp1PNo&_nc_oc=AdqtZYl-qjUtlkYeNxdjq9YRHvjuMafezxDaOIsz7jihwoZvr_jo4tx1G3FNdGVG-8US46lL3rbpm0VnjIjR60Z9&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=Z_frhUfYWsDSlIi0Iuv4OQ&_nc_ss=7b2a8&oh=00_Af5odsxfIQuxFtXYyq1qJPInq9aoP9BmUMZDX6yDHXF1jQ&oe=69FF4542",
+            "https://ncsu-las.org/wp-content/uploads/2022/08/LAS_logo_fullcolor-e1660057075455.png",
           duration: "Dec 2023 – Aug 2024",
           location: "Raleigh, NC",
           description:
@@ -741,7 +741,7 @@ const experience = {
           company: "Laboratory for Space Systems Engineering & Technology",
           company_url: "",
           logo_path:
-            "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/277748940_124007493541864_7622640440864708500_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=vMq76jOKzIQQ7kNvwFqem-k&_nc_oc=Adogw37vLFPYbO02621VCw7L4j7Hf7px7UM0kqaz8I3Gyvr-qhnMk3QHvvPsjQe4hZLsbqI72-j78NSHBWgrAgF&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=2gHVdo1FknXXjLVy0jwFyA&_nc_ss=7b2a8&oh=00_Af5DAepXVaR8GOw6xAM9gSHEh7ZQuVyAsZMr_MoGxCWpvw&oe=69FF509B",
+            "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/269265388_437140104692210_184097023900869449_n.png?_nc_cat=110&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=ThVrCTIgt4sQ7kNvwHp1PNo&_nc_oc=AdqtZYl-qjUtlkYeNxdjq9YRHvjuMafezxDaOIsz7jihwoZvr_jo4tx1G3FNdGVG-8US46lL3rbpm0VnjIjR60Z9&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=Z_frhUfYWsDSlIi0Iuv4OQ&_nc_ss=7b2a8&oh=00_Af5odsxfIQuxFtXYyq1qJPInq9aoP9BmUMZDX6yDHXF1jQ&oe=69FF4542",
           duration: "Feb 2021 – Jul 2022",
           location: "Dhaka, Bangladesh",
           description:
