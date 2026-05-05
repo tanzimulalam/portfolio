@@ -8,7 +8,7 @@ function paragraphsFromText(text) {
     .filter(Boolean);
 }
 
-export default function RecommendationCard({ name, role, context, text }) {
+export default function RecommendationCard({ name, role, text }) {
   const [expanded, setExpanded] = useState(false);
   const paras = useMemo(() => paragraphsFromText(text), [text]);
   const isLong = text.length > 420 || paras.length > 2;
@@ -40,7 +40,6 @@ export default function RecommendationCard({ name, role, context, text }) {
       <header className="calm-reco-head">
         <h3 className="calm-reco-name">{name}</h3>
         <p className="calm-reco-role">{role}</p>
-        <p className="calm-reco-context">{context}</p>
       </header>
       <div className="calm-reco-body">
         {displayParas.map((para, i) => (

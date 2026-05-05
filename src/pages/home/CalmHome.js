@@ -164,7 +164,6 @@ export default function CalmHome() {
                 key={t.name}
                 name={t.name}
                 role={t.role}
-                context={t.context}
                 text={t.text}
               />
             ))}

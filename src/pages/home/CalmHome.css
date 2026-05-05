@@ -281,15 +281,8 @@
   font-size: clamp(0.76rem, 2.8vw, 0.82rem);
   line-height: 1.45;
   color: var(--color-text-muted);
-  margin: 0 0 var(--space-2);
-  word-break: break-word;
-}
-
-.calm-reco-context {
-  font-size: 0.8rem;
-  color: var(--color-accent);
   margin: 0;
-  font-weight: 500;
+  word-break: break-word;
 }
 
 .calm-reco-body p {
