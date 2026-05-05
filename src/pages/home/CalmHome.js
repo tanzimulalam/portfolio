@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LiveUpdatesFeed from "../../components/liveUpdates/LiveUpdatesFeed";
+import RecommendationCard from "../../components/recommendationCard/RecommendationCard";
 import {
   academicProfile,
   caseStudies,
@@ -159,18 +160,13 @@ export default function CalmHome() {
           </p>
           <div className="calm-reco-list">
             {testimonials.map((t) => (
-              <article key={t.name} className="calm-reco">
-                <header className="calm-reco-head">
-                  <h3 className="calm-reco-name">{t.name}</h3>
-                  <p className="calm-reco-role">{t.role}</p>
-                  <p className="calm-reco-context">{t.context}</p>
-                </header>
-                <div className="calm-reco-body">
-                  {t.text.split(/\n\n+/).map((para, i) => (
-                    <p key={i}>{para.trim()}</p>
-                  ))}
-                </div>
-              </article>
+              <RecommendationCard
+                key={t.name}
+                name={t.name}
+                role={t.role}
+                context={t.context}
+                text={t.text}
+              />
             ))}
           </div>
         </div>

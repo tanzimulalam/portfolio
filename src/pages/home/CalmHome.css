@@ -250,11 +250,19 @@
 
 .calm-reco {
   margin: 0;
-  padding: var(--space-5) var(--space-5) var(--space-6);
+  padding: clamp(1rem, 3vw, 1.25rem) clamp(1rem, 3vw, 1.35rem)
+    clamp(1.25rem, 3vw, 1.5rem);
   border-left: 3px solid var(--color-accent);
   background: var(--color-bg-page);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   box-shadow: 0 1px 6px rgba(31, 31, 31, 0.05);
+}
+
+@media (max-width: 480px) {
+  .calm-recommendations .calm-inner--wide {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .calm-reco-head {
@@ -270,10 +278,11 @@
 }
 
 .calm-reco-role {
-  font-size: 0.82rem;
+  font-size: clamp(0.76rem, 2.8vw, 0.82rem);
   line-height: 1.45;
   color: var(--color-text-muted);
   margin: 0 0 var(--space-2);
+  word-break: break-word;
 }
 
 .calm-reco-context {

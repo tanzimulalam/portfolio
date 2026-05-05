@@ -110,12 +110,12 @@ const services = [
   },
 ];
 
-/** LinkedIn recommendations (newest first). */
+/** LinkedIn recommendations (newest first; curated subset). */
 const testimonials = [
   {
     name: "Shirsendu Mondal",
     role:
-      "Cybersecurity Researcher | ISO 27001:2022 (ISMS) Lead Auditor | CNPen | eJPT | CEH | CC (ISC)² | Youngest Certified Ethical Hacker of Bangladesh | HackTheBox SME | NASA HoF | DHS HoF",
+      "Cybersecurity Researcher | CNPen | eJPT | CEH | CC (ISC)² | NASA HoF | DHS HoF",
     context: "March 23, 2026 · worked with Tanzimul on the same team",
     text:
       "Tanzimul Alam Fahim is an excellent cybersecurity professional and a dependable teammate to work with in the SOC environment. During the time we worked together, I saw him handle security operations responsibilities with professionalism, consistency, and strong attention to detail. He approaches incidents and alerts with a calm mindset, thinks analytically, and works hard to ensure issues are properly investigated and addressed.\n\nWhat stands out most about Fahim is his reliability and teamwork. He is someone who can be trusted to contribute meaningfully during day-to-day SOC operations, collaborate well with others, and maintain a strong sense of responsibility in fast-paced situations. He is always willing to support the team and brings a solid work ethic to everything he does.\n\nI believe Fahim has a strong future in cybersecurity, and I am confident he will continue to do well in any security-focused role he takes on.",
@@ -155,14 +155,6 @@ const testimonials = [
       "I have known Tanzimul for 2 years. During this time, I have worked with him on several projects. He is a very dedicated, enthusiastic person with sound skills in technology. We both worked in BracU Dichari, IMechE Bracu Student Chapter, and BracU Mongol Tori.\n\nBest wishes.",
   },
   {
-    name: "Md Tasnimul Alam",
-    role: "Founder & CEO @ AutonoBytes LLC",
-    context:
-      "October 25, 2022 · Tanzimul was senior to Md Tasnimul (not a direct manager)",
-    text:
-      "I have found Tanzimul Alam possessing an inquisitive mind which led to strong analytical discussion with his own academic topics and life decisions. I watched him grow into an outstanding individual who excels in both theoretical and practical knowledge. At the time of his BRACU journey he was one of the important members of the BRACU Dichari team and worked on BRACU's flagship project that led him and his team to the final round of the European Robotics League 2022 in Poznan, Poland. Through his perseverance, brilliance and effort he went through and solved complex problems that required analytical ability and logical reasoning. I wish him all the success in his pursuits of academic advancement and career.",
-  },
-  {
     name: "Shahria Omar Fahim",
     role:
       "Office Engineer (Civil) at MEPC | Co-Founder at CloudString Technology | Sr. Coordinator at Beatbox Bangladesh | Lead of IT Department at English Olympiad™",
@@ -170,14 +162,6 @@ const testimonials = [
       "October 22, 2022 · same team (English Olympiad, Coding Olympiad, CloudString Technology)",
     text:
       "Tanzimul, hard working person I ever known. We both worked together at English Olympiad as Campus Ambassador. And, afterward as Lead and Deputy Lead of IT department at English Olympiad. We both also worked together as Representative of Coding Olympiad. CloudString Technology, a company co-founded by me and Tanzimul.\n\nAs we have been working over 5years together, I must admit I have learnt a lot from Tanzimul. He is the most coolest and intelligent person I ever known! There is a lot to learn from him. And I must mention one thing, Tanzimul is seriously a passionate person and takes work very seriously and always try to solve them on time and makes thing very simple to do with his knowledge!",
-  },
-  {
-    name: "Sihab Sahariar",
-    role:
-      "Computer Vision | Software Engineering | AI | VLM | Robotics | Python",
-    context: "October 18, 2022 · same team (BRACU Dichari robotics project)",
-    text:
-      "Tanzimul is a brilliant guy with whom I worked on our university robotics project, “BRACU DICHARI”. He is hardworking and promising. His problem-solving skills are amazing. I would recommend him for his incredible management skills.",
   },
 ];
 
@@ -754,7 +738,7 @@ const experience = {
             "Laboratory for Analytic Sciences and National Security Agency",
           company_url: "https://www.nsa.gov/",
           logo_path:
-            "https://ncsu-las.org/wp-content/uploads/2022/08/LAS_logo_fullcolor-e1660057075455.png",
+            "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/269265388_437140104692210_184097023900869449_n.png?_nc_cat=110&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=ThVrCTIgt4sQ7kNvwHp1PNo&_nc_oc=AdqtZYl-qjUtlkYeNxdjq9YRHvjuMafezxDaOIsz7jihwoZvr_jo4tx1G3FNdGVG-8US46lL3rbpm0VnjIjR60Z9&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=Z_frhUfYWsDSlIi0Iuv4OQ&_nc_ss=7b2a8&oh=00_Af5odsxfIQuxFtXYyq1qJPInq9aoP9BmUMZDX6yDHXF1jQ&oe=69FF4542",
           duration: "Dec 2023 – Aug 2024",
           location: "Raleigh, NC",
           description:
@@ -766,7 +750,7 @@ const experience = {
           company: "Laboratory for Space Systems Engineering & Technology",
           company_url: "",
           logo_path:
-            "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/269265388_437140104692210_184097023900869449_n.png?_nc_cat=110&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=FD2sp5c8kNoQ7kNvwEYlcGj&_nc_oc=AdnmxuZSNf5Ko2IGvJxAeI2URaGMxkxGQZqzCh3LMmOg7_v30nL3oy4XRK-76npwBsrM-ghH8t1pWw4XkKipM6ah&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=MpFx2GAYB090r9nSWD-KtA&_nc_ss=8&oh=00_AfzQEH8DJzB7gzTRKXYuLVBSPhnYsx0Ifptu5PuqF2C8UQ&oe=69BEABC2",
+            "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/277748940_124007493541864_7622640440864708500_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=vMq76jOKzIQQ7kNvwFqem-k&_nc_oc=Adogw37vLFPYbO02621VCw7L4j7Hf7px7UM0kqaz8I3Gyvr-qhnMk3QHvvPsjQe4hZLsbqI72-j78NSHBWgrAgF&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=2gHVdo1FknXXjLVy0jwFyA&_nc_ss=7b2a8&oh=00_Af5DAepXVaR8GOw6xAM9gSHEh7ZQuVyAsZMr_MoGxCWpvw&oe=69FF509B",
           duration: "Feb 2021 – Jul 2022",
           location: "Dhaka, Bangladesh",
           description:

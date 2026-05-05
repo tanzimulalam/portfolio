@@ -18,6 +18,8 @@ class ExperienceCard extends Component {
                     className="experience-card-logo"
                     src={imageSrc}
                     alt=""
+                    loading="lazy"
+                    decoding="async"
                     onError={(e) => {
                       e.target.style.display = "none";
                       const placeholder = e.target.parentElement.querySelector(
