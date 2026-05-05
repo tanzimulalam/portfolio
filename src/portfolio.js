@@ -646,17 +646,6 @@ const experience = {
       work: true,
       experiences: [
         {
-          title: "Independent Cyber Threat Intelligence Researcher",
-          company: "Independent",
-          company_url: "https://www.tanzimulalam.com/",
-          logo_path: "",
-          duration: "2026 – Present",
-          location: "Remote",
-          description:
-            "Independent research on cyber threat intelligence: STIX/TAXII-aligned tooling, synthetic CTI knowledge graphs, coordinated disclosure, and collaboration with teams that value rigorous analysis and responsible disclosure.",
-          color: "#4F5B7A",
-        },
-        {
           title: "Security Operations Center (SOC) Analyst",
           company:
             "UNCP Division of Information Technology, Network & Security Department",
