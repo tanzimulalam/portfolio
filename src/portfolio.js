@@ -134,7 +134,7 @@ const testimonials = [
       "I've had the pleasure of working with Tanzimul on a paper about security issues in building heating and cooling systems, focusing on universities. Tanzimul brings such a unique mix of skills to the table—from his work in geology to his knack for IT security. He's got this great way of tackling tricky problems, especially when it comes to analyzing data and handling security incidents. What really stands out is how hard-working and easy to work with Tanzimul is. He dives into challenges head-first and always has insightful ideas to share. I've got no doubt that Tanzimul would be a fantastic addition to any team. His blend of tech smarts and people skills is pretty hard to beat.",
   },
   {
-    name: "MD FAYSAL KHAN SHIHAB",
+    name: "Faysal Khan Shihab",
     role:
       "Marketing and Public Relations Specialist | Digital Marketer | Content Manager | Esports Athlete",
     text:
