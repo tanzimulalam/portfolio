@@ -8,7 +8,7 @@ import {
   homepage,
   liveFeedUpdates,
   services,
-  testimonial,
+  testimonials,
 } from "../../portfolio.js";
 import "./CalmHome.css";
 
@@ -147,17 +147,32 @@ export default function CalmHome() {
       </section>
 
       <section
-        className="calm-section calm-section--muted"
-        aria-labelledby="quote-heading"
+        className="calm-section calm-section--muted calm-recommendations"
+        aria-labelledby="reco-heading"
       >
-        <div className="calm-inner calm-inner--narrow">
-          <h2 id="quote-heading" className="visually-hidden">
-            Endorsement
+        <div className="calm-inner calm-inner--wide">
+          <h2 id="reco-heading" className="calm-h2">
+            Recommendations
           </h2>
-          <blockquote className="calm-quote">
-            <p>“{testimonial.quote}”</p>
-            <footer>— {testimonial.attribution}</footer>
-          </blockquote>
+          <p className="calm-lead calm-reco-intro">
+            What colleagues and collaborators have shared on LinkedIn.
+          </p>
+          <div className="calm-reco-list">
+            {testimonials.map((t) => (
+              <article key={t.name} className="calm-reco">
+                <header className="calm-reco-head">
+                  <h3 className="calm-reco-name">{t.name}</h3>
+                  <p className="calm-reco-role">{t.role}</p>
+                  <p className="calm-reco-context">{t.context}</p>
+                </header>
+                <div className="calm-reco-body">
+                  {t.text.split(/\n\n+/).map((para, i) => (
+                    <p key={i}>{para.trim()}</p>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

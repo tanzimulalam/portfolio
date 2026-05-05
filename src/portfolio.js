@@ -110,12 +110,76 @@ const services = [
   },
 ];
 
-const testimonial = {
-  quote:
-    "Tanzimul brings disciplined security thinking and unusually clear technical communication—valuable on any research-heavy or incident-driven team.",
-  attribution:
-    "Collaborator, Laboratory for Analytic Sciences internship program",
-};
+/** LinkedIn recommendations (newest first). */
+const testimonials = [
+  {
+    name: "Shirsendu Mondal",
+    role:
+      "Cybersecurity Researcher | ISO 27001:2022 (ISMS) Lead Auditor | CNPen | eJPT | CEH | CC (ISC)² | Youngest Certified Ethical Hacker of Bangladesh | HackTheBox SME | NASA HoF | DHS HoF",
+    context: "March 23, 2026 · worked with Tanzimul on the same team",
+    text:
+      "Tanzimul Alam Fahim is an excellent cybersecurity professional and a dependable teammate to work with in the SOC environment. During the time we worked together, I saw him handle security operations responsibilities with professionalism, consistency, and strong attention to detail. He approaches incidents and alerts with a calm mindset, thinks analytically, and works hard to ensure issues are properly investigated and addressed.\n\nWhat stands out most about Fahim is his reliability and teamwork. He is someone who can be trusted to contribute meaningfully during day-to-day SOC operations, collaborate well with others, and maintain a strong sense of responsibility in fast-paced situations. He is always willing to support the team and brings a solid work ethic to everything he does.\n\nI believe Fahim has a strong future in cybersecurity, and I am confident he will continue to do well in any security-focused role he takes on.",
+  },
+  {
+    name: "Imran Sefat",
+    role:
+      "Data & Integration Architect | Enterprise Data Lifecycle, ETL, Governance | NSW Government · Powerhouse | Azure · AWS | HIPAA-regulated PHI experience",
+    context:
+      "September 16, 2024 · volunteered together (IEEE BRACU Student Chapter & IEEE Computer Society BRACU SC)",
+    text:
+      "I had the pleasure of working with Fahim during his time volunteering with IEEE BRACU Student Chapter (IEEE BRACU SC) and IEEE Computer Society BRACU SC. His dedication, technical expertise, and proactive approach made him an invaluable asset to the team.\n\nFahim consistently went above and beyond in every task he undertook. Whether it was coordinating events or managing web technologies, he always brought a level of professionalism and creativity that set him apart. His contribution to the Web Tech Hackathon 2021 was particularly impressive, where he was rightfully nominated as Best Volunteer for his outstanding efforts in ensuring the event’s success. He handled everything from troubleshooting technical issues to ensuring smooth communication between teams, making him a key player in the hackathon’s seamless execution. One of Fahim’s strongest qualities is his initiative. He often stepped up to take on challenging projects, such as leading the development of the chapter’s website and providing mentorship to new members. His ability to stay calm under pressure, paired with his problem-solving mindset, made him a go-to person for both technical and organizational matters. Beyond his technical skills, Fahim demonstrated remarkable leadership and team spirit. He’s someone who works well with diverse teams and knows how to bring out the best in others. His positive attitude, work ethic, and passion for learning left a lasting impression on everyone who had the opportunity to work with him.\n\nI highly recommend Fahim for any future opportunities he pursues. He has the rare combination of technical skill, leadership ability, and a genuine drive to make an impact.",
+  },
+  {
+    name: "Tazrian Ismail",
+    role:
+      "Sustainable building & industrial automation | AMER Controls @ Amazon Web Services | PLC and Automation | Project Management",
+    context: "August 31, 2024 · senior to Tanzimul (not direct manager)",
+    text:
+      "I've had the pleasure of working with Tanzimul on a paper about security issues in building heating and cooling systems, focusing on universities. Tanzimul brings such a unique mix of skills to the table—from his work in geology to his knack for IT security. He's got this great way of tackling tricky problems, especially when it comes to analyzing data and handling security incidents. What really stands out is how hard-working and easy to work with Tanzimul is. He dives into challenges head-first and always has insightful ideas to share. I've got no doubt that Tanzimul would be a fantastic addition to any team. His blend of tech smarts and people skills is pretty hard to beat.",
+  },
+  {
+    name: "MD FAYSAL KHAN SHIHAB",
+    role:
+      "Marketing and Public Relations Specialist | Digital Marketer | Content Manager | Esports Athlete",
+    context:
+      "May 1, 2023 · same team (Gamers of Bangladesh, GameVerse Bangladesh)",
+    text:
+      "I worked with Tanzimul during our time together at both Tanzimul In Gamers of Bangladesh and GameVerse Bangladesh. Throughout our collaboration, Tanzimul proved to be a highly skilled and passionate individual with an exceptional talent for both gaming and robotics.\n\nTanzimul's technical abilities and expertise in robotics were particularly impressive, as evidenced by his numerous international awards in the field, including his achievements in the European Robotics League. He consistently demonstrated a remarkable level of focus and dedication in his work, consistently going above and beyond to ensure that projects were completed to the highest standard.\n\nBeyond his technical skills, Tanzimul's management abilities also stood out. As an organizer for the English Olympiad from its inception, he was instrumental in ensuring that the event ran smoothly and efficiently, handling all aspects of coordination and logistics with ease.\n\nI highly recommend this guy! His skills, passion, and dedication make him an invaluable asset to any team, and I am confident that he will continue to achieve great things in his future endeavors.",
+  },
+  {
+    name: "Jahir Uddin",
+    role:
+      "Physical AI & Human Factor Engineering Researcher | Graduate Research Assistant at UNMC",
+    context: "December 17, 2022 · managed Tanzimul directly",
+    text:
+      "I have known Tanzimul for 2 years. During this time, I have worked with him on several projects. He is a very dedicated, enthusiastic person with sound skills in technology. We both worked in BracU Dichari, IMechE Bracu Student Chapter, and BracU Mongol Tori.\n\nBest wishes.",
+  },
+  {
+    name: "Md Tasnimul Alam",
+    role: "Founder & CEO @ AutonoBytes LLC",
+    context:
+      "October 25, 2022 · Tanzimul was senior to Md Tasnimul (not a direct manager)",
+    text:
+      "I have found Tanzimul Alam possessing an inquisitive mind which led to strong analytical discussion with his own academic topics and life decisions. I watched him grow into an outstanding individual who excels in both theoretical and practical knowledge. At the time of his BRACU journey he was one of the important members of the BRACU Dichari team and worked on BRACU's flagship project that led him and his team to the final round of the European Robotics League 2022 in Poznan, Poland. Through his perseverance, brilliance and effort he went through and solved complex problems that required analytical ability and logical reasoning. I wish him all the success in his pursuits of academic advancement and career.",
+  },
+  {
+    name: "Shahria Omar Fahim",
+    role:
+      "Office Engineer (Civil) at MEPC | Co-Founder at CloudString Technology | Sr. Coordinator at Beatbox Bangladesh | Lead of IT Department at English Olympiad™",
+    context:
+      "October 22, 2022 · same team (English Olympiad, Coding Olympiad, CloudString Technology)",
+    text:
+      "Tanzimul, hard working person I ever known. We both worked together at English Olympiad as Campus Ambassador. And, afterward as Lead and Deputy Lead of IT department at English Olympiad. We both also worked together as Representative of Coding Olympiad. CloudString Technology, a company co-founded by me and Tanzimul.\n\nAs we have been working over 5years together, I must admit I have learnt a lot from Tanzimul. He is the most coolest and intelligent person I ever known! There is a lot to learn from him. And I must mention one thing, Tanzimul is seriously a passionate person and takes work very seriously and always try to solve them on time and makes thing very simple to do with his knowledge!",
+  },
+  {
+    name: "Sihab Sahariar",
+    role:
+      "Computer Vision | Software Engineering | AI | VLM | Robotics | Python",
+    context: "October 18, 2022 · same team (BRACU Dichari robotics project)",
+    text:
+      "Tanzimul is a brilliant guy with whom I worked on our university robotics project, “BRACU DICHARI”. He is hardworking and promising. His problem-solving skills are amazing. I would recommend him for his incredible management skills.",
+  },
+];
 
 const toolkitCategories = [
   {
@@ -992,7 +1056,7 @@ export {
   liveFeedUpdates,
   homepage,
   services,
-  testimonial,
+  testimonials,
   toolkitCategories,
   caseStudies,
   contactForm,
