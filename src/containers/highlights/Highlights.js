@@ -36,7 +36,8 @@ export default function Highlights(props) {
         },
         {
           date: "Feb 2026",
-          text: "Started working for Vanguard as a Cybersecurity Analyst.",
+          text:
+            "Focus: independent CTI research, coordinated disclosure, and open-source security contributions.",
         },
         {
           date: "Dec 2025",

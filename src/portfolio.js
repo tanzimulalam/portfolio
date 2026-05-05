@@ -33,8 +33,8 @@ const greeting = {
 // Academic-style home (hero, interests, CV). Headshot + bio for professional landing.
 const academicProfile = {
   headshotUrl: "https://i.imgur.com/Mr40tL0.jpeg",
-  role: "Cybersecurity Analyst",
-  institution: "The Vanguard Group",
+  role: "Independent Cyber Threat Intelligence Researcher",
+  institution: "Independent",
   degreeLine: "B.S. Cybersecurity — University of North Carolina at Pembroke",
   bio:
     "Hi, I’m Tanzimul (Fahim). I work in cybersecurity with a strong interest in how intelligence, machine learning, and careful engineering make systems safer. I’ve contributed to open-source security (including coordinated disclosure in Joomla Core), built research-style tooling around synthetic CTI and knowledge graphs, and care about robotics safety and digital forensics as domains where assurance really matters. I enjoy shipping practical defenses, learning in public, and collaborating with teams that take both impact and ethics seriously.",
@@ -66,7 +66,8 @@ const liveFeedUpdates = [
   },
   {
     date: "Feb 2026",
-    text: "Started working for Vanguard as a Cybersecurity Analyst.",
+    text:
+      "Focus: independent CTI research, coordinated disclosure, and open-source security contributions.",
   },
   {
     date: "Dec 2025",
@@ -646,16 +647,15 @@ const experience = {
       work: true,
       experiences: [
         {
-          title: "Cybersecurity Analyst",
-          company: "The Vanguard Group",
-          company_url: "https://investor.vanguard.com/",
-          logo_path:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Vanguard_logo.svg/320px-Vanguard_logo.svg.png",
-          duration: "Feb 2026 – Present",
-          location: "United States",
+          title: "Independent Cyber Threat Intelligence Researcher",
+          company: "Independent",
+          company_url: "https://www.tanzimulalam.com/",
+          logo_path: "",
+          duration: "2026 – Present",
+          location: "Remote",
           description:
-            "Security operations and analysis within a large-scale enterprise environment, contributing to detection, response, and continuous improvement of defensive posture.",
-          color: "#96151d",
+            "Independent research on cyber threat intelligence: STIX/TAXII-aligned tooling, synthetic CTI knowledge graphs, coordinated disclosure, and collaboration with teams that value rigorous analysis and responsible disclosure.",
+          color: "#4F5B7A",
         },
         {
           title: "Security Operations Center (SOC) Analyst",
@@ -916,7 +916,7 @@ const achievements = {
           organization_url:
             "https://www.tbsnews.net/features/pursuit/bracu-dichari-bangladeshi-robotics-team-world-stage-479498",
           logo_path:
-            "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/277748940_124007493541864_7622640440864708500_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=nbTvOVGH-LsQ7kNvwFnS5Rh&_nc_oc=Adk0HV_xVIGhx1QoA6otgQ3zkUnl4rX3uIDG8SMoSOaapNzaWzJVODnDnbNOc4pE_570EsHXi3rk7M7qeOY1aY-n&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=YqhE0n7yunpueFtWzmMC6A&_nc_ss=8&oh=00_Afy3M1BUo1-dDe219fHCz3MaI7TgBbRqjXLWBCK7SOh2Vg&oe=69BEB71B",
+            "https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2022/08/18/img-20220705-wa0006.jpg",
           duration: "2022",
           location: "Aero Klub Poznań, Poland",
           description:
@@ -982,7 +982,7 @@ const achievements = {
             "Workplace Skill Development Academy New Zealand (WSDA NZ)",
           organization_url: "",
           logo_path:
-            "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/163239651_381325526494841_4179118879986352282_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=bllAcrjcMKQQ7kNvwEpBR9v&_nc_oc=Adkt1skpIzqJekAuwFB7-JStCA_L9PCC8jDn0fMfkkj-y4SJc76MlV9a12oRMsHMnNXmJXe97AOuOHpx8OijmmBa&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=AbLh-LQOEjToSxWCZFd3EQ&_nc_ss=8&oh=00_AfyK3m76TNU_NcfJQvwg7iJ2H0dR290GYAzPaBUBIXrQ2w&oe=69E05FDD",
+            "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/163239651_381325526494841_4179118879986352282_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=X3woEen8isIQ7kNvwGowYf4&_nc_oc=Adpf8yM7PnFmJuimtQsLsM7PYG2_--x2oKY9CMaavVry_S4pzVhEvqhENFvQCxmqjCUmgNDFfwYE5wz_UuoQOOMb&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=Qt2itfRnorZeqK1c3cvATA&_nc_ss=7b2a8&oh=00_Af7eLJ5u6u6y9OUfYWbdjW1-xSED3jU5Smz_aw9F-zY8cg&oe=6A20C11D",
           duration: "2020",
           location: "Bangladesh",
           description:
