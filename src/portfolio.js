@@ -843,15 +843,15 @@ const experience = {
           color: "#003366",
         },
         {
-          title: "Resident Assistant",
+          title: "Resident Advisor (RA), North Residence Hall",
           company: "UNCP Housing & Residence Life",
           company_url: "https://www.uncp.edu/",
           logo_path:
             "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
-          duration: "Jan 2024 – Apr 2025",
+          duration: "Dec 2023 – May 2025",
           location: "Pembroke, NC",
           description:
-            "Managed field & administrative responsibilities and ensured a harmonious living environment of 577 residents.",
+            "Managed field and administrative responsibilities and kept a harmonious living environment for 577 residents.",
           color: "#003366",
         },
       ],
@@ -895,7 +895,7 @@ const experience = {
           company_url: "https://www.uncp.edu/",
           logo_path:
             "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
-          duration: "",
+          duration: "Aug 2023 – Dec 2025",
           location: "Pembroke, NC",
           description:
             "Attended NC-PaCE Symposium, gaining insights into cybersecurity trends and initiatives in NC. Organized monthly programming competitions in collaboration with ACM Chapter at UNCP.",
@@ -927,12 +927,12 @@ const experience = {
         },
         {
           title:
-            "Head of Electoral Commission, Student Government Association 77th Election",
+            "Electoral Commission Liaison, Student Government Association 77th Election",
           company: "UNCP",
           company_url: "https://www.uncp.edu/",
           logo_path:
             "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
-          duration: "Jan 2024 – Apr 2025",
+          duration: "Nov 2023 – Feb 2024",
           location: "Pembroke, NC",
           description:
             "Oversaw the election process, ensuring transparency, fairness, and increased student involvement.",
@@ -1077,7 +1077,7 @@ const achievements = {
             "https://www.tbsnews.net/features/pursuit/bracu-dichari-bangladeshi-robotics-team-world-stage-479498",
           logo_path:
             "https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2022/08/18/img-20220705-wa0006.jpg",
-          duration: "2022",
+          duration: "Mar 2022 – Jul 2022",
           location: "Aero Klub Poznań, Poland",
           description:
             "Led operations for the BRACU Dichari robotics team at European Robotics League 2022, the first Asian team to reach the final round. Won the Perseverance Award and placed Top 5.",
@@ -1130,7 +1130,7 @@ const achievements = {
           organization_url: "",
           logo_path:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLD_3SLpXK_gDGCic6orAQmZRJkYq6I6ISBg&s",
-          duration: "",
+          duration: "Nov 2021 – Aug 2023",
           location: "Bangladesh",
           description:
             "Served as Convenor & Country Ambassador for Bangladesh. World Orphans Day (20th April) was declared by Worldwide Organization for Charity (WOC) and is observed all over the world.",
