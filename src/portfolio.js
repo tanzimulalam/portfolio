@@ -8,13 +8,16 @@ const settings = {
 
 //SEO Related settings
 const seo = {
-  title: "Tanzimul Alam Fahim — Portfolio",
+  title: "Tanzimul Alam Fahim | Ph.D. Researcher, Agentic AI",
   description:
-    "Cybersecurity analyst and researcher. Interests: cyber threat intelligence, machine learning for security, robotics safety, and digital forensics.",
+    "Ph.D. student in Computational & Data Science at Middle Tennessee State University. Graduate Research Assistant in the ASQI Lab, building agentic AI for autonomous UAVs, with a background in security operations and cyber threat intelligence.",
+  keywords:
+    "Tanzimul Alam Fahim, agentic AI, autonomous UAV, ASQI Lab, MTSU, computational and data science, knowledge graphs, STIX, cyber threat intelligence, SOC analyst, robotics",
   og: {
-    title: "Tanzimul Alam Fahim — Cybersecurity & Research",
+    title: "Tanzimul Alam Fahim | Ph.D. Researcher, Agentic AI",
     type: "website",
     url: "https://www.tanzimulalam.com/",
+    image: "https://www.tanzimulalam.com/images/portfolio-banner-dark.png",
   },
 };
 
@@ -24,31 +27,129 @@ const greeting = {
   logo_name: "Tanzimul Alam Fahim",
   nickname: "tanzimulalam",
   subTitle:
-    "Cybersecurity analyst and researcher focused on threat intelligence, ML for security, and responsible technology.",
+    "Ph.D. researcher building agentic AI for autonomous unmanned aerial vehicles, with a background in security operations and cyber threat intelligence.",
   resumeLink: "",
   portfolio_repository: "https://github.com/tanzimulalam/portfolio",
   githubProfile: "https://github.com/tanzimulalam",
 };
 
-// Academic-style home (hero, interests, CV). Headshot + bio for professional landing.
+// Academic identity. Drives the hero, About page, and structured data.
 const academicProfile = {
   headshotUrl: "https://i.imgur.com/Mr40tL0.jpeg",
-  role: "Independent Cyber Threat Intelligence Researcher",
-  tagline: "Researcher · Mentor · Cybersecurity Analyst",
+  role: "Ph.D. Student, Computational & Data Science",
+  lab: "ASQI Lab",
+  labUrl: "https://ma-hossain.github.io/",
+  institution: "Middle Tennessee State University",
+  institutionShort: "MTSU",
+  institutionUrl: "https://www.mtsu.edu/",
+  advisor: "Dr. Mohammad Arif Hossain",
+  advisorUrl: "https://ma-hossain.github.io/",
+  location: "Murfreesboro, Tennessee",
+  since: "2026",
+  tagline: "Agentic AI · Autonomous systems · Cybersecurity",
+  headline: "Agents that fly, decide, and can be trusted.",
+  intro:
+    "I'm a Ph.D. student in Computational & Data Science at Middle Tennessee State University and a Graduate Research Assistant in the ASQI Lab, working with Dr. Mohammad Arif Hossain. My current project is an agentic AI system for autonomous unmanned aerial vehicles: drones that plan, adapt, and navigate on their own rather than following a fixed script.",
   bio:
-    "Hi, I’m Tanzimul (Fahim). I work in cybersecurity with a strong interest in how intelligence, machine learning, and careful engineering make systems safer. I’ve contributed to open-source security (including coordinated disclosure in Joomla Core), built research-style tooling around synthetic CTI and knowledge graphs, and care about robotics safety and digital forensics as domains where assurance really matters. I enjoy shipping practical defenses, learning in public, and collaborating with teams that take both impact and ethics seriously.",
+    "I came to autonomy from two directions. The first was robotics. At the Laboratory for Space Systems Engineering & Technology in Dhaka I led development of autonomous aerial and ground vehicles using ROS, LiDAR, and sensor fusion, and took the BRACU Dichari team to the European Robotics League 2022 finals as the first Asian team to reach that round.\n\nThe second was security. I spent three years as a security operations analyst, triaging alerts across Splunk, Defender, and Cisco tooling, writing Python automation and anomaly detection that cut incident response time by 30 percent. Alongside that I ran a research internship with the Laboratory for Analytic Sciences and the NSA, leading a team of five that built synthetic cyber threat intelligence: STIX 2.1 knowledge graphs with more than 100,000 nodes, so analysts could train and test tooling without touching sensitive production data. I also reported a stored XSS issue in Joomla Core that was fixed as CVE-2026-21631, and taught cybersecurity bootcamp modules to career changers at Data Group USA.\n\nThose two threads meet in the same question. An autonomous agent is a system that reads untrusted input from the world and then acts on it, which is also a fair description of an attack surface. My research is about making agents capable enough to be useful and verifiable enough to deploy.",
   researchInterests: [
+    "Agentic AI",
+    "Autonomous Systems & UAVs",
+    "Knowledge Graphs",
     "Cyber Threat Intelligence",
-    "Machine Learning for Cybersecurity",
-    "Robotics Safety",
-    "Digital Forensics",
+    "Machine Learning Security",
+    "Computer Vision & Perception",
   ],
-  resumeUrl:
-    "https://drive.google.com/file/d/1yIu1uHcYQCdNFv5NA22ht2P00r4GVieX/view?usp=sharing",
+  resumeUrl: "/Tanzimul_Alam_Fahim_CV.pdf",
 };
+
+/** Headline numbers for the hero metric strip. Keep to four. */
+const stats = [
+  { value: "3+ yrs", label: "Security operations and threat analysis" },
+  { value: "100K+", label: "Nodes in a synthetic CTI knowledge graph" },
+  { value: "CVE-2026-21631", label: "Joomla Core disclosure, credited" },
+  { value: "IEEE CICN", label: "Technical Review Committee, 2026" },
+];
+
+/**
+ * Research agenda: the spine of the site. Each thrust states the question,
+ * what I'm actually doing about it, and where it connects to prior work.
+ */
+const researchAreas = [
+  {
+    id: "agentic-uav",
+    index: "01",
+    title: "Agentic AI for Autonomous UAVs",
+    question:
+      "Can a drone plan its own mission, revise the plan when the world disagrees, and still stay within safe bounds?",
+    body:
+      "My work in the ASQI Lab is an agentic system for unmanned aerial vehicles. Instead of following a fixed waypoint script, the agent reasons about its goal, calls perception and control tools, and updates its approach as conditions change. The interesting problems are in the loop itself: how the agent decides a plan has failed, how it recovers without human input, and what guardrails keep self-directed behaviour predictable.",
+    keywords: [
+      "Self-evolving agents",
+      "Autonomous navigation",
+      "ROS",
+      "Sensor fusion",
+    ],
+    status: "Primary focus",
+  },
+  {
+    id: "agent-security",
+    index: "02",
+    title: "Security of Agentic Systems",
+    question:
+      "An agent that reads the world and acts on it is also an attack surface. What breaks it?",
+    body:
+      "Prompt injection, tool misuse, and adversarial manipulation are the native failure modes of systems that consume untrusted input and then take action. Coming from security operations, I treat these as delivery mechanisms and privilege escalation rather than purely model behaviour, which surfaces failure paths a benchmark-only view tends to miss.",
+    keywords: [
+      "Prompt injection",
+      "Tool misuse",
+      "Adversarial robustness",
+      "Threat modeling",
+    ],
+    status: "Active",
+  },
+  {
+    id: "cti-graphs",
+    index: "03",
+    title: "Knowledge Graphs for Threat Intelligence",
+    question:
+      "Can synthetic intelligence be realistic enough to train on and traceable enough to trust?",
+    body:
+      "This grew out of SAKURA, the STIX 2.1 knowledge graph platform I built at LAS and the NSA. The generation side is largely solved. The harder half is provenance, validity checking, and link prediction: knowing which relationships in a generated graph are sound and which should not be believed.",
+    keywords: [
+      "STIX 2.1",
+      "Link prediction",
+      "Graph neural networks",
+      "Synthetic data",
+    ],
+    status: "Ongoing",
+  },
+  {
+    id: "evaluation",
+    index: "04",
+    title: "Evaluation & Assurance",
+    question:
+      "How do we make claims about autonomous systems that hold up to scrutiny?",
+    body:
+      "A lot of work in this space measures the wrong thing convincingly. I care about benchmark design, reproducibility, and honest baselines, because that methodological work decides whether a field accumulates knowledge or just accumulates papers.",
+    keywords: ["Benchmarks", "Reproducibility", "Simulation", "Red teaming"],
+    status: "Ongoing",
+  },
+];
 
 // Home “Latest updates” feed (month + year only); expandable on the landing page.
 const liveFeedUpdates = [
+  {
+    date: "Aug 2026",
+    text:
+      "Started the Ph.D. in Computational & Data Science at Middle Tennessee State University as a Graduate Research Assistant in the ASQI Lab, building agentic AI for autonomous unmanned aerial vehicles with Dr. Mohammad Arif Hossain.",
+    highlight: true,
+  },
+  {
+    date: "Jul 2026",
+    text:
+      "Wrapped up a contract teaching cybersecurity bootcamp modules at Data Group USA, covering vulnerability management, threat intelligence, and risk assessment for career changers.",
+  },
   {
     date: "Mar 2026",
     text:
@@ -82,30 +183,32 @@ const liveFeedUpdates = [
   },
 ];
 
-// Calm homepage (value proposition + CTAs)
+// Landing page copy
 const homepage = {
-  headline: "I help teams ship calm, defensible security work.",
+  eyebrow: "Ph.D. Student · ASQI Lab · MTSU",
+  headline: "Agents that fly, decide, and can be trusted.",
   subhead:
-    "Cybersecurity analyst and researcher—threat intelligence, SOC operations, and careful engineering: from STIX knowledge graphs to coordinated disclosure and open collaboration.",
-  primaryCta: { label: "View my work", to: "/work" },
-  secondaryCta: { label: "Get in touch", to: "/contact" },
+    "I build agentic AI for autonomous unmanned aerial vehicles in the ASQI Lab at MTSU. Before the Ph.D. I spent three years in security operations and threat intelligence, including research with the Laboratory for Analytic Sciences and the NSA. Both halves ask the same question: how much can you let a system decide for itself?",
+  primaryCta: { label: "Read the research", to: "/research" },
+  secondaryCta: { label: "Curriculum vitae", to: "/about" },
 };
 
 const services = [
   {
-    title: "Security operations & CTI",
+    title: "Research",
     description:
-      "Enterprise SOC workflows, triage, and structured threat data.",
+      "Agentic AI for autonomous UAVs, knowledge graphs, and agent security.",
+    to: "/research",
+  },
+  {
+    title: "Engineering & practice",
+    description:
+      "Case write-ups: synthetic CTI at scale, SOC operations, coordinated disclosure.",
     to: "/work",
   },
   {
-    title: "Research-style engineering",
-    description: "Synthetic intel graphs, LLM pipelines, and evaluation rigor.",
-    to: "/work",
-  },
-  {
-    title: "Story & background",
-    description: "Education, leadership, and how I work with teams.",
+    title: "Background",
+    description: "Education, appointments, leadership, and the full CV.",
     to: "/about",
   },
 ];
@@ -181,8 +284,10 @@ const toolkitCategories = [
 const caseStudies = [
   {
     id: "sakura-cti",
+    year: "2024",
+    track: "Research",
     title: "Synthetic CTI knowledge graphs (SAKURA / Synthetica)",
-    role: "Research engineer — NSA LAS internship",
+    role: "Research and ML Intern, Laboratory for Analytic Sciences / NSA",
     problem:
       "Analysts need realistic STIX 2.1 data without exposing sensitive production intel.",
     approach:
@@ -194,8 +299,10 @@ const caseStudies = [
   },
   {
     id: "soc-uncp",
+    year: "2024–25",
+    track: "Practice",
     title: "SOC analysis & response (campus scale)",
-    role: "Security Operations Center Analyst — UNCP IT",
+    role: "Security Operations Center Analyst, UNCP IT",
     problem:
       "High alert volume across email, endpoint, and network controls with limited analyst time.",
     approach:
@@ -207,8 +314,10 @@ const caseStudies = [
   },
   {
     id: "mdl-identity",
+    year: "2024–25",
+    track: "Research",
     title: "Mobile Driver’s License architecture research",
-    role: "Research Assistant — Cyber Defense Education Center",
+    role: "Research Assistant, UNCP Cyber Defense Education Center",
     problem:
       "mDL systems must balance privacy, crypto agility, and real-world issuance constraints.",
     approach:
@@ -224,7 +333,9 @@ const caseStudies = [
   },
   {
     id: "joomla-cve",
-    title: "Coordinated disclosure — Joomla Core (CVE-2026-21631)",
+    year: "2026",
+    track: "Disclosure",
+    title: "Coordinated disclosure: Joomla Core (CVE-2026-21631)",
     role: "Independent researcher",
     problem:
       "A stored XSS class of issue in a widely deployed CMS comparison view.",
@@ -237,8 +348,10 @@ const caseStudies = [
   },
   {
     id: "pfas-pipelines",
+    year: "2024–25",
+    track: "Data science",
     title: "Environmental data pipelines at scale",
-    role: "Data Science Research Assistant — UNCP Geology",
+    role: "Data Science Research Assistant, UNCP Geology",
     problem:
       "Tens of thousands of PFAS well records required cleaning, deduplication, and geographic matching.",
     approach:
@@ -581,13 +694,26 @@ const competitiveSites = {
 const degrees = {
   degrees: [
     {
+      title: "Middle Tennessee State University",
+      subtitle: "Doctor of Philosophy: Computational & Data Science",
+      logo_path: "mtsu_logo.png",
+      alt_name: "MTSU",
+      duration: "2026 – present",
+      descriptions: [
+        "⚡ ASQI Lab, advised by Dr. Mohammad Arif Hossain (Department of Engineering Technology)",
+        "⚡ Research: agentic LLM security, adversarial robustness, and machine-generated threat intelligence",
+        "⚡ Coursework and methods spanning distributed machine learning, edge intelligence, and generative AI",
+      ],
+      website_link: "https://www.mtsu.edu/",
+    },
+    {
       title: "University of North Carolina at Pembroke",
       subtitle: "Bachelor of Science: Cybersecurity",
       logo_path: "uncp_logo.png",
       alt_name: "UNCP",
       duration: "2025",
       descriptions: [
-        "⚡ Cum Laude — Honors Scholar Fellowship, Chancellor's Honor List, National Honors Society",
+        "⚡ Cum Laude. Honors Scholar Fellowship, Chancellor's Honor List, National Honors Society",
         "⚡ Pembroke Scholar (2023, 2024, 2025)",
         "⚡ Focused on cybersecurity, application security, incident response, and secure identity research",
       ],
@@ -638,7 +764,7 @@ const experience = {
   title: "Experience",
   subtitle: "Work, Internship and Research",
   description:
-    "Cybersecurity professional with extensive experience in Security Operations Center (SOC) analysis, threat intelligence, machine learning research, and data science. Passionate about developing innovative solutions for cybersecurity challenges and advancing research in digital identity and threat intelligence.",
+    "Three years of security operations and threat intelligence work, a research internship with the Laboratory for Analytic Sciences and the NSA, and robotics before that. Listed newest first.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -646,16 +772,38 @@ const experience = {
       work: true,
       experiences: [
         {
+          title: "Graduate Research Assistant, ASQI Lab",
+          company: "MTSU Mechatronics Engineering & Engineering Technology",
+          company_url: "https://ma-hossain.github.io/",
+          logo_path: "mtsu_logo.png",
+          duration: "Aug 2026 – present",
+          location: "Murfreesboro, TN",
+          description:
+            "Developing an agentic AI system for autonomous unmanned aerial vehicles under Dr. Mohammad Arif Hossain. The agent plans its own mission, calls perception and control tools, and revises its approach as conditions change, with guardrails that keep self-directed behaviour predictable.",
+          color: "#0066CC",
+        },
+        {
+          title: "Cyber Security Instructor",
+          company: "Data Group USA",
+          company_url: "",
+          logo_path: "",
+          duration: "May 2026 – Jul 2026",
+          location: "Washington DC-Baltimore Area",
+          description:
+            "Taught fast-paced cybersecurity bootcamp sessions for career changers, covering vulnerability management, threat intelligence, and risk assessment. Built real-world scenarios to connect theory to practice, provided one-on-one coaching, and prepared students for security analyst and SOC analyst roles.",
+          color: "#0066CC",
+        },
+        {
           title: "Security Operations Center (SOC) Analyst",
           company:
             "UNCP Division of Information Technology, Network & Security Department",
           company_url: "https://www.uncp.edu/",
           logo_path:
             "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
-          duration: "Jan 2024 – Sep 2025",
+          duration: "Mar 2024 – Aug 2025",
           location: "Pembroke, NC",
           description:
-            "Proactively conducted vulnerability analysis and security operations in Splunk, Microsoft Defender, Cisco AMP, Umbrella, and PhishER, triaging alerts and performing incident response workflows to detect and mitigate threats.",
+            "Investigated alerts and ran vulnerability assessments in Splunk, Microsoft Defender, Cisco AMP, Umbrella, and PhishER. Wrote Python scripts and applied machine learning based anomaly detection to automate threat identification, reducing incident response time by 30 percent.",
           color: "#003366",
         },
         {
@@ -799,19 +947,43 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects span cybersecurity, machine learning, data science, and robotics. I specialize in developing innovative solutions using cutting-edge technologies including STIX knowledge graphs, GANs, LLMs, and autonomous systems.",
+    "Projects across autonomous systems, machine learning, and security: STIX knowledge graphs, agentic pipelines, computer vision, and robotics.",
   avatar_image_path: "projects_image.svg",
 };
 
 const publicationsHeader = {
   title: "Projects and Research",
   description:
-    "Research projects, publications, and innovative solutions in cybersecurity, machine learning, and data science.",
+    "Research prototypes and applied builds across autonomous systems, machine learning, and security.",
   avatar_image_path: "projects_image.svg",
 };
 
 const publications = {
   data: [
+    {
+      id: "agentic-uav",
+      name: "Agentic AI for Autonomous UAV Navigation",
+      createdAt: "2026-08-01T00:00:00Z",
+      description:
+        "Current ASQI Lab project. A self-evolving agent that plans a UAV mission, calls perception and control tools, and revises its route when conditions change, with guardrails on self-directed behaviour.",
+      url: "",
+    },
+    {
+      id: "phishnet",
+      name: "PhishNet",
+      createdAt: "2026-03-01T00:00:00Z",
+      description:
+        "A Python machine learning pipeline that detects phishing by modelling structural and behavioural patterns in web and URL data.",
+      url: "",
+    },
+    {
+      id: "kg-link-prediction",
+      name: "Link Prediction in Knowledge Graphs",
+      createdAt: "2023-09-01T00:00:00Z",
+      description:
+        "Comparative evaluation of link prediction models on the SAKURA dataset, measuring accuracy and computational efficiency against the SAKURA approach.",
+      url: "",
+    },
     {
       id: "skelevision",
       name: "SkeleVision",
@@ -861,21 +1033,21 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "animated_profile.png",
     description:
-      "I am available for opportunities in cybersecurity, machine learning, and data science. Feel free to reach out via email or LinkedIn. I typically respond within 24 hours. I can help with cybersecurity analysis, threat intelligence, ML/AI projects, and research collaborations.",
+      "I like hearing from people working on adjacent problems: autonomous systems, agentic AI, threat intelligence, or anything nearby. Open to research collaborations, paper discussions, review invitations, and internships. I usually reply within a day or two.",
   },
   blogSection: {
-    title: "Blogs",
+    title: "Notes",
     subtitle:
-      "I document my research experiences, technical insights, and career journey in cybersecurity and machine learning.",
+      "Occasional write-ups on research, security engineering, and what I'm reading.",
     link: "",
     avatar_image_path: "blogs_image.svg",
   },
   addressSection: {
-    title: "Address",
-    subtitle: "Pembroke, NC, USA",
-    locality: "Pembroke",
+    title: "Based in",
+    subtitle: "Murfreesboro, TN, USA",
+    locality: "Murfreesboro",
     country: "USA",
-    region: "North Carolina",
+    region: "Tennessee",
     postalCode: "",
     streetAddress: "",
     avatar_image_path: "address_image.svg",
@@ -899,7 +1071,7 @@ const achievements = {
       achievements: [
         {
           title:
-            "Team Lead of Operations — BRACU Dichari (European Robotics League 2022)",
+            "Team Lead of Operations, BRACU Dichari (European Robotics League 2022)",
           organization: "BRACU Dichari Robotics Team",
           organization_url:
             "https://www.tbsnews.net/features/pursuit/bracu-dichari-bangladeshi-robotics-team-world-stage-479498",
@@ -908,7 +1080,7 @@ const achievements = {
           duration: "2022",
           location: "Aero Klub Poznań, Poland",
           description:
-            "Led operations for the BRACU Dichari robotics team at European Robotics League (ERL) 2022 — first Asian team to reach the final round; won the Perseverance Award and placed Top 5.",
+            "Led operations for the BRACU Dichari robotics team at European Robotics League 2022, the first Asian team to reach the final round. Won the Perseverance Award and placed Top 5.",
           color: "#1E88E5",
           links: [
             {
@@ -1016,6 +1188,8 @@ export {
   seo,
   greeting,
   academicProfile,
+  stats,
+  researchAreas,
   liveFeedUpdates,
   homepage,
   services,
