@@ -185,7 +185,7 @@ const liveFeedUpdates = [
 
 // Landing page copy
 const homepage = {
-  eyebrow: "Ph.D. Student · ASQI Lab · MTSU",
+  eyebrow: "Building autonomous UAV agents",
   headline: "Agents that fly, decide, and can be trusted.",
   subhead:
     "I build agentic AI for autonomous unmanned aerial vehicles in the ASQI Lab at MTSU. Before the Ph.D. I spent three years in security operations and threat intelligence, including research with the Laboratory for Analytic Sciences and the NSA. Both halves ask the same question: how much can you let a system decide for itself?",
