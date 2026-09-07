@@ -59,11 +59,6 @@
   pointer-events: none;
 }
 
-/* ---------------------------------------------------------------
-   Hero footage. Four stacked gradients bleed every edge into the
-   page ground so the clip has no visible border, then the same
-   left-hand scrim the canvas used keeps the headline legible.
-   --------------------------------------------------------------- */
 /* The clip is only 640px wide and there is no larger rendition, so it is
    sized to its own aspect ratio on a right-hand panel rather than stretched
    across the hero. That holds the upscale near 1.25x instead of 2.5x, which
