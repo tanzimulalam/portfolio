@@ -191,7 +191,7 @@ const homepage = {
   eyebrow: "Building autonomous UAV agents",
   headline: "Agents that fly, decide, and can be trusted.",
   subhead:
-    "I build agentic AI for autonomous unmanned aerial vehicles in the ASQI Lab at MTSU. Before the Ph.D. I spent three years in security operations and threat intelligence, including research with the Laboratory for Analytic Sciences and the NSA. Both halves ask the same question: how much can you let a system decide for itself?",
+    "I build and research on the security of agentic AI in autonomous unmanned aerial vehicles. Before the doctoral studies, I spent nearly four years in security operations, cyber threat intelligence and research in AI security. Both halves ask the same question: how much can you let a system decide for itself?",
   primaryCta: { label: "Read the research", to: "/research" },
   secondaryCta: { label: "Curriculum vitae", to: "/about" },
 };

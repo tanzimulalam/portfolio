@@ -26,9 +26,9 @@ export default function Home() {
         <picture className="sg-hero-media">
           <source
             media="(prefers-reduced-motion: reduce)"
-            srcSet="/media/hero-uav-poster.jpg"
+            srcSet="/media/hero-quad-poster.jpg"
           />
-          <img src="/media/hero-uav.webp" alt="" decoding="async" />
+          <img src="/media/hero-quad.webp" alt="" decoding="async" />
         </picture>
 
         <div className="sg-hero-inner sg-wrap">
