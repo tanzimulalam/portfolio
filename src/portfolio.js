@@ -71,7 +71,7 @@ const stats = [
   },
   { value: "100K+", label: "Nodes in a synthetic CTI knowledge graph" },
   { value: "CVE-2026-21631", label: "Joomla Core disclosure, credited" },
-  { value: "IEEE CICN", label: "Technical Review Committee, 2026" },
+  { value: "IMechE", label: "Founder, BRACU Student Chapter" },
 ];
 
 /**
@@ -188,7 +188,7 @@ const liveFeedUpdates = [
 
 // Landing page copy
 const homepage = {
-  eyebrow: "Building autonomous UAV agents",
+  eyebrow: "Researcher · Student · Developer · Security Practitioner",
   headline: "Agents that fly, decide, and can be trusted.",
   subhead:
     "I build and research on the security of agentic AI in autonomous unmanned aerial vehicles. Before the doctoral studies, I spent nearly four years in security operations, cyber threat intelligence and research in AI security. Both halves ask the same question: how much can you let a system decide for itself?",

@@ -177,7 +177,10 @@ a {
   color: var(--signal);
   margin: 0;
   display: inline-flex;
-  align-items: center;
+  /* flex-start, not center: a wrapped eyebrow would otherwise float its dot
+     between the two lines. The offset below puts it on the first line, which
+     is where centring already put it in the single-line case. */
+  align-items: flex-start;
   gap: 0.6em;
 }
 
@@ -192,6 +195,7 @@ a {
   border-radius: 50%;
   background: currentColor;
   flex: none;
+  margin-top: 0.58em;
   box-shadow: 0 0 0 3px var(--signal-faint);
 }
 

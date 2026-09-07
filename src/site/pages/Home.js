@@ -88,8 +88,6 @@ export default function Home() {
                   >
                     {academicProfile.institution}
                   </a>
-                  {" · "}
-                  advised by {academicProfile.advisor}
                 </span>
               </span>
             </div>
