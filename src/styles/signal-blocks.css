@@ -59,22 +59,26 @@
   pointer-events: none;
 }
 
-/* The clip is only 640px wide and there is no larger rendition, so it is
+/* The clip is only 498px wide and Giphy has no larger rendition, so it is
    sized to its own aspect ratio on a right-hand panel rather than stretched
-   across the hero. That holds the upscale near 1.25x instead of 2.5x, which
-   is the difference between soft and blurry. */
+   across the hero. That holds the upscale near 1.4x instead of 3x, which is
+   the difference between soft and blurry. */
 .sg-hero-media {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: min(54%, 820px);
-  aspect-ratio: 640 / 366;
+  width: min(48%, 700px);
+  aspect-ratio: 498 / 280;
   z-index: 0;
   display: block;
   pointer-events: none;
 }
 
+/* The clip is a dusk shot, pink and blue. This chain flattens it to luminance,
+   warms it, then rotates the hue into the phosphor green the site runs on, so
+   the footage sits inside the palette instead of fighting it. `hue-rotate` is
+   the dial: lower goes yellow-green, higher goes cyan. */
 .sg-hero-media img {
   position: relative;
   z-index: 0;
@@ -82,9 +86,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* No type sits over the panel now, so it can stay brighter than it did
-     when it was a full-bleed backdrop. */
-  filter: brightness(0.74) contrast(1.06) saturate(0.8);
+  filter: grayscale(1) sepia(1) hue-rotate(96deg) saturate(1.65)
+    brightness(0.58) contrast(1.24);
 }
 
 /* Fine scanlines. They cost nothing, they read as a feed rather than as a
@@ -120,29 +123,30 @@
 
 @media (max-width: 900px) {
   /* A full-height cover crop on a 375px screen slices a narrow vertical strip
-     out of a 16:9 clip, which crops the aircraft out entirely and leaves only
-     haze. Give it the clip's own ratio as a band across the top instead, so
-     the whole frame is visible and nothing is upscaled. */
+     out of a widescreen clip, which crops the aircraft out entirely and leaves
+     only haze. Give it the clip's own ratio as a band across the top instead,
+     so the whole frame is visible and nothing is upscaled. */
   .sg-hero-media {
     inset: 0 0 auto 0;
     top: 0;
     width: auto;
-    aspect-ratio: 640 / 366;
+    aspect-ratio: 498 / 280;
     transform: none;
   }
 
   .sg-hero-media img {
     object-position: center;
-    filter: brightness(0.72) contrast(1.06) saturate(0.8);
+    filter: grayscale(1) sepia(1) hue-rotate(96deg) saturate(1.65)
+      brightness(0.54) contrast(1.24);
   }
 
-  /* Dissolve the band's lower half into the copy beneath it. */
+  /* Dissolve the band's lower edge into the copy beneath it. */
   .sg-hero-media::after {
     background: linear-gradient(
         to bottom,
-        rgba(10, 12, 16, 0.16) 0%,
-        rgba(10, 12, 16, 0.34) 44%,
-        rgba(10, 12, 16, 0.88) 82%,
+        rgba(10, 12, 16, 0.1) 0%,
+        rgba(10, 12, 16, 0.24) 52%,
+        rgba(10, 12, 16, 0.8) 84%,
         var(--ink-1) 100%
       ),
       linear-gradient(to right, var(--ink-1) 0%, rgba(10, 12, 16, 0) 14%),
@@ -180,6 +184,16 @@
   z-index: 1;
   width: 100%;
   padding-block: clamp(4rem, 10vw, 7rem);
+}
+
+/* On narrow screens the footage becomes a band across the top of the hero, so
+   the copy has to start below it. The expression is the band's own height:
+   viewport width times the clip's aspect ratio. This has to sit after the rule
+   above, whose `padding-block` shorthand would otherwise win on source order. */
+@media (max-width: 900px) {
+  .sg-hero-inner {
+    padding-top: calc(100vw * 280 / 498 + 1.25rem);
+  }
 }
 
 .sg-hero-col {
