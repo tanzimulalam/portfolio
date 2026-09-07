@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
-import GraphField from "../components/GraphField";
 import { Feed, Metrics, Quote, Reveal, SectionHead } from "../components/Bits";
 import {
   academicProfile,
@@ -21,7 +20,16 @@ export default function Home() {
     <Layout>
       {/* ---------------------------------------------- hero */}
       <section className="sg-hero" aria-labelledby="hero-title">
-        <GraphField className="sg-hero-canvas" />
+        {/* Decorative backdrop. The poster is served instead of the loop under
+            `prefers-reduced-motion`, which an animated image cannot honour on
+            its own. */}
+        <picture className="sg-hero-media">
+          <source
+            media="(prefers-reduced-motion: reduce)"
+            srcSet="/media/hero-drone-poster.jpg"
+          />
+          <img src="/media/hero-drone.webp" alt="" decoding="async" />
+        </picture>
 
         <div className="sg-hero-inner sg-wrap">
           <div className="sg-hero-col">

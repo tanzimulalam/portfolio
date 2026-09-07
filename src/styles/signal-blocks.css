@@ -59,6 +59,102 @@
   pointer-events: none;
 }
 
+/* ---------------------------------------------------------------
+   Hero footage. Four stacked gradients bleed every edge into the
+   page ground so the clip has no visible border, then the same
+   left-hand scrim the canvas used keeps the headline legible.
+   --------------------------------------------------------------- */
+/* The clip is only 640px wide and there is no larger rendition, so it is
+   sized to its own aspect ratio on a right-hand panel rather than stretched
+   across the hero. That holds the upscale near 1.25x instead of 2.5x, which
+   is the difference between soft and blurry. */
+.sg-hero-media {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(54%, 820px);
+  aspect-ratio: 640 / 366;
+  z-index: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.sg-hero-media img {
+  position: relative;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* No type sits over the panel now, so it can stay brighter than it did
+     when it was a full-bleed backdrop. */
+  filter: brightness(0.74) contrast(1.06) saturate(0.8);
+}
+
+/* Fine scanlines. They cost nothing, they read as a feed rather than as a
+   photograph, and they give the eye real high-frequency edges to hold on to,
+   which hides what is left of the upscaling softness. */
+.sg-hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.26) 0 1px,
+    rgba(0, 0, 0, 0) 1px 3px
+  );
+}
+
+/* Every edge bleeds into the page ground, so the panel has no visible frame. */
+.sg-hero-media::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 2;
+  background: linear-gradient(
+      to right,
+      var(--ink-1) 0%,
+      rgba(10, 12, 16, 0) 34%
+    ),
+    linear-gradient(to left, var(--ink-1) 0%, rgba(10, 12, 16, 0) 26%),
+    linear-gradient(to bottom, var(--ink-1) 0%, rgba(10, 12, 16, 0) 30%),
+    linear-gradient(to top, var(--ink-1) 0%, rgba(10, 12, 16, 0) 30%);
+}
+
+@media (max-width: 900px) {
+  /* A full-height cover crop on a 375px screen slices a narrow vertical strip
+     out of a 16:9 clip, which crops the aircraft out entirely and leaves only
+     haze. Give it the clip's own ratio as a band across the top instead, so
+     the whole frame is visible and nothing is upscaled. */
+  .sg-hero-media {
+    inset: 0 0 auto 0;
+    top: 0;
+    width: auto;
+    aspect-ratio: 640 / 366;
+    transform: none;
+  }
+
+  .sg-hero-media img {
+    object-position: center;
+    filter: brightness(0.72) contrast(1.06) saturate(0.8);
+  }
+
+  /* Dissolve the band's lower half into the copy beneath it. */
+  .sg-hero-media::after {
+    background: linear-gradient(
+        to bottom,
+        rgba(10, 12, 16, 0.16) 0%,
+        rgba(10, 12, 16, 0.34) 44%,
+        rgba(10, 12, 16, 0.88) 82%,
+        var(--ink-1) 100%
+      ),
+      linear-gradient(to right, var(--ink-1) 0%, rgba(10, 12, 16, 0) 14%),
+      linear-gradient(to left, var(--ink-1) 0%, rgba(10, 12, 16, 0) 14%);
+  }
+}
+
 /* Fade the graph out behind the text column so type stays legible. */
 .sg-hero-canvas::after {
   content: "";
@@ -93,6 +189,14 @@
 
 .sg-hero-col {
   max-width: 54rem;
+}
+
+/* Keep the copy clear of the footage panel on desktop. Below 901px the panel
+   goes full bleed and the copy gets the whole width back. */
+@media (min-width: 901px) {
+  .sg-hero-col {
+    max-width: min(54rem, 46vw);
+  }
 }
 
 .sg-hero-title {

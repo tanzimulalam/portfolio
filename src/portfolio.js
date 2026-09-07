@@ -65,7 +65,10 @@ const academicProfile = {
 
 /** Headline numbers for the hero metric strip. Keep to four. */
 const stats = [
-  { value: "3+ yrs", label: "Security operations and threat analysis" },
+  {
+    value: "ERL 2022",
+    label: "Perseverance Award, first Asian team in the finals",
+  },
   { value: "100K+", label: "Nodes in a synthetic CTI knowledge graph" },
   { value: "CVE-2026-21631", label: "Joomla Core disclosure, credited" },
   { value: "IEEE CICN", label: "Technical Review Committee, 2026" },
