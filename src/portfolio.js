@@ -143,6 +143,11 @@ const researchAreas = [
 // Home “Latest updates” feed (month + year only); expandable on the landing page.
 const liveFeedUpdates = [
   {
+    date: "Sep 2026",
+    text:
+      "Joined the Technical Program Committee for CSNT 2027, the 16th IEEE International Conference on Communication Systems and Network Technologies.",
+  },
+  {
     date: "Aug 2026",
     text:
       "Started the Ph.D. in Computational & Data Science at Middle Tennessee State University as a Graduate Research Assistant in the ASQI Lab, building agentic AI for autonomous unmanned aerial vehicles with Dr. Mohammad Arif Hossain.",
