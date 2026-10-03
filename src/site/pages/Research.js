@@ -71,17 +71,9 @@ export default function Research() {
 
           <Reveal className="sg-prose">
             <p className="sg-prose-open">
-              I work in the <strong>{academicProfile.lab}</strong> at{" "}
-              {academicProfile.institution}, advised by{" "}
-              <a
-                className="sg-link"
-                href={academicProfile.advisorUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {academicProfile.advisor}
-              </a>{" "}
-              in the Department of Engineering Technology.
+              I work in the <strong>{academicProfile.lab}</strong>, in the
+              Department of Engineering Technology at{" "}
+              {academicProfile.institution}.
             </p>
             <p>
               The lab works on agentic LLM systems, distributed and

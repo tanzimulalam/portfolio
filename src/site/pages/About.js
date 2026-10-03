@@ -52,9 +52,6 @@ export default function About() {
                   <b>Lab</b> · {academicProfile.lab}
                 </div>
                 <div>
-                  <b>Advisor</b> · {academicProfile.advisor}
-                </div>
-                <div>
                   <b>Based</b> · {academicProfile.location}
                 </div>
               </div>

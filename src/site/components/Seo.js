@@ -72,12 +72,24 @@ export default function Seo({ title, description }) {
       <meta property="og:description" content={pageDesc} />
       <meta property="og:type" content={seo.og.type} />
       <meta property="og:url" content={seo.og.url} />
+      {/* Dimensions let a scraper reserve the right space before the image
+          lands, which is what stops previews rendering as a thin strip. */}
       <meta property="og:image" content={seo.og.image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta
+        property="og:image:alt"
+        content={`${greeting.title} · ${academicProfile.role}`}
+      />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDesc} />
       <meta name="twitter:image" content={seo.og.image} />
+      <meta
+        name="twitter:image:alt"
+        content={`${greeting.title} · ${academicProfile.role}`}
+      />
 
       <script type="application/ld+json">{JSON.stringify(personLd)}</script>
     </Helmet>
