@@ -143,7 +143,7 @@ const liveFeedUpdates = [
   {
     date: "Sep 2026",
     text:
-      "Joined the Technical Program Committee for CSNT 2027, the 16th IEEE International Conference on Communication Systems and Network Technologies, and served as a sub-reviewer for IEEE MSN 2026, the 22nd International Conference on Mobility, Sensing and Networking.",
+      "Joined the Technical Program Committee for CSNT 2027, the 16th IEEE International Conference on Communication Systems and Network Technologies, and served as a reviewer for IEEE MSN 2026, the 22nd International Conference on Mobility, Sensing and Networking.",
   },
   {
     date: "Aug 2026",
