@@ -34,9 +34,6 @@ export default function Nav() {
         <NavLink to="/" className="sg-brand" exact>
           <span className="sg-brand-dot" aria-hidden="true" />
           <span>{greeting.title}</span>
-          <span className="sg-brand-sub">
-            {academicProfile.lab} · {academicProfile.institutionShort}
-          </span>
         </NavLink>
 
         <button

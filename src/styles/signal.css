@@ -466,16 +466,6 @@ a {
   }
 }
 
-.sg-brand-sub {
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--text-3);
-  padding-left: 0.7rem;
-  border-left: 1px solid var(--line-2);
-}
-
 .sg-nav-links {
   display: flex;
   align-items: center;
@@ -568,10 +558,6 @@ a {
     margin-top: 0.9rem;
     border-radius: var(--r-sm);
     text-align: center;
-  }
-
-  .sg-brand-sub {
-    display: none;
   }
 }
 
