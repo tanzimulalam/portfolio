@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Icon from "./Icons";
 import {
   academicProfile,
   contactForm,
@@ -54,8 +55,15 @@ export default function Footer() {
             <ul className="sg-footer-list">
               {socialMediaLinks.map((s) => (
                 <li key={s.name}>
-                  <a href={s.link} target="_blank" rel="noopener noreferrer">
-                    {s.name} ↗
+                  <a
+                    className="sg-social"
+                    href={s.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name={s.icon} size={15} className="sg-social-icon" />
+                    <span>{s.name}</span>
+                    <span aria-hidden="true">↗</span>
                   </a>
                 </li>
               ))}

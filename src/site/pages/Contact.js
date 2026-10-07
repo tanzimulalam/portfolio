@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { PageHead, Reveal } from "../components/Bits";
+import Icon from "../components/Icons";
 import {
   academicProfile,
   contactForm,
@@ -100,10 +101,16 @@ export default function Contact() {
 
               {socialMediaLinks.map((s) => (
                 <div className="sg-detail" key={s.name}>
-                  <p className="sg-detail-k">{s.name}</p>
+                  <p className="sg-detail-k">
+                    <Icon name={s.icon} size={13} className="sg-detail-icon" />
+                    {s.name}
+                  </p>
                   <p className="sg-detail-v">
                     <a href={s.link} target="_blank" rel="noopener noreferrer">
-                      {s.link.replace(/^https?:\/\/(www\.)?/, "")} ↗
+                      {s.link
+                        .replace(/^https?:\/\/(www\.)?/, "")
+                        .replace(/\?.*$/, "")}{" "}
+                      ↗
                     </a>
                   </p>
                 </div>

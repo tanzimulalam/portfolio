@@ -90,6 +90,22 @@
   filter: brightness(0.62) contrast(1.12) saturate(0.85) hue-rotate(-38deg);
 }
 
+/* On the light theme the clip sits on an off-white ground, so pulling the
+   exposure down the way the dark theme does would leave a murky hole. Lift it
+   back up and let the edge gradients, which follow --ink-1-rgb, dissolve it
+   into the light ground instead. */
+:root[data-theme="light"] .sg-hero-media img {
+  filter: brightness(1.04) contrast(0.95) saturate(0.7) hue-rotate(-38deg);
+}
+
+:root[data-theme="light"] .sg-hero-media::before {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(18, 26, 22, 0.07) 0 1px,
+    rgba(18, 26, 22, 0) 1px 3px
+  );
+}
+
 /* Fine scanlines. They cost nothing, they read as a feed rather than as a
    photograph, and they give the eye real high-frequency edges to hold on to,
    which hides what is left of the upscaling softness. */
@@ -114,11 +130,11 @@
   background: linear-gradient(
       to right,
       var(--ink-1) 0%,
-      rgba(10, 12, 16, 0) 34%
+      rgba(var(--ink-1-rgb), 0) 34%
     ),
-    linear-gradient(to left, var(--ink-1) 0%, rgba(10, 12, 16, 0) 26%),
-    linear-gradient(to bottom, var(--ink-1) 0%, rgba(10, 12, 16, 0) 30%),
-    linear-gradient(to top, var(--ink-1) 0%, rgba(10, 12, 16, 0) 30%);
+    linear-gradient(to left, var(--ink-1) 0%, rgba(var(--ink-1-rgb), 0) 26%),
+    linear-gradient(to bottom, var(--ink-1) 0%, rgba(var(--ink-1-rgb), 0) 30%),
+    linear-gradient(to top, var(--ink-1) 0%, rgba(var(--ink-1-rgb), 0) 30%);
 }
 
 @media (max-width: 900px) {
@@ -143,13 +159,13 @@
   .sg-hero-media::after {
     background: linear-gradient(
         to bottom,
-        rgba(10, 12, 16, 0.1) 0%,
-        rgba(10, 12, 16, 0.24) 52%,
-        rgba(10, 12, 16, 0.8) 84%,
+        rgba(var(--ink-1-rgb), 0.1) 0%,
+        rgba(var(--ink-1-rgb), 0.24) 52%,
+        rgba(var(--ink-1-rgb), 0.8) 84%,
         var(--ink-1) 100%
       ),
-      linear-gradient(to right, var(--ink-1) 0%, rgba(10, 12, 16, 0) 14%),
-      linear-gradient(to left, var(--ink-1) 0%, rgba(10, 12, 16, 0) 14%);
+      linear-gradient(to right, var(--ink-1) 0%, rgba(var(--ink-1-rgb), 0) 14%),
+      linear-gradient(to left, var(--ink-1) 0%, rgba(var(--ink-1-rgb), 0) 14%);
   }
 }
 
@@ -161,9 +177,9 @@
   background: linear-gradient(
     100deg,
     var(--ink-1) 0%,
-    rgba(10, 12, 16, 0.94) 34%,
-    rgba(10, 12, 16, 0.45) 62%,
-    rgba(10, 12, 16, 0.72) 100%
+    rgba(var(--ink-1-rgb), 0.94) 34%,
+    rgba(var(--ink-1-rgb), 0.45) 62%,
+    rgba(var(--ink-1-rgb), 0.72) 100%
   );
 }
 
@@ -171,8 +187,8 @@
   .sg-hero-canvas::after {
     background: linear-gradient(
       180deg,
-      rgba(10, 12, 16, 0.86) 0%,
-      rgba(10, 12, 16, 0.93) 55%,
+      rgba(var(--ink-1-rgb), 0.86) 0%,
+      rgba(var(--ink-1-rgb), 0.93) 55%,
       var(--ink-1) 100%
     );
   }
@@ -458,7 +474,7 @@
   letter-spacing: 0.11em;
   text-transform: uppercase;
   color: var(--signal);
-  border: 1px solid rgba(94, 243, 196, 0.25);
+  border: 1px solid rgba(var(--signal-rgb), 0.25);
   background: var(--signal-faint);
   border-radius: 999px;
   padding: 0.24rem 0.6rem;
@@ -514,7 +530,7 @@
 }
 
 .sg-interest:hover {
-  border-color: rgba(94, 243, 196, 0.35);
+  border-color: rgba(var(--signal-rgb), 0.35);
   color: var(--signal);
 }
 

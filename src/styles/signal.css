@@ -5,12 +5,20 @@
    ============================================================ */
 
 :root {
-  /* --- surface ladder --- */
-  --ink-0: #06080b;
-  --ink-1: #0a0c10;
-  --ink-2: #0e1218;
-  --ink-3: #141922;
-  --ink-4: #1b212c;
+  color-scheme: dark;
+
+  /* --- surface ladder ---
+     Lifted off pure black. A near-black ground against near-white type is the
+     harshest pairing on an emissive screen; a few points of lift takes the
+     glare off without losing the dark-lab feel. */
+  --ink-0: #090b0f;
+  --ink-1: #0d1014;
+  --ink-2: #12161c;
+  --ink-3: #181d26;
+  --ink-4: #1f2530;
+
+  /* Ground as channels, so gradients and scrims can follow the theme. */
+  --ink-1-rgb: 13, 16, 20;
 
   /* --- lines --- */
   --line: rgba(255, 255, 255, 0.07);
@@ -18,15 +26,17 @@
   --line-3: rgba(255, 255, 255, 0.2);
 
   /* --- text --- */
-  --text: #e9eef5;
+  --text: #e2e8f1;
   --text-2: #9aa7b8;
-  --text-3: #667385;
+  --text-3: #8290a4;
 
   /* --- accents --- */
   --signal: #5ef3c4;
+  --signal-rgb: 94, 243, 196;
   --signal-deep: #23c79b;
-  --signal-glow: rgba(94, 243, 196, 0.16);
-  --signal-faint: rgba(94, 243, 196, 0.07);
+  --signal-ink: #06130f;
+  --signal-glow: rgba(var(--signal-rgb), 0.16);
+  --signal-faint: rgba(var(--signal-rgb), 0.07);
   --violet: #9b8cff;
   --amber: #ffc46b;
 
@@ -49,6 +59,44 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --dur: 380ms;
   --dur-fast: 180ms;
+}
+
+/* ============================================================
+   LIGHT THEME
+   A warm off-white ground rather than pure white, for the same
+   reason the dark ground is not pure black: maximum contrast is
+   not the same thing as comfortable contrast. The surface ladder
+   inverts, so cards lift toward white instead of sinking.
+   The accent has to change outright, since the mint that glows on
+   near-black fails contrast on a light ground.
+   ============================================================ */
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --ink-0: #eceee8;
+  --ink-1: #f6f7f3;
+  --ink-2: #ffffff;
+  --ink-3: #f1f3ed;
+  --ink-4: #e6e9e1;
+  --ink-1-rgb: 246, 247, 243;
+
+  --line: rgba(18, 26, 22, 0.1);
+  --line-2: rgba(18, 26, 22, 0.16);
+  --line-3: rgba(18, 26, 22, 0.26);
+
+  --text: #141a17;
+  --text-2: #4c5852;
+  --text-3: #5f6a64;
+
+  --signal: #077055;
+  --signal-rgb: 7, 112, 85;
+  --signal-deep: #065c46;
+  --signal-ink: #ffffff;
+  --signal-glow: rgba(var(--signal-rgb), 0.14);
+  --signal-faint: rgba(var(--signal-rgb), 0.08);
+  --violet: #6b5bd6;
+  --amber: #a9711a;
 }
 
 /* ============================================================
@@ -89,7 +137,7 @@ body.signal-body::before {
   pointer-events: none;
   background: radial-gradient(
       70ch 60ch at 12% -8%,
-      rgba(94, 243, 196, 0.07),
+      rgba(var(--signal-rgb), 0.07),
       transparent 70%
     ),
     radial-gradient(
@@ -290,7 +338,7 @@ a {
   color: var(--signal);
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 1px solid rgba(94, 243, 196, 0.28);
+  border-bottom: 1px solid rgba(var(--signal-rgb), 0.28);
   transition: border-color var(--dur-fast) var(--ease),
     color var(--dur-fast) var(--ease);
 }
@@ -344,15 +392,22 @@ a {
 
 .sg-btn--primary {
   background: var(--signal);
-  color: var(--ink-0);
+  color: var(--signal-ink);
   border-color: var(--signal);
   font-weight: 600;
 }
 
 .sg-btn--primary:hover {
+  background: var(--signal-deep);
+  border-color: var(--signal-deep);
+  box-shadow: 0 0 0 1px var(--signal-glow), 0 8px 30px -12px var(--signal);
+}
+
+/* On the dark theme the accent is already bright, so hover should lift rather
+   than deepen. */
+:root:not([data-theme="light"]) .sg-btn--primary:hover {
   background: #7bf7d2;
   border-color: #7bf7d2;
-  box-shadow: 0 0 0 1px var(--signal-glow), 0 8px 30px -12px var(--signal);
 }
 
 .sg-btn--ghost {
@@ -398,7 +453,7 @@ a {
 
 .sg-chip--on {
   color: var(--signal);
-  border-color: rgba(94, 243, 196, 0.3);
+  border-color: rgba(var(--signal-rgb), 0.3);
   background: var(--signal-faint);
 }
 
@@ -410,7 +465,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(10, 12, 16, 0.72);
+  background: rgba(var(--ink-1-rgb), 0.72);
   backdrop-filter: blur(14px) saturate(150%);
   -webkit-backdrop-filter: blur(14px) saturate(150%);
   border-bottom: 1px solid var(--line);
@@ -462,7 +517,7 @@ a {
     box-shadow: 0 0 0 3px var(--signal-faint);
   }
   50% {
-    box-shadow: 0 0 0 8px rgba(94, 243, 196, 0.015);
+    box-shadow: 0 0 0 8px rgba(var(--signal-rgb), 0.015);
   }
 }
 
@@ -642,4 +697,80 @@ a {
   font-size: 0.7rem;
   letter-spacing: 0.05em;
   color: var(--text-3);
+}
+
+/* ============================================================
+   THEME TOGGLE
+   ============================================================ */
+
+.sg-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  flex: none;
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    background-color var(--dur-fast) var(--ease);
+}
+
+.sg-theme-toggle:hover {
+  color: var(--signal);
+  border-color: var(--signal);
+  background: var(--signal-faint);
+}
+
+.sg-theme-toggle:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
+
+.sg-theme-toggle svg {
+  display: block;
+}
+
+/* The sun and moon live in one SVG; which one shows is the theme's business. */
+.sg-theme-toggle .sg-icon-moon {
+  display: none;
+}
+
+:root[data-theme="light"] .sg-theme-toggle .sg-icon-moon {
+  display: block;
+}
+
+:root[data-theme="light"] .sg-theme-toggle .sg-icon-sun {
+  display: none;
+}
+
+/* ============================================================
+   SOCIAL MARKS
+   ============================================================ */
+
+.sg-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sg-social-icon {
+  flex: none;
+  opacity: 0.75;
+  transition: opacity var(--dur-fast) var(--ease);
+}
+
+.sg-social:hover .sg-social-icon {
+  opacity: 1;
+}
+
+.sg-detail-icon {
+  vertical-align: -1px;
+  margin-right: 0.45rem;
+  opacity: 0.7;
 }

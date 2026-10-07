@@ -34,9 +34,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#0a0c10">
+    <meta name="msapplication-TileColor" content="#0d1014">
     <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#0a0c10">
+    <meta name="theme-color" content="#0d1014">
 
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -92,12 +92,35 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
     />
-    <meta name="color-scheme" content="dark" />
+    <meta name="color-scheme" content="dark light" />
     <style>
-      /* Paint the dark ground before React mounts so there is no white flash. */
-      html { background: #0a0c10; }
-      body { margin: 0; background: #0a0c10; color: #e9eef5; }
+      /* Paint the ground before React mounts so there is no flash. The two
+         values have to match the --ink-1 / --text tokens in signal.css. */
+      html { background: #0d1014; }
+      body { margin: 0; background: #0d1014; color: #e2e8f1; }
+      html[data-theme="light"],
+      html[data-theme="light"] body { background: #f6f7f3; color: #141a17; }
     </style>
+    <script>
+      /* Resolve the theme before first paint: a stored choice wins, otherwise
+         follow the OS. Running here rather than in React is what stops the
+         page flashing the wrong ground while the bundle loads. */
+      (function () {
+        try {
+          var stored = localStorage.getItem("sg-theme");
+          var light =
+            stored === "light" ||
+            (!stored &&
+              window.matchMedia &&
+              window.matchMedia("(prefers-color-scheme: light)").matches);
+          if (light) {
+            document.documentElement.setAttribute("data-theme", "light");
+            var m = document.querySelector('meta[name="theme-color"]');
+            if (m) m.setAttribute("content", "#f6f7f3");
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body class="signal-body">
     <noscript>You need to enable JavaScript to run this app.</noscript>

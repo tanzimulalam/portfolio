@@ -35,7 +35,7 @@ const greeting = {
 
 // Academic identity. Drives the hero, About page, and structured data.
 const academicProfile = {
-  headshotUrl: "https://i.imgur.com/Mr40tL0.jpeg",
+  headshotUrl: "/media/headshot-640.webp",
   role: "Ph.D. Student, Computational & Data Science",
   lab: "ASQI Lab",
   labUrl: "https://et.mtsu.edu/",
@@ -140,6 +140,11 @@ const researchAreas = [
 
 // Home “Latest updates” feed (month + year only); expandable on the landing page.
 const liveFeedUpdates = [
+  {
+    date: "Oct 2026",
+    text:
+      "Agreed to serve on the Technical Program Committee for CICN 2027, the IEEE International Conference on Computational Intelligence and Communication Networks.",
+  },
   {
     date: "Sep 2026",
     text:
@@ -378,16 +383,29 @@ const contactForm = {
 
 const socialMediaLinks = [
   {
-    name: "Github",
+    name: "ORCID",
+    link: "https://orcid.org/0009-0002-4152-6597",
+    icon: "orcid",
+  },
+  {
+    name: "Google Scholar",
+    link: "https://scholar.google.com/citations?hl=en&user=zjqHXOAAAAAJ",
+    icon: "scholar",
+  },
+  {
+    name: "GitHub",
     link: "https://github.com/tanzimulalam",
-    fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
-    backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
+    icon: "github",
   },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/tanzimulalam",
-    fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
-    backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
+    icon: "linkedin",
+  },
+  {
+    name: "Devpost",
+    link: "https://devpost.com/fahim5898",
+    icon: "devpost",
   },
 ];
 

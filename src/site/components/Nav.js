@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { academicProfile, greeting } from "../../portfolio.js";
+import ThemeToggle from "./ThemeToggle";
 
 const LINKS = [
   { to: "/", label: "Home", exact: true },
@@ -35,6 +36,8 @@ export default function Nav() {
           <span className="sg-brand-dot" aria-hidden="true" />
           <span>{greeting.title}</span>
         </NavLink>
+
+        <ThemeToggle />
 
         <button
           type="button"

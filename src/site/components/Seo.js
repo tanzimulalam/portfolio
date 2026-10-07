@@ -14,13 +14,17 @@ const email = (contactForm.bookChatMailto || "")
   .replace(/^mailto:/, "")
   .split("?")[0];
 
+/** schema.org wants absolute URLs; the headshot is served from this origin. */
+const absolute = (path) =>
+  /^https?:/.test(path) ? path : new URL(path, seo.og.url).href;
+
 /** schema.org Person. Built once at module load; it never varies per page. */
 const personLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: greeting.title,
   url: seo.og.url,
-  image: academicProfile.headshotUrl,
+  image: absolute(academicProfile.headshotUrl),
   email: email || undefined,
   jobTitle: academicProfile.role,
   description: seo.description,
@@ -64,8 +68,9 @@ export default function Seo({ title, description }) {
       <meta name="description" content={pageDesc} />
       <meta name="keywords" content={seo.keywords} />
       <meta name="author" content={greeting.title} />
-      <meta name="theme-color" content="#0a0c10" />
-      <meta name="color-scheme" content="dark" />
+      {/* theme-color and color-scheme are deliberately not declared here.
+          Helmet would reassert them on every route change and stomp the value
+          ThemeToggle sets; index.html owns them instead. */}
 
       <meta property="og:site_name" content={greeting.title} />
       <meta property="og:title" content={pageTitle} />
