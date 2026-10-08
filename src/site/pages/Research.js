@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import { PageHead, Reveal, SectionHead } from "../components/Bits";
 import {
   academicProfile,
+  authorSelf,
   papers,
   publications,
   researchAreas,
@@ -139,10 +140,26 @@ export default function Research() {
                   <span>{paper.venue}</span>
                   <span aria-hidden="true">·</span>
                   <span>{paper.category}</span>
-                  <span aria-hidden="true">·</span>
-                  <span>{formatYear(paper.date)}</span>
+                  {paper.venue.includes(formatYear(paper.date)) ? null : (
+                    <>
+                      <span aria-hidden="true">·</span>
+                      <span>{formatYear(paper.date)}</span>
+                    </>
+                  )}
                 </p>
                 <h3 className="sg-paper-title">{paper.title}</h3>
+                <p className="sg-paper-authors">
+                  {paper.authors.map((name, i) => (
+                    <React.Fragment key={name}>
+                      {i > 0 ? ", " : ""}
+                      {name === authorSelf ? (
+                        <b className="sg-paper-me">{name}</b>
+                      ) : (
+                        name
+                      )}
+                    </React.Fragment>
+                  ))}
+                </p>
                 <p className="sg-paper-summary">{paper.summary}</p>
                 <a
                   className="sg-arrow"
@@ -150,7 +167,7 @@ export default function Research() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span>arXiv:{paper.arxivId}</span>
+                  <span>{paper.ref}</span>
                   <span aria-hidden="true">↗</span>
                 </a>
               </Reveal>

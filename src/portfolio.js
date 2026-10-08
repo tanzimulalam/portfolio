@@ -169,6 +169,11 @@ const liveFeedUpdates = [
   {
     date: "Jul 2026",
     text:
+      "“BrainFuseNet: Attention-Enhanced Deep Fusion for Interpretable and Generalized Brain Tumor MRI Classification” published at IEEE SIST 2026.",
+  },
+  {
+    date: "Jul 2026",
+    text:
       "Wrapped up a contract teaching cybersecurity bootcamp modules at Data Group USA, covering vulnerability management, threat intelligence, and risk assessment for career changers.",
   },
   {
@@ -994,15 +999,39 @@ const papers = [
     id: "sentinel-aoii",
     title:
       "Distributed Quantum-Assisted Robust AoII Minimization in Satellite-Ground Integrated Edge Networks",
+    authors: ["MA Hossain", "TA Fahim", "W Liu", "N Ansari"],
     venue: "arXiv preprint",
     category: "cs.NI",
     date: "2026-10-05T00:00:00Z",
-    arxivId: "2610.05651",
+    ref: "arXiv:2610.05651",
     url: "https://arxiv.org/abs/2610.05651",
     summary:
       "Keeping an edge node's picture of a monitored process correct, not merely recent, when the only link available runs through satellites that hand over and fade. We minimise age of incorrect information across the network and solve the scheduling problem on a hybrid quantum-classical stack, with a certified worst-case bound on every schedule.",
   },
+  {
+    id: "brainfusenet",
+    title:
+      "BrainFuseNet: Attention-Enhanced Deep Fusion for Interpretable and Generalized Brain Tumor MRI Classification",
+    authors: [
+      "TA Fahim",
+      "MS Uddin",
+      "AD Nath",
+      "S Mondal",
+      "S Mia",
+      "SH Sumon",
+    ],
+    venue: "IEEE SIST 2026",
+    category: "Smart Information Systems and Technologies",
+    date: "2026-07-01T00:00:00Z",
+    ref: "10.1109/SIST61674.2026.11596217",
+    url: "https://ieeexplore.ieee.org/document/11596217",
+    summary:
+      "Brain tumour classification from MRI, built for the parts the leaderboard does not measure: robustness, interpretability and external testing. An attention-enhanced fusion model, assessed beyond the single public dataset it was trained on.",
+  },
 ];
+
+/** Rendered brighter than the rest of an author list. */
+const authorSelf = "TA Fahim";
 
 const publicationsHeader = {
   title: "Projects and Research",
@@ -1258,6 +1287,7 @@ export {
   experience,
   projectsHeader,
   papers,
+  authorSelf,
   publicationsHeader,
   publications,
   achievements,
