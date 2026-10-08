@@ -143,8 +143,7 @@ const liveFeedUpdates = [
   {
     date: "Oct 2026",
     text:
-      "First paper posted: “Distributed Quantum-Assisted Robust AoII Minimization in Satellite-Ground Integrated Edge Networks”, on arXiv as 2610.05651.",
-    highlight: true,
+      "Posted a preprint to arXiv: “Distributed Quantum-Assisted Robust AoII Minimization in Satellite-Ground Integrated Edge Networks” (arXiv:2610.05651).",
   },
   {
     date: "Oct 2026",
