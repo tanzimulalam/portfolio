@@ -143,6 +143,12 @@ const liveFeedUpdates = [
   {
     date: "Oct 2026",
     text:
+      "First paper posted: “Distributed Quantum-Assisted Robust AoII Minimization in Satellite-Ground Integrated Edge Networks”, on arXiv as 2610.05651.",
+    highlight: true,
+  },
+  {
+    date: "Oct 2026",
+    text:
       "Agreed to serve on the Technical Program Committee for CICN 2027, the IEEE International Conference on Computational Intelligence and Communication Networks.",
   },
   {
@@ -980,6 +986,25 @@ const projectsHeader = {
   avatar_image_path: "projects_image.svg",
 };
 
+/**
+ * Peer-reviewed and preprint output. Separate from `publications` below, which
+ * is really a projects list and predates this.
+ */
+const papers = [
+  {
+    id: "sentinel-aoii",
+    title:
+      "Distributed Quantum-Assisted Robust AoII Minimization in Satellite-Ground Integrated Edge Networks",
+    venue: "arXiv preprint",
+    category: "cs.NI",
+    date: "2026-10-05T00:00:00Z",
+    arxivId: "2610.05651",
+    url: "https://arxiv.org/abs/2610.05651",
+    summary:
+      "Keeping an edge node's picture of a monitored process correct, not merely recent, when the only link available runs through satellites that hand over and fade. We minimise age of incorrect information across the network and solve the scheduling problem on a hybrid quantum-classical stack, with a certified worst-case bound on every schedule.",
+  },
+];
+
 const publicationsHeader = {
   title: "Projects and Research",
   description:
@@ -1233,6 +1258,7 @@ export {
   certifications,
   experience,
   projectsHeader,
+  papers,
   publicationsHeader,
   publications,
   achievements,

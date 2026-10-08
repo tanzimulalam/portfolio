@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import { PageHead, Reveal, SectionHead } from "../components/Bits";
 import {
   academicProfile,
+  papers,
   publications,
   researchAreas,
 } from "../../portfolio.js";
@@ -121,6 +122,43 @@ export default function Research() {
         </div>
       </section>
 
+      {/* ------------------------------------------------ publications */}
+      <section className="sg-section" aria-labelledby="publications">
+        <div className="sg-wrap">
+          <SectionHead
+            index="04"
+            id="publications"
+            title="Publications"
+            lead="Preprints and peer-reviewed work."
+          />
+
+          <ul className="sg-papers">
+            {papers.map((paper) => (
+              <Reveal as="li" className="sg-paper" key={paper.id}>
+                <p className="sg-paper-meta">
+                  <span>{paper.venue}</span>
+                  <span aria-hidden="true">·</span>
+                  <span>{paper.category}</span>
+                  <span aria-hidden="true">·</span>
+                  <span>{formatYear(paper.date)}</span>
+                </p>
+                <h3 className="sg-paper-title">{paper.title}</h3>
+                <p className="sg-paper-summary">{paper.summary}</p>
+                <a
+                  className="sg-arrow"
+                  href={paper.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>arXiv:{paper.arxivId}</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* ------------------------------------------------ projects */}
       <section
         className="sg-section sg-section--sunk"
@@ -128,10 +166,10 @@ export default function Research() {
       >
         <div className="sg-wrap">
           <SectionHead
-            index="04"
+            index="05"
             id="artifacts"
             title="Projects & artifacts"
-            lead="Research prototypes and applied builds. Peer-reviewed publications will be listed here as they appear."
+            lead="Research prototypes and applied builds."
           />
 
           <ul className="sg-cases">
