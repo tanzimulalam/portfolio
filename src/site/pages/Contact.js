@@ -89,13 +89,12 @@ export default function Contact() {
                 <p className="sg-detail-k">Affiliation</p>
                 <p className="sg-detail-v">
                   <a
-                    href={academicProfile.labUrl}
+                    href={academicProfile.institutionUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {academicProfile.lab}
+                    {academicProfile.institution}
                   </a>
-                  , {academicProfile.institution}
                 </p>
               </div>
 

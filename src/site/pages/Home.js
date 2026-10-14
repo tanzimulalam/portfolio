@@ -74,14 +74,6 @@ export default function Home() {
                 <span className="sg-hero-id-role">{academicProfile.role}</span>
                 <span className="sg-hero-id-affil">
                   <a
-                    href={academicProfile.labUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {academicProfile.lab}
-                  </a>
-                  {" · "}
-                  <a
                     href={academicProfile.institutionUrl}
                     target="_blank"
                     rel="noopener noreferrer"

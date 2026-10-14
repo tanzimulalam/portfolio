@@ -37,11 +37,6 @@ const personLd = {
     name: academicProfile.institution,
     url: academicProfile.institutionUrl,
   },
-  worksFor: {
-    "@type": "ResearchOrganization",
-    name: `${academicProfile.lab}, ${academicProfile.institution}`,
-    url: academicProfile.labUrl,
-  },
   address: {
     "@type": "PostalAddress",
     addressLocality: contactPageData.addressSection.locality,

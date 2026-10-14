@@ -8,13 +8,13 @@ const settings = {
 
 //SEO Related settings
 const seo = {
-  title: "Tanzimul Alam Fahim | Ph.D. Researcher, Agentic AI",
+  title: "Tanzimul Alam Fahim | Doctoral Researcher, Agentic AI",
   description:
-    "Ph.D. student in Computational & Data Science at Middle Tennessee State University. Graduate Research Assistant in the ASQI Lab, building agentic AI for autonomous UAVs, with a background in security operations and cyber threat intelligence.",
+    "Doctoral student in Computational & Data Science at Middle Tennessee State University, working on agentic AI for autonomous UAVs and the security of agentic systems, with a background in security operations and cyber threat intelligence.",
   keywords:
-    "Tanzimul Alam Fahim, agentic AI, autonomous UAV, ASQI Lab, MTSU, computational and data science, knowledge graphs, STIX, cyber threat intelligence, SOC analyst, robotics",
+    "Tanzimul Alam Fahim, agentic AI, autonomous UAV, MTSU, computational and data science, knowledge graphs, STIX, cyber threat intelligence, SOC analyst, robotics",
   og: {
-    title: "Tanzimul Alam Fahim | Ph.D. Researcher, Agentic AI",
+    title: "Tanzimul Alam Fahim | Doctoral Researcher, Agentic AI",
     type: "website",
     url: "https://www.tanzimulalam.com/",
     image: "https://www.tanzimulalam.com/media/social-card-dark.png",
@@ -27,7 +27,7 @@ const greeting = {
   logo_name: "Tanzimul Alam Fahim",
   nickname: "tanzimulalam",
   subTitle:
-    "Ph.D. researcher building agentic AI for autonomous unmanned aerial vehicles, with a background in security operations and cyber threat intelligence.",
+    "Doctoral researcher building agentic AI for autonomous unmanned aerial vehicles, with a background in security operations and cyber threat intelligence.",
   resumeLink: "",
   portfolio_repository: "https://github.com/tanzimulalam/portfolio",
   githubProfile: "https://github.com/tanzimulalam",
@@ -36,9 +36,7 @@ const greeting = {
 // Academic identity. Drives the hero, About page, and structured data.
 const academicProfile = {
   headshotUrl: "/media/headshot-640.webp",
-  role: "Ph.D. Student, Computational & Data Science",
-  lab: "ASQI Lab",
-  labUrl: "https://et.mtsu.edu/",
+  role: "Doctoral Student in Computational & Data Science",
   institution: "Middle Tennessee State University",
   institutionShort: "MTSU",
   institutionUrl: "https://www.mtsu.edu/",
@@ -47,7 +45,7 @@ const academicProfile = {
   tagline: "Agentic AI · Autonomous systems · Cybersecurity",
   headline: "Agents that fly, decide, and can be trusted.",
   intro:
-    "I'm a Ph.D. student in Computational & Data Science at Middle Tennessee State University and a Graduate Research Assistant in the ASQI Lab. My current project is an agentic AI system for autonomous unmanned aerial vehicles: drones that plan, adapt, and navigate on their own rather than following a fixed script.",
+    "I'm a doctoral student in Computational & Data Science at Middle Tennessee State University. My current project is an agentic AI system for autonomous unmanned aerial vehicles: drones that plan, adapt, and navigate on their own rather than following a fixed script.",
   bio:
     "I came to autonomy from two directions. The first was robotics. At the Laboratory for Space Systems Engineering & Technology in Dhaka I led development of autonomous aerial and ground vehicles using ROS, LiDAR, and sensor fusion, and took the BRACU Dichari team to the European Robotics League 2022 finals as the first Asian team to reach that round.\n\nThe second was security. I spent three years as a security operations analyst, triaging alerts across Splunk, Defender, and Cisco tooling, writing Python automation and anomaly detection that cut incident response time by 30 percent. Alongside that I ran a research internship with the Laboratory for Analytic Sciences and the NSA, leading a team of five that built synthetic cyber threat intelligence: STIX 2.1 knowledge graphs with more than 100,000 nodes, so analysts could train and test tooling without touching sensitive production data. I also reported a stored XSS issue in Joomla Core that was fixed as CVE-2026-21631, and taught cybersecurity bootcamp modules to career changers at Data Group USA.\n\nThose two threads meet in the same question. An autonomous agent is a system that reads untrusted input from the world and then acts on it, which is also a fair description of an attack surface. My research is about making agents capable enough to be useful and verifiable enough to deploy.",
   researchInterests: [
@@ -84,7 +82,7 @@ const researchAreas = [
     question:
       "Can a drone plan its own mission, revise the plan when the world disagrees, and still stay within safe bounds?",
     body:
-      "My work in the ASQI Lab is an agentic system for unmanned aerial vehicles. Instead of following a fixed waypoint script, the agent reasons about its goal, calls perception and control tools, and updates its approach as conditions change. The interesting problems are in the loop itself: how the agent decides a plan has failed, how it recovers without human input, and what guardrails keep self-directed behaviour predictable.",
+      "My doctoral work is an agentic system for unmanned aerial vehicles. Instead of following a fixed waypoint script, the agent reasons about its goal, calls perception and control tools, and updates its approach as conditions change. The interesting problems are in the loop itself: how the agent decides a plan has failed, how it recovers without human input, and what guardrails keep self-directed behaviour predictable.",
     keywords: [
       "Self-evolving agents",
       "Autonomous navigation",
@@ -163,7 +161,7 @@ const liveFeedUpdates = [
   {
     date: "Aug 2026",
     text:
-      "Started the Ph.D. in Computational & Data Science at Middle Tennessee State University as a Graduate Research Assistant in the ASQI Lab, building agentic AI for autonomous unmanned aerial vehicles.",
+      "Started the doctorate in Computational & Data Science at Middle Tennessee State University, working on agentic AI for autonomous unmanned aerial vehicles.",
     highlight: true,
   },
   {
@@ -739,7 +737,7 @@ const degrees = {
       alt_name: "MTSU",
       duration: "2026 – present",
       descriptions: [
-        "⚡ ASQI Lab, Department of Engineering Technology",
+        "⚡ Department of Engineering Technology",
         "⚡ Research: agentic LLM security, adversarial robustness, and machine-generated threat intelligence",
         "⚡ Coursework and methods spanning distributed machine learning, edge intelligence, and generative AI",
       ],
@@ -811,7 +809,7 @@ const experience = {
       work: true,
       experiences: [
         {
-          title: "Graduate Research Assistant, ASQI Lab",
+          title: "Graduate Research Assistant",
           company: "MTSU Mechatronics Engineering & Engineering Technology",
           company_url: "https://et.mtsu.edu/",
           logo_path: "mtsu_logo.png",
@@ -1047,7 +1045,7 @@ const publications = {
       name: "Agentic AI for Autonomous UAV Navigation",
       createdAt: "2026-08-01T00:00:00Z",
       description:
-        "Current ASQI Lab project. A self-evolving agent that plans a UAV mission, calls perception and control tools, and revises its route when conditions change, with guardrails on self-directed behaviour.",
+        "Current doctoral project. A self-evolving agent that plans a UAV mission, calls perception and control tools, and revises its route when conditions change, with guardrails on self-directed behaviour.",
       url: "",
     },
     {

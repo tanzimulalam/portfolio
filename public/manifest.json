@@ -1,6 +1,6 @@
 {
   "name": "Tanzimul Alam Fahim",
-  "description": "Ph.D. researcher working on agentic AI for autonomous UAVs and the security of agentic systems.",
+  "description": "Doctoral researcher working on agentic AI for autonomous UAVs and the security of agentic systems.",
   "background_color": "#0d1014",
   "display": "standalone",
   "icons": [
@@ -48,7 +48,7 @@
     }
   ],
   "scope": "/",
-  "short_name": "T. A. Fahim",
+  "short_name": "TA Fahim",
   "start_url": "/",
   "theme_color": "#0d1014"
 }

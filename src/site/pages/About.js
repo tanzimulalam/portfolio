@@ -21,7 +21,7 @@ export default function About() {
   return (
     <Layout
       title="About"
-      description="Background, education, appointments, and honours. From robotics and security operations to Ph.D. research on agentic AI in the ASQI Lab at MTSU."
+      description="Background, education, appointments, and honours. From robotics and security operations to doctoral research on agentic AI at MTSU."
     >
       <PageHead
         eyebrow="Background"
@@ -49,7 +49,7 @@ export default function About() {
                   <b>Role</b> · {academicProfile.role}
                 </div>
                 <div>
-                  <b>Lab</b> · {academicProfile.lab}
+                  <b>Institution</b> · {academicProfile.institution}
                 </div>
                 <div>
                   <b>Based</b> · {academicProfile.location}

@@ -22,7 +22,7 @@ export default function Research() {
       description="Research agenda: agentic AI for autonomous UAVs, security of agentic systems, knowledge graphs for threat intelligence, and evaluation methods for autonomous systems."
     >
       <PageHead
-        eyebrow={`${academicProfile.lab} · ${academicProfile.institutionShort}`}
+        eyebrow={`Computational & Data Science · ${academicProfile.institutionShort}`}
         title="Research"
         lead={academicProfile.intro}
       />
@@ -66,24 +66,20 @@ export default function Research() {
         </div>
       </section>
 
-      {/* ------------------------------------------------ lab context */}
-      <section className="sg-section sg-section--sunk" aria-labelledby="lab">
+      {/* ------------------------------------------------ approach */}
+      <section
+        className="sg-section sg-section--sunk"
+        aria-labelledby="approach"
+      >
         <div className="sg-wrap">
-          <SectionHead index="02" id="lab" title="Where this work happens" />
+          <SectionHead index="02" id="approach" title="How I come at it" />
 
           <Reveal className="sg-prose">
             <p className="sg-prose-open">
-              I work in the <strong>{academicProfile.lab}</strong>, in the
-              Department of Engineering Technology at{" "}
-              {academicProfile.institution}.
-            </p>
-            <p>
-              The lab works on agentic LLM systems, distributed and
-              privacy-aware machine learning, edge intelligence and IoT,
-              generative AI for network management, AI-native 6G networks, and
-              quantum-assisted machine learning. My project sits in the agentic
-              corner of that portfolio: an autonomous UAV that plans and revises
-              its own mission rather than flying a fixed route.
+              I am a doctoral student in Computational &amp; Data Science at{" "}
+              <strong>{academicProfile.institution}</strong>, working on
+              autonomous unmanned aerial vehicles that plan and revise their own
+              missions rather than flying a fixed route.
             </p>
             <p>
               I bring an operational security background to it. A prompt
@@ -93,17 +89,6 @@ export default function Research() {
               and detection engineering, surfaces failure paths that a purely
               benchmark-driven view tends to miss. On a drone, those failure
               paths have physical consequences.
-            </p>
-            <p>
-              <a
-                className="sg-arrow"
-                href={academicProfile.labUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>Visit the ASQI Lab</span>
-                <span aria-hidden="true">↗</span>
-              </a>
             </p>
           </Reveal>
         </div>

@@ -19,16 +19,7 @@ export default function Footer() {
           <div>
             <p className="sg-footer-name">{greeting.title}</p>
             <p className="sg-footer-affil">
-              {academicProfile.role} ·{" "}
-              <a
-                className="sg-link"
-                href={academicProfile.labUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {academicProfile.lab}
-              </a>
-              , {academicProfile.institution}.
+              {academicProfile.role} · {academicProfile.institution}.
             </p>
           </div>
 
