@@ -40,7 +40,7 @@ const academicProfile = {
   institution: "Middle Tennessee State University",
   institutionShort: "MTSU",
   institutionUrl: "https://www.mtsu.edu/",
-  location: "Murfreesboro, Tennessee",
+  location: "Nashville, Tennessee",
   since: "2026",
   tagline: "Agentic AI · Autonomous systems · Cybersecurity",
   headline: "Agents that fly, decide, and can be trusted.",
@@ -59,14 +59,21 @@ const academicProfile = {
   resumeUrl: "/Tanzimul_Alam_Fahim_CV.pdf",
 };
 
-/** Headline numbers for the hero metric strip. Keep to four. */
+/** Headline credentials for the hero metric strip. Keep to five. */
 const stats = [
   {
     value: "ERL 2022",
     label: "Perseverance Award, first Asian team in the finals",
   },
-  { value: "100K+", label: "Nodes in a synthetic CTI knowledge graph" },
+  {
+    value: "SOC Analyst",
+    label: "More than four years of experience in Security Operation Centers",
+  },
   { value: "CVE-2026-21631", label: "Joomla Core disclosure, credited" },
+  {
+    value: "BRACU Dichari",
+    label: "Co-Founder, robotics team",
+  },
   { value: "IMechE", label: "Founder, BRACU Student Chapter" },
 ];
 
@@ -752,6 +759,7 @@ const degrees = {
       descriptions: [
         "⚡ Cum Laude. Honors Scholar Fellowship, Chancellor's Honor List, National Honors Society",
         "⚡ Pembroke Scholar (2023, 2024, 2025)",
+        "⚡ Community with Highest GPA Award (Resident Assistant, North Hall)",
         "⚡ Focused on cybersecurity, application security, incident response, and secure identity research",
       ],
       website_link: "https://www.uncp.edu/",
@@ -784,6 +792,14 @@ const certifications = {
       certificate_link: "",
       alt_name: "(ISC)²",
       color_code: "#FF660099",
+    },
+    {
+      title: "Drone Trust Certification",
+      subtitle: "-",
+      logo_path: "",
+      certificate_link: "",
+      alt_name: "Drone Trust",
+      color_code: "#0C7A5999",
     },
     {
       title: "MATLAB Onramp",
@@ -936,6 +952,30 @@ const experience = {
           location: "Pembroke, NC",
           description:
             "Attended NC-PaCE Symposium, gaining insights into cybersecurity trends and initiatives in NC. Organized monthly programming competitions in collaboration with ACM Chapter at UNCP.",
+          color: "#003366",
+        },
+        {
+          title: "Organizer, UNCP Monthly Programming Contest",
+          company: "UNCP",
+          company_url: "https://www.uncp.edu/",
+          logo_path:
+            "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
+          duration: "",
+          location: "Pembroke, NC",
+          description:
+            "Ran the monthly programming contest, in collaboration with the ACM chapter at UNCP.",
+          color: "#003366",
+        },
+        {
+          title: "Organizer, UNCP Cybersecurity Escape Room",
+          company: "UNCP",
+          company_url: "https://www.uncp.edu/",
+          logo_path:
+            "https://upload.wikimedia.org/wikipedia/en/f/ff/University_of_North_Carolina_at_Pembroke_seal.svg",
+          duration: "",
+          location: "Pembroke, NC",
+          description:
+            "Built and ran a cybersecurity escape room, turning security concepts into puzzles for students outside the major.",
           color: "#003366",
         },
         {
@@ -1124,8 +1164,8 @@ const contactPageData = {
   },
   addressSection: {
     title: "Based in",
-    subtitle: "Murfreesboro, TN, USA",
-    locality: "Murfreesboro",
+    subtitle: "Nashville, TN, USA",
+    locality: "Nashville",
     country: "USA",
     region: "Tennessee",
     postalCode: "",

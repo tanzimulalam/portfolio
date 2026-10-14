@@ -130,6 +130,33 @@ export function Feed({ items, initial = 4 }) {
 }
 
 /* ------------------------------------------------------------------
+   Disclosure: keeps a block out of the way until it is asked for.
+   ------------------------------------------------------------------ */
+
+export function Disclosure({ showLabel, hideLabel, children }) {
+  const [open, setOpen] = useState(false);
+  const id =
+    "sg-disclosure-" + String(showLabel).replace(/\W+/g, "-").toLowerCase();
+
+  return (
+    <div className="sg-disclosure">
+      <button
+        type="button"
+        className="sg-feed-more"
+        aria-expanded={open}
+        aria-controls={id}
+        onClick={() => setOpen((v) => !v)}
+      >
+        {open ? hideLabel : showLabel}
+      </button>
+      <div id={id} hidden={!open}>
+        {open ? children : null}
+      </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------
    Quote: a recommendation, clamped to its first paragraph.
    ------------------------------------------------------------------ */
 

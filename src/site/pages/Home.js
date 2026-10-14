@@ -1,7 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
-import { Feed, Metrics, Quote, Reveal, SectionHead } from "../components/Bits";
+import {
+  Disclosure,
+  Feed,
+  Metrics,
+  Quote,
+  Reveal,
+  SectionHead,
+} from "../components/Bits";
 import {
   academicProfile,
   caseStudies,
@@ -258,11 +265,16 @@ export default function Home() {
             title="What collaborators say"
             lead="Selected recommendations from colleagues, advisors, and teammates."
           />
-          <Reveal as="ul" className="sg-quotes">
-            {testimonials.map((t) => (
-              <Quote key={t.name} name={t.name} role={t.role} text={t.text} />
-            ))}
-          </Reveal>
+          <Disclosure
+            showLabel={`Read ${testimonials.length} references`}
+            hideLabel="Hide references"
+          >
+            <ul className="sg-quotes sg-quotes--revealed">
+              {testimonials.map((t) => (
+                <Quote key={t.name} name={t.name} role={t.role} text={t.text} />
+              ))}
+            </ul>
+          </Disclosure>
         </div>
       </section>
 
