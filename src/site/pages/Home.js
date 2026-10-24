@@ -57,14 +57,12 @@ export default function Home() {
               >
                 {homepage.primaryCta.label}
               </Link>
-              <a
+              <Link
                 className="sg-btn sg-btn--ghost"
-                href={academicProfile.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                to={homepage.secondaryCta.to}
               >
-                Curriculum vitae ↗
-              </a>
+                {homepage.secondaryCta.label}
+              </Link>
             </div>
 
             <div className="sg-hero-id">

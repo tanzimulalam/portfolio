@@ -34,27 +34,6 @@ export default function ThemeToggle() {
       meta.setAttribute("content", theme === "light" ? "#f6f7f3" : "#0d1014");
   }, [theme]);
 
-  // Follow the OS while the visitor has not expressed a preference.
-  useEffect(() => {
-    if (typeof window.matchMedia !== "function") return undefined;
-    let stored = null;
-    try {
-      stored = window.localStorage.getItem(KEY);
-    } catch (e) {
-      /* ignore */
-    }
-    if (stored) return undefined;
-
-    const mq = window.matchMedia("(prefers-color-scheme: light)");
-    const onChange = (e) => setTheme(e.matches ? "light" : "dark");
-    if (mq.addEventListener) mq.addEventListener("change", onChange);
-    else mq.addListener(onChange);
-    return () => {
-      if (mq.removeEventListener) mq.removeEventListener("change", onChange);
-      else mq.removeListener(onChange);
-    };
-  }, []);
-
   const next = theme === "light" ? "dark" : "light";
 
   return (

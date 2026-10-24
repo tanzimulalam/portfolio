@@ -102,18 +102,13 @@
       html[data-theme="light"] body { background: #f6f7f3; color: #141a17; }
     </style>
     <script>
-      /* Resolve the theme before first paint: a stored choice wins, otherwise
-         follow the OS. Running here rather than in React is what stops the
-         page flashing the wrong ground while the bundle loads. */
+      /* Resolve the theme before first paint. Dark is the default and the OS
+         preference is deliberately not consulted: light is opt-in, and only a
+         stored choice switches to it. Running here rather than in React is what
+         stops the page flashing the wrong ground while the bundle loads. */
       (function () {
         try {
-          var stored = localStorage.getItem("sg-theme");
-          var light =
-            stored === "light" ||
-            (!stored &&
-              window.matchMedia &&
-              window.matchMedia("(prefers-color-scheme: light)").matches);
-          if (light) {
+          if (localStorage.getItem("sg-theme") === "light") {
             document.documentElement.setAttribute("data-theme", "light");
             var m = document.querySelector('meta[name="theme-color"]');
             if (m) m.setAttribute("content", "#f6f7f3");

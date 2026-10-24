@@ -56,7 +56,6 @@ const academicProfile = {
     "Machine Learning Security",
     "Computer Vision & Perception",
   ],
-  resumeUrl: "/Tanzimul_Alam_Fahim_CV.pdf",
 };
 
 /** Headline credentials for the hero metric strip. Keep to five. */
@@ -221,7 +220,7 @@ const homepage = {
   subhead:
     "I build and research on the security of agentic AI in autonomous unmanned aerial vehicles. Before the doctoral studies, I spent nearly four years in security operations, cyber threat intelligence and research in AI security. Both halves ask the same question: how much can you let a system decide for itself?",
   primaryCta: { label: "Read the research", to: "/research" },
-  secondaryCta: { label: "Curriculum vitae", to: "/about" },
+  secondaryCta: { label: "Background", to: "/about" },
 };
 
 const services = [
@@ -239,7 +238,7 @@ const services = [
   },
   {
     title: "Background",
-    description: "Education, appointments, leadership, and the full CV.",
+    description: "Education, appointments, leadership, and honours.",
     to: "/about",
   },
 ];
@@ -794,11 +793,11 @@ const certifications = {
       color_code: "#FF660099",
     },
     {
-      title: "Drone Trust Certification",
-      subtitle: "-",
+      title: "The Recreational UAS Safety Test (TRUST)",
+      subtitle: "- FAA",
       logo_path: "",
       certificate_link: "",
-      alt_name: "Drone Trust",
+      alt_name: "FAA",
       color_code: "#0C7A5999",
     },
     {

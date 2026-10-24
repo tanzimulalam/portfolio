@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { academicProfile, greeting } from "../../portfolio.js";
+import { greeting } from "../../portfolio.js";
 import ThemeToggle from "./ThemeToggle";
 
 const LINKS = [
@@ -65,16 +65,6 @@ export default function Nav() {
               </NavLink>
             </li>
           ))}
-          <li>
-            <a
-              className="sg-nav-link sg-nav-cv"
-              href={academicProfile.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              CV ↗
-            </a>
-          </li>
         </ul>
       </div>
     </nav>

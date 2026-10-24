@@ -33,7 +33,7 @@ export default function Footer() {
                 <Link to="/work">Work</Link>
               </li>
               <li>
-                <Link to="/about">About &amp; CV</Link>
+                <Link to="/about">About</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
@@ -58,15 +58,6 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
-              <li>
-                <a
-                  href={academicProfile.resumeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Curriculum vitae ↗
-                </a>
-              </li>
               {email ? (
                 <li>
                   <a href={`mailto:${email}`}>{email}</a>

@@ -62,17 +62,6 @@ export default function About() {
               {bioParagraphs.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
-              <p>
-                <a
-                  className="sg-arrow"
-                  href={academicProfile.resumeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Full curriculum vitae</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </p>
             </Reveal>
           </div>
         </div>
@@ -291,14 +280,6 @@ export default function About() {
               <Link className="sg-btn sg-btn--primary" to="/research">
                 Research agenda
               </Link>
-              <a
-                className="sg-btn sg-btn--ghost"
-                href={academicProfile.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Download CV ↗
-              </a>
             </div>
           </Reveal>
         </div>

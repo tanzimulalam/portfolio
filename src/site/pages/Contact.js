@@ -115,19 +115,6 @@ export default function Contact() {
                 </div>
               ))}
 
-              <div className="sg-detail">
-                <p className="sg-detail-k">Curriculum vitae</p>
-                <p className="sg-detail-v">
-                  <a
-                    href={academicProfile.resumeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Open CV ↗
-                  </a>
-                </p>
-              </div>
-
               <div style={{ marginTop: "2rem" }}>
                 <a
                   className="sg-btn sg-btn--primary"

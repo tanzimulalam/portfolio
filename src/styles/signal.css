@@ -554,17 +554,6 @@ a {
   background: var(--signal-faint);
 }
 
-.sg-nav-cv {
-  margin-left: 0.5rem;
-  padding: 0.5rem 0.95rem;
-  border: 1px solid var(--line-2);
-}
-
-.sg-nav-cv:hover {
-  border-color: var(--signal);
-  color: var(--signal);
-}
-
 .sg-nav-toggle {
   display: none;
   background: transparent;
@@ -606,13 +595,6 @@ a {
     padding: 0.85rem 0.4rem;
     border-bottom: 1px solid var(--line);
     border-radius: 0;
-  }
-
-  .sg-nav-cv {
-    margin-left: 0;
-    margin-top: 0.9rem;
-    border-radius: var(--r-sm);
-    text-align: center;
   }
 }
 
