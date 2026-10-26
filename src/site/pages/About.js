@@ -46,12 +46,6 @@ export default function About() {
               />
               <div className="sg-portrait-meta">
                 <div>
-                  <b>Role</b> · {academicProfile.role}
-                </div>
-                <div>
-                  <b>Institution</b> · {academicProfile.institution}
-                </div>
-                <div>
                   <b>Based</b> · {academicProfile.location}
                 </div>
               </div>
