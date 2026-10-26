@@ -35,7 +35,7 @@ const greeting = {
 
 // Academic identity. Drives the hero, About page, and structured data.
 const academicProfile = {
-  headshotUrl: "/media/portrait-640.webp",
+  headshotUrl: "/media/portrait-bw-640.webp",
   role: "Doctoral Student in Computational & Data Science",
   institution: "Middle Tennessee State University",
   institutionShort: "MTSU",
